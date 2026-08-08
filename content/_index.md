@@ -9,8 +9,10 @@ A holisztikus és biológiai fogászat képezi a rendelőnk alapját.
 
 Dr. Kelemen László a fogorvos és tulajdonos.
 
-Melegszívűsége, lelkesedése és gondoskodó természete tökéletesen illeszkedik ahhoz a filozófiához, amelyet Önök már megismertek és amelyben megbíznak. Biztos vagyok benne, hogy barátságosnak, együttérzőnek és elkötelezettnek fogják találni őt mind fogászati egészségük, mind általános jólétük iránt.
+<div class="brand-circle"></div>
 
+Melegszívűsége, lelkesedése és gondoskodó természete tökéletesen illeszkedik ahhoz a filozófiához, amelyet Önök már megismertek és amelyben megbíznak. Biztos vagyok benne, hogy barátságosnak, együttérzőnek és elkötelezettnek fogják találni őt mind fogászati egészségük, mind általános jólétük iránt.
+<span class="brand-circle-small"></span>
 Dr. Kelemen László a SOTE Egyetem Fogorvostudományi Karán szerzett diplomát.
 
 A magyarországi biológiai fogászat vezető szakértőitől tanult, többek között Dr. Csiszár Róberttől.
