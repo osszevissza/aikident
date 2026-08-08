@@ -203,9 +203,15 @@ figure { margin: 0; }
 .utility-bar a {
   color: var(--color-accent);
   text-decoration: none;
+
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid transparent;
 }
 
-.utility-bar a:hover { text-decoration: underline; }
+.utility-bar a:hover,
+.utility-bar a:focus-visible {
+  border-bottom-color: var(--color-accent);
+}
 
 .site-header {
   background: var(--color-primary);
@@ -265,14 +271,24 @@ figure { margin: 0; }
 .menu-list a {
   color: var(--color-accent);
   text-decoration: none;
+
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid transparent;
 }
 
-.menu-list a:hover { text-decoration: underline; }
+.menu-list a:hover,
+.menu-list a:focus-visible {
+  border-bottom-color: var(--color-accent);
+}
 
 .menu-list a[aria-current="page"] {
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-  text-underline-offset: 0.4rem;
+  border-bottom-width: 3px;
+  border-bottom-color: var(--color-accent);
+}
+
+/* Aktív oldal: türkiz keretes chip */
+.menu-list a[aria-current="page"] {
+  border-color: var(--color-accent);
 }
 
 /* Gombok: türkiz háttér, bordó szöveg */
@@ -281,20 +297,32 @@ figure { margin: 0; }
 
   padding: 0.85rem 1.2rem;
 
-  border-radius: 999px;
+  border-radius: 0.5rem;
 
-  background: var(--color-accent);
-  color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-accent);
 
   text-decoration: none;
   cursor: pointer;
 }
 
-.button:hover { opacity: 0.9; }
+.button:hover {
+  opacity: 0.9;
+}
 
 .button-small {
   padding: 0.65rem 1rem;
   font-size: 0.9rem;
+}
+
+/* Változat a bordó fejlécbe – a sima bordó gomb ott nem látszana */
+.button--on-dark {
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.button--on-dark:hover {
+  opacity: 0.9;
 }
 
 /* ---------- 08. FOOTER (bordó háttér, türkiz szöveg) ---------- */
@@ -316,9 +344,15 @@ figure { margin: 0; }
 .site-footer a {
   color: var(--color-accent);
   text-decoration: none;
+
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid transparent;
 }
 
-.site-footer a:hover { text-decoration: underline; }
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  border-bottom-color: var(--color-accent);
+}
 
 .footer-title { font-weight: 700; }
 
