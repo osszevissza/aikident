@@ -436,10 +436,6 @@ figure { margin: 0; }
     padding-block: 1rem;
   }
 
-  .header-phone {
-    display: none;
-  }
-
   .header-actions {
     display: flex;
     align-items: center;
@@ -460,17 +456,17 @@ figure { margin: 0; }
     width: 100%;
 
     background: rgb(129 19 49 / 70%);
-    backdrop-filter: blur(10px);;
+    backdrop-filter: blur(10px);
 
+    opacity: 0;
     visibility: hidden;
     pointer-events: none;
 
-    transform: translateY(-0.5rem);
+    transform: translateY(-1rem);
 
     transition:
     opacity 0.2s ease,
-    transform 0.2s ease,
-    visibility 0.2s ease;
+    visibility 0.45s;
   }
 
   .nav-wrapper:has(.menu-list.is-open) {
@@ -478,7 +474,28 @@ figure { margin: 0; }
     visibility: visible;
     pointer-events: auto;
 
-    transform: translateY(0);
+    animation: menu-drop 0.46s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  @keyframes menu-drop {
+    0% {
+      transform: translateY(-1.25rem);
+      opacity: 0;
+    }
+
+    68% {
+      transform: translateY(0.3rem);
+      opacity: 1;
+    }
+
+    84% {
+      transform: translateY(-0.1rem);
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   .menu-list {
