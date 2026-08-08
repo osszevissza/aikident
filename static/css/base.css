@@ -396,7 +396,63 @@ figure { margin: 0; }
 
 .scroll-to-top.is-visible { display: grid; }
 
-/* ---------- 10. MOBIL ---------- */
+/* ---------- 10. HAMBURGER MENÜ ---------- */
+
+.nav-wrapper {
+  position: relative;
+}
+
+.nav-toggle {
+  display: none;
+
+  padding: 0.6rem;
+
+  border: 0;
+  background: transparent;
+  color: var(--color-accent);
+
+  cursor: pointer;
+}
+
+.hamburger {
+  width: 2rem;
+  height: 1.4rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+
+  width: 100%;
+  height: 2px;
+
+  border-radius: 999px;
+  background: currentColor;
+
+  transition:
+  transform 0.2s ease,
+  opacity 0.2s ease;
+}
+
+/* Hamburger → X */
+
+.nav-toggle[aria-expanded="true"] .hamburger span:nth-child(1) {
+  transform: translateY(0.6rem) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .hamburger span:nth-child(3) {
+  transform: translateY(-0.6rem) rotate(-45deg);
+}
+
+/* ---------- 11. MOBIL ---------- */
+
 @media (max-width: 860px) {
   .utility-inner,
   .header-inner {
@@ -404,15 +460,51 @@ figure { margin: 0; }
     padding-block: 1rem;
   }
 
-  .utility-inner { align-items: flex-start; }
+  .utility-inner {
+    align-items: flex-start;
+  }
 
   .header-actions {
     align-items: flex-start;
     width: 100%;
   }
 
-  .menu-list { gap: 0.7rem 1rem; }
+  /* Hamburger megjelenik */
+
+  .nav-toggle {
+    display: grid;
+    place-items: center;
+  }
+
+  /* Menü alapból csukva */
+
+  .menu-list {
+    display: none;
+
+    width: 100%;
+    margin-top: 1rem;
+
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* JS nyitja ki */
+
+  .menu-list.is-open {
+    display: flex;
+  }
+
+  .menu-list li {
+    width: 100%;
+  }
+
+  .menu-list a {
+    display: block;
+    padding-block: 0.75rem;
+  }
 
   .intro-grid,
-  .footer-inner { grid-template-columns: 1fr; }
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
 }
