@@ -1,22 +1,38 @@
 <header class="site-header" id="site-header">
-  <div class="utility-bar">
-    <div class="utility-inner">
-      <a href="tel:+36301932714">+36301932714</a>
-      <nav aria-label="Kiemelt szolgáltatások">
-        <a href="/vizsgalatok/">CBCT</a>
-        <a href="/kezelesek/">Amalgámtömések biztonságos eltávolítása</a>
-        <a href="/kezelesek/">Fluoridmentes fogászat</a>
-      </nav>
-    </div>
-  </div>
   <div class="header-inner">
-    <a class="site-brand" href="{{ "/" | relURL }}" aria-label="Aiki Dent Fogászat – Főoldal">
+    <a
+      class="site-brand"
+      href="{{ "/" | relURL }}"
+      aria-label="Aiki Dent Fogászat – Főoldal"
+    >
       <span class="logo-placeholder">Aiki Dent</span>
       <span class="brand-subtitle">Fogászat</span>
     </a>
+
     <div class="header-actions">
-      <a class="button button-small" href="/kapcsolat/">Időpontfoglalás</a>
-      {{ partial "nav.html" . }}
+      <a class="header-phone" href="tel:+36301932714">
+        +36 30 193 2714
+      </a>
+
+      <a class="button" href="{{ "/kapcsolat/" | relURL }}">
+        Időpontfoglalás
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-menu"
+        aria-label="Menü megnyitása"
+      >
+        <span class="hamburger" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
     </div>
   </div>
+
+  {{ partial "nav.html" . }}
 </header>

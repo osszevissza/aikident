@@ -30,6 +30,11 @@ html {
 }
 
 body {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
   margin: 0;
   background: var(--color-bg);
   color: var(--color-text);
@@ -152,8 +157,6 @@ figure { margin: 0; }
 
 /* ---------- 06. KÖZÉPRE RENDEZÉS / ELRENDEZÉS ---------- */
 .page-shell,
-.header-inner,
-.utility-inner,
 .footer-inner {
   width: min(calc(100% - 2rem), var(--content-max-width));
   margin-inline: auto;
@@ -177,55 +180,28 @@ figure { margin: 0; }
   align-items: center;
 }
 
-/* ---------- 07. FEJLÉC (bordó háttér, türkiz szöveg) ---------- */
-.utility-bar {
-  background: var(--color-primary);
-  border-bottom: 1px solid rgb(126 236 206 / 25%);
-  color: var(--color-accent);
-  font-size: 0.86rem;
-}
-
-.utility-inner {
-  min-height: 42px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
-
-.utility-inner nav {
-  display: flex;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-}
-
-.utility-bar a {
-  color: var(--color-accent);
-  text-decoration: none;
-
-  padding-bottom: 0.3rem;
-  border-bottom: 2px solid transparent;
-}
-
-.utility-bar a:hover,
-.utility-bar a:focus-visible {
-  border-bottom-color: var(--color-accent);
-}
+/* ---------- 07. FEJLÉC ---------- */
 
 .site-header {
+  position: relative;
+
   background: var(--color-primary);
   color: var(--color-accent);
 }
 
 .header-inner {
-  min-height: 118px;
+  min-height: 110px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+
+  width: min(calc(100% - 2rem), var(--content-max-width));
+  margin-inline: auto;
 }
+
+/* ---------- 07/A. BRAND ---------- */
 
 .site-brand {
   display: inline-flex;
@@ -244,26 +220,45 @@ figure { margin: 0; }
 .brand-subtitle {
   margin-top: 0.35rem;
 
-  color: var(--color-accent);
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
+/* ---------- 07/B. FEJLÉC MŰVELETEK ---------- */
+
 .header-actions {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 1rem;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.header-phone {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.header-phone:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+/* ---------- 07/C. NAVIGÁCIÓ ---------- */
+
+.nav-wrapper {
+  position: relative;
+  border-top: 1px solid rgb(126 236 206 / 25%);
 }
 
 .menu-list {
+  width: min(calc(100% - 2rem), var(--content-max-width));
+  margin-inline: auto;
+
   display: flex;
   gap: 1.1rem;
   flex-wrap: wrap;
 
-  margin: 0;
-  padding: 0;
+  padding: 1rem 0;
 
   list-style: none;
 }
@@ -286,48 +281,34 @@ figure { margin: 0; }
   border-bottom-color: var(--color-accent);
 }
 
-/* Aktív oldal: türkiz keretes chip */
-.menu-list a[aria-current="page"] {
-  border-color: var(--color-accent);
-}
+/* ---------- 07/C. GOMBOK ---------- */
 
-/* Gombok: türkiz háttér, bordó szöveg */
 .button {
   display: inline-block;
 
-  padding: 0.85rem 1.2rem;
+  padding: 0.75rem 1.1rem;
 
+  border: 1px solid var(--color-accent);
   border-radius: 0.5rem;
 
-  background: var(--color-primary);
-  color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-primary);
 
+  font: inherit;
+  font-weight: 600;
   text-decoration: none;
+
   cursor: pointer;
 }
 
 .button:hover {
-  opacity: 0.9;
-}
-
-.button-small {
-  padding: 0.65rem 1rem;
-  font-size: 0.9rem;
-}
-
-/* Változat a bordó fejlécbe – a sima bordó gomb ott nem látszana */
-.button--on-dark {
-  background: var(--color-accent);
-  color: var(--color-primary);
-}
-
-.button--on-dark:hover {
-  opacity: 0.9;
+  background: transparent;
+  color: var(--color-accent);
 }
 
 /* ---------- 08. FOOTER (bordó háttér, türkiz szöveg) ---------- */
 .site-footer {
-  margin-top: 5rem;
+  margin-top: auto;
   padding: 3rem 0 1.5rem;
 
   background: var(--color-primary);
@@ -398,10 +379,6 @@ figure { margin: 0; }
 
 /* ---------- 10. HAMBURGER MENÜ ---------- */
 
-.nav-wrapper {
-  position: relative;
-}
-
 .nav-toggle {
   display: none;
 
@@ -454,44 +431,63 @@ figure { margin: 0; }
 /* ---------- 11. MOBIL ---------- */
 
 @media (max-width: 860px) {
-  .utility-inner,
   .header-inner {
-    flex-direction: column;
+    min-height: 82px;
     padding-block: 1rem;
   }
 
-  .utility-inner {
-    align-items: flex-start;
+  .header-phone {
+    display: none;
   }
 
   .header-actions {
-    align-items: flex-start;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
   }
-
-  /* Hamburger megjelenik */
 
   .nav-toggle {
     display: grid;
     place-items: center;
   }
 
-  /* Menü alapból csukva */
-
-  .menu-list {
-    display: none;
+  .nav-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
 
     width: 100%;
-    margin-top: 1rem;
+
+    background: var(--color-primary);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(-0.5rem);
+
+    transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
+  }
+
+  .nav-wrapper:has(.menu-list.is-open) {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateY(0);
+  }
+
+  .menu-list {
+    width: min(calc(100% - 2rem), var(--content-max-width));
+    margin-inline: auto;
+    padding-block: 0.75rem;
 
     flex-direction: column;
     gap: 0;
-  }
-
-  /* JS nyitja ki */
-
-  .menu-list.is-open {
-    display: flex;
   }
 
   .menu-list li {
