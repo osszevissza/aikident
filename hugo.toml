@@ -1,0 +1,61 @@
+baseURL = 'https://aikident.hu/'
+languageCode = 'hu-HU'
+title = 'Aiki Dent Fogászat'
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  description = 'Aiki Dent Fogászat'
+  phone = '+36301932714'
+  email = 'info@aikident.hu'
+  address = '1136 Budapest, Hegedűs Gyula utca 29/b'
+
+[menus]
+  [[menus.main]]
+    name = 'Főoldal'
+    url = '/'
+    weight = 10
+  [[menus.main]]
+    name = 'Rólunk'
+    url = '/rolunk/'
+    weight = 20
+  [[menus.main]]
+    name = 'Betegségek'
+    url = '/betegsegek/'
+    weight = 30
+  [[menus.main]]
+    name = 'Vizsgálatok'
+    url = '/vizsgalatok/'
+    weight = 40
+  [[menus.main]]
+    name = 'Kezelések'
+    url = '/kezelesek/'
+    weight = 50
+  [[menus.main]]
+    name = 'Technológia'
+    url = '/technologia/'
+    weight = 60
+  [[menus.main]]
+    name = 'Új páciensek'
+    url = '/uj-paciensek/'
+    weight = 70
+  [[menus.main]]
+    name = 'Kapcsolat'
+    url = '/kapcsolat/'
+    weight = 80
+
+  [[menus.footer]]
+    name = 'Rólunk'
+    url = '/rolunk/'
+    weight = 10
+  [[menus.footer]]
+    name = 'Vizsgálatok'
+    url = '/vizsgalatok/'
+    weight = 20
+  [[menus.footer]]
+    name = 'Kezelések'
+    url = '/kezelesek/'
+    weight = 30
+  [[menus.footer]]
+    name = 'Kapcsolat'
+    url = '/kapcsolat/'
+    weight = 40

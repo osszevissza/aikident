@@ -1,0 +1,11 @@
+{{ $pattern := .Get "match" | default "img/*" }}
+{{ $images := .Page.Resources.Match $pattern }}
+<div class="gallery-grid" role="list">
+  {{ range $i, $img := $images }}
+    <figure class="gallery-item" role="listitem">
+      <a class="gallery-thumb" href="{{ $img.RelPermalink }}">
+        <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" loading="lazy" decoding="async" alt="{{ $img.Name | replace "-" " " | replace ".webp" "" | title }}">
+      </a>
+    </figure>
+  {{ end }}
+</div>

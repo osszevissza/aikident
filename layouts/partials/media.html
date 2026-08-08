@@ -1,0 +1,5 @@
+{{ $src := .src }}
+{{ $alt := .alt | default "" }}
+<figure class="media-figure">
+  <img src="/img/{{ $src }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+</figure>

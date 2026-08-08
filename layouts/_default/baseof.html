@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ block "title" . }}{{ .Title }} – {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:locale" content="hu_HU">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ .Title }}">
+  <meta name="twitter:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+
+  <link rel="stylesheet" href="{{ "css/base.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/layout.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/components.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/utilities.css" | relURL }}">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Ugrás a tartalomra</a>
+  {{ partial "header.html" . }}
+  <main id="main-content">{{ block "main" . }}{{ end }}</main>
+  {{ partial "footer.html" . }}
+
+  <a href="#main-content" id="scrollToTopBtn" class="scroll-to-top" aria-label="Vissza a tetejére">↑</a>
+  <script src="{{ "js/scroll-top.js" | relURL }}" defer></script>
+</body>
+</html>

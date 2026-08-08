@@ -1,0 +1,12 @@
+{{ define "title" }}{{ .Site.Title }}{{ end }}
+{{ define "main" }}
+<article class="home page-shell">
+  <header class="hero">
+    <p class="eyebrow">Aiki-Dent Fogászat</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lead }}<p class="hero-lead">{{ . }}</p>{{ end }}
+    <a class="button" href="/kapcsolat/">Időpontfoglalás</a>
+  </header>
+  <div class="content">{{ .Content }}</div>
+</article>
+{{ end }}
