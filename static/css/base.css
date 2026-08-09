@@ -13,7 +13,7 @@
   --color-accent-strong: #0e7c62;  /* sötét türkiz – fókuszgyűrű világos alapon */
 
   --font-family-base: "GeneralSans", system-ui, sans-serif;
-  --font-family-title: "Playfair", Georgia, serif;
+  --font-family-title: "Comfortaa", Georgia, serif;
 
   --content-max-width: 1180px;
 }
@@ -39,8 +39,8 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-family-base);
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.8;
 }
 
 a {
@@ -67,7 +67,7 @@ p { margin-top: 0; }
 
 .eyebrow {
   color: var(--color-primary);
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;

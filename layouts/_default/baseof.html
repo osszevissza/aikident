@@ -13,6 +13,10 @@
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:locale" content="hu_HU">
 
+  <link rel="stylesheet" href="{{ "fonts/Comfortaa/Comfortaa.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "fonts/GeneralSans/GeneralSans.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "fonts/Playfair/Playfair.css" | relURL }}">
+
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ .Title }}">
   <meta name="twitter:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
