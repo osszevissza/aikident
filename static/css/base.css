@@ -488,7 +488,6 @@ figure { margin: 0; }
     width: 100%;
   }
 
-  /* Link sorok – a desktop aláhúzás a panelben nem kell */
   .menu-list a {
     position: relative;
     isolation: isolate;
@@ -502,6 +501,9 @@ figure { margin: 0; }
     border-radius: 0.75rem;
 
     border: 0;
+
+    opacity: 0;
+    transform: translateX(-18px);
   }
 
   .menu-list a:hover,
@@ -514,7 +516,7 @@ figure { margin: 0; }
     font-weight: 700;
   }
 
-  /* Hover sweep – a barátod animációjának nyoma */
+  /* Hover sweep */
   .menu-list a::before {
     content: "";
     position: absolute;

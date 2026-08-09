@@ -16,12 +16,14 @@
 
   function dropIn() {
     cancelAnimationFrame(raf);
-    panel.classList.add('is-open');
-    panel.style.opacity = 1;
+
     links.forEach(a => {
       a.style.opacity = 0;
       a.style.transform = 'translateX(-18px)';
     });
+    panel.classList.add('is-open');
+    panel.style.opacity = 1;
+
 
     if (reduce) {
       panel.style.transform = 'translateY(0) scaleY(1) scaleX(1)';
