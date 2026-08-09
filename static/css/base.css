@@ -588,25 +588,20 @@ figure { margin: 0; }
   max-width: min(100%, 940px);
 }
 
-.treatment-item {
-  margin-block: clamp(1.75rem, 4vw, 2.75rem);
-}
-
-/* Cím + fogak */
-.treatment-title {
+.content:has(.treatment-list-marker) h2 {
   display: flex;
   align-items: flex-start;
   gap: 0.8rem;
 
-  margin: 0 0 0.9rem;
-  padding: 0;
-  border: 0;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 3px solid rgb(126 236 206 / 55%);
 
   color: var(--color-primary);
   font-size: clamp(1.4rem, 3vw, 2rem);
 }
 
-.treatment-title::before {
+.content:has(.treatment-list-marker) h2::before {
   content: "";
   flex: 0 0 auto;
 
@@ -617,12 +612,9 @@ figure { margin: 0; }
   background: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%230e7c62'%20stroke-width='1.7'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M12%204C8.5%204%206%206%206%209.5C6%2013%207%2016%207.5%2019C7.7%2020.5%209.5%2020.8%2010.3%2019.5L12%2016.5L13.7%2019.5C14.5%2020.8%2016.3%2020.5%2016.5%2019C17%2016%2018%2013%2018%209.5C18%206%2015.5%204%2012%204Z'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
-.treatment-copy p {
-  margin-bottom: 0.9rem;
-}
-
-.treatment-copy p:last-child {
-  margin-bottom: 0;
+.content:has(.treatment-list-marker) h2:first-of-type {
+  margin-top: 2.5rem;
+  border-top: none;
 }
 
 /* ---------- 13. TECHNOLÓGIA – PARALLAX KÉPSÁVOK ---------- */
