@@ -19,10 +19,6 @@ disableKinds = ['taxonomy', 'term']
     url = '/rolunk/'
     weight = 20
   [[menus.main]]
-    name = 'Betegségek'
-    url = '/betegsegek/'
-    weight = 30
-  [[menus.main]]
     name = 'Vizsgálatok'
     url = '/vizsgalatok/'
     weight = 40
@@ -35,8 +31,8 @@ disableKinds = ['taxonomy', 'term']
     url = '/technologia/'
     weight = 60
   [[menus.main]]
-    name = 'Új páciensek'
-    url = '/uj-paciensek/'
+    name = 'Első látogatás'
+    url = '/elso-latogatas/'
     weight = 70
   [[menus.main]]
     name = 'Kapcsolat'

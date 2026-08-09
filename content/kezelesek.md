@@ -2,15 +2,11 @@
 title: "Kezelések"
 ---
 
-## Biológiai kezelések és szolgáltatások az Aiki Dent Fogászatban
-
-Az Aiki Dent Fogászatban minden tevékenységünk a küldetésünkön alapul: olyan empatikus, biológiai alapú fogászati ellátást nyújtani, amely az embert egészében támogatja.
-
-Hiszünk abban, hogy a szájápolás szorosan összefügg az általános egészségi állapottal és átgondolt, integrált fogászati kezelésünk révén segítünk pácienseinknek abban, hogy magabiztosságot, önbizalmat és egész életen át tartó vitalitást nyerjenek.
-
-Munkánkat alapvető értékeink vezérlik: integritás minden cselekedetben, jelenlét és együttérzés, kíváncsiság és fejlődés, felelősségvállalás, valamint az egyéniség helyett az együttműködés.
+Biológiai alapú kezelések, amelyek az egész embert támogatják – nem csak a fogat.
 
 ## Akupunktúra
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ## Amalgámtömések biztonságos eltávolítása
 
@@ -38,17 +34,15 @@ A régi fémkoronákat biztonságosan kicseréljük fémmentes, biokompatibilis 
 
 ## Fogeltávolítás
 
-Ha egy fogat el kell távolítani, kíméletes, a szervezetet támogató módszert alkalmazunk. Huggins fogeltávolítási protokolon alapul és PRF-fel (vérlemezkékben gazdag fibrin) fertőtlenítjük és tápláljuk a területet, hogy elősegítsük a csont megfelelő gyógyulását, és minimalizáljuk a tartós fertőzés vagy kavitáció kialakulásának kockázatát. Kiegészítő kezelések is rendelkezésre állnak az immunrendszer és a természetes gyógyulás támogatására.
+Ha egy fogat el kell távolítani, kíméletes, a szervezetet támogató módszert alkalmazunk. Huggins fogeltávolítási protokollon alapul, és PRF-fel (vérlemezkékben gazdag fibrin) fertőtlenítjük és tápláljuk a területet, hogy elősegítsük a csont megfelelő gyógyulását, és minimalizáljuk a tartós fertőzés vagy kavitáció kialakulásának kockázatát. Kiegészítő kezelések is rendelkezésre állnak az immunrendszer és a természetes gyógyulás támogatására.
 
-## Fotodinámiás lézerterápia (PDT-Photodynamic Laser Therapy)
+## Fotodinámiás lézerterápia (PDT)
 
-Már kialakult fogágybetegség és az implantátumok mellett fellépő gyulladások kezelésére,
-
-a folyamat lassítását célzó eljárás, melynek során tisztítást követően a tasakot fenntartó baktériumokat lézerfénnyel szemben érzékennyé tesszük, majd lágylézerrel „megvilágítjuk” elpusztítva ezáltal a kórokozókat.
+Már kialakult fogágybetegség és az implantátumok mellett fellépő gyulladások kezelésére a folyamat lassítását célzó eljárás, melynek során tisztítást követően a tasakot fenntartó baktériumokat lézerfénnyel szemben érzékennyé tesszük, majd lágylézerrel „megvilágítjuk”, elpusztítva ezáltal a kórokozókat.
 
 Háromszori kezelést követően új, feszes hámtapadás jön létre, mely állapotot megfelelő szájhigiénével és rendszeres professzionális fogtisztítással hosszabb időn keresztül fenntarthatunk.
 
-A kezelés fájdalmatlan, mellékhatásoktól mentes és a tasak felszámolásáig ismételendő.
+A kezelés fájdalmatlan, mellékhatásoktól mentes, és a tasak felszámolásáig ismételendő.
 
 ## Higanymentes fogászat
 
@@ -60,11 +54,15 @@ Fogai biztonságos helyreállítása mérgező fémektől mentes anyagokkal.
 
 ## Homeopátia
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
 ## Lézeres fogászat
 
 Minimálisan invazív lézertechnológia, amely precízióval és kényelemmel támogatja fogászati kezeléseit.
 
 ## PRF membrán
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ## Természetes fogtisztítás
 

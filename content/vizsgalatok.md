@@ -2,51 +2,13 @@
 title: "Vizsgálatok"
 ---
 
-## 3D-s CBCT képalkotás
-
-Fejlett képalkotási technológia, amely lehetővé teszi a teljes kép megtekintését, amikor a hagyományos röntgenfelvételek nem elegendőek.
-
-## Átfogó fogászati vizsgálatok
-
-A rendszeres vizsgálatok segítik mosolyának egészségének és ragyogásának megőrzését. Javasoljuk, hogy félévente keressen fel minket.
-
-## Ételintolerancia vizsgálat
-
-## Fogászati anyagok allergia vizsgálata
-
-## Fogászati meridián-táblázat
-
-Minden fog kapcsolatban áll a test különböző szerveivel, mirigyeivel és energiacsatornáival. A fogászati meridiánok elveinek alkalmazásával feltárjuk a szájüregi egészségügyi problémák és a szisztémás tünetek közötti lehetséges összefüggéseket, így mélyebb betekintést nyerünk, és személyre szabottabb, az egész testet átfogó ellátást tudunk nyújtani.
-
-## Hajanalízis
-
-## Kavitációk (FDOJ/NICO) * diagnózis
-
-A kavitációk az állcsontban rejtőző fertőzések vagy rosszul gyógyuló területek, amelyek gyakran régi foghúzási vagy gyökérkezelési helyeken fordulnak elő. Bár helyi fájdalmat nem okoznak, csendben károsíthatják az immunrendszert, fáradtságot okozhatnak, vagy hozzájárulhatnak a krónikus gyulladás kialakulásához.
-
-## Nyelvdiagnosztika
-
-A nyelv testén egy ugyanolyan mikro-rendszer található, mint a fülkagyló belső részén, vagy a tenyerén illetve a talp belső területein. Az egyik legfontosabb kínai belgyógyászati kórmegállapító módszer. Alakját, méretét, felszínét, szélét, színét és mozgását vizsgáljuk. A nyelven észlelhető elváltozások, lerakódások, elszíneződések a megfelelő belső szervnek a bajára utalnak.
-
-## Sötétlátóteres mikroszkópos vérvizsgálat
-
-## Száj(üregi) akupunkturás diagnózis
-
-Speciális szájüregi pontokba adott mikroinjekciókkal gyors gyógyulást lehet elérni.
-
-## Szájüregi galvánáram mérése
-
-A szájban levő fémek között kialakuló áram az idegi és akupunktúrás rendszer károsodásához vezethet!
-
-## Szájüreg mikroszkópos vizsgálata
-
----
+Rendelőnk diagnosztikáját a modern eszközpark és a holisztikus szemlélet együttese adja: előbb feltárjuk és megértjük a problémát, csak utána javasolunk bármit.
 
 ## 3D-s CBCT képalkotás
 
 Fejlett képalkotás a biztonságosabb, teljes testre kiterjedő fogászati ellátásért.
 
-Az Aiki-Dent Fogászatnál hisszük, hogy a tisztán látható képek jobb ellátást tesznek lehetővé. 3D-s fogászati kúpos sugárnyalábos képalkotási technológiánk segítségével többet láthatunk, mint a hagyományos röntgenfelvételekkel – ez segít nekünk a rejtett problémák felismerésében, a kezelések pontosabb megtervezésében, valamint az Ön általános egészségének magabiztos védelmében.
+Az Aiki Dent Fogászatnál hisszük, hogy a tisztán látható képek jobb ellátást tesznek lehetővé. 3D-s fogászati kúpos sugárnyalábos képalkotási technológiánk segítségével többet láthatunk, mint a hagyományos röntgenfelvételekkel – ez segít nekünk a rejtett problémák felismerésében, a kezelések pontosabb megtervezésében, valamint az Ön általános egészségének magabiztos védelmében.
 
 Ez a hatékony diagnosztikai eszköz támogatja küldetésünket, hogy átfogó, biológiai alapú fogászati ellátást nyújtsunk, amely az egész embert kezeli, nem csupán a tüneteket.
 
@@ -67,7 +29,7 @@ Mivel alacsony sugárterhelésű, rendkívül fókuszált kúpos sugártechnoló
 - Idegpályák: segítenek elkerülni az idegkárosodást foghúzás vagy egyéb beavatkozások során
 - A légutak felépítése: segíthet a légúti problémák vagy az alvási légzési rendellenességek szűrésében
 
-### Miért alkalmazzuk a kúpos sugárnyalábos képalkotást az Aiki-Dent Fogászatnál?
+### Miért alkalmazzuk a kúpos sugárnyalábos képalkotást?
 
 A teljes testre kiterjedő egészség iránti elkötelezettségünk azt jelenti, hogy a kezelés megkezdése előtt a lehető legteljesebb és legpontosabb információkra van szükségünk. Nem találgatunk – hanem alaposan felmérjük a helyzetet.
 
@@ -79,14 +41,14 @@ Ennek a képalkotási módszernek a használatával:
 - Megvédjük az érzékeny szöveteket, például az idegeket és a melléküregeket
 - Együttműködünk Önnel, hogy jól tájékozott, közös döntéseket hozzunk
 
-Ez összhangban áll az integritás, a kíváncsiság és a felelősségvállalás elvű alapértékeinkkel – így olyan ellátást nyújtunk Önnek, amely átlátható és az Ön egészségi állapotának teljes körű megértésén alapul.
+Ez összhangban áll az integritás, a kíváncsiság és a felelősségvállalás alapértékeinkkel – így olyan ellátást nyújtunk, amely átlátható és az Ön egészségi állapotának teljes körű megértésén alapul.
 
 ### Kényelmes, gyors vizsgálat
 
-- Gyors, fájdalommentes vizsgálat: Az egész folyamat körülbelül 20 másodpercet vesz igénybe
-- Minimális sugárterhelés: Alacsonyabb dózis, mint a hagyományos CT-vizsgálatoknál
-- Nincs szükség különleges előkészületre: Csak pihenjen és lélegezzen normálisan a vizsgálat alatt
-- Azonnali eredmények: A 3D-felvételeket azonnal áttekintjük Önnel, így Ön magabiztosnak és jól tájékozottnak érezheti magát
+- **Gyors, fájdalommentes vizsgálat:** az egész folyamat körülbelül 20 másodpercet vesz igénybe
+- **Minimális sugárterhelés:** alacsonyabb dózis, mint a hagyományos CT-vizsgálatoknál
+- **Nincs szükség különleges előkészületre:** csak pihenjen és lélegezzen normálisan a vizsgálat alatt
+- **Azonnali eredmények:** a 3D-felvételeket azonnal áttekintjük Önnel, így magabiztosnak és jól tájékozottnak érezheti magát
 
 ### Mikor ajánlott a kúpos sugárnyalábos képalkotás?
 
@@ -99,3 +61,51 @@ A következő esetekben javasolhatunk CBCT-vizsgálatot:
 - Olyan, az egész testet érintő tünetekre keres választ, amelyek lehetséges, hogy a szájüregből erednek
 
 Az egészsége túl fontos ahhoz, hogy a véletlenre bízza!
+
+[Időpontfoglalás telefonon](tel:+36301932714)
+
+---
+
+## Átfogó fogászati vizsgálatok
+
+A rendszeres vizsgálatok segítik mosolyának egészségének és ragyogásának megőrzését. Javasoljuk, hogy félévente keressen fel minket.
+
+## Ételintolerancia vizsgálat
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+## Fogászati anyagok allergia vizsgálata
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+## Fogászati meridián-táblázat
+
+Minden fog kapcsolatban áll a test különböző szerveivel, mirigyeivel és energiacsatornáival. A fogászati meridiánok elveinek alkalmazásával feltárjuk a szájüregi egészségügyi problémák és a szisztémás tünetek közötti lehetséges összefüggéseket, így mélyebb betekintést nyerünk, és személyre szabottabb, az egész testet átfogó ellátást tudunk nyújtani.
+
+## Hajanalízis
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+## Kavitációk (FDOJ/NICO) – diagnózis
+
+A kavitációk az állcsontban rejtőző fertőzések vagy rosszul gyógyuló területek, amelyek gyakran régi foghúzási vagy gyökérkezelési helyeken fordulnak elő. Bár helyi fájdalmat nem okoznak, csendben károsíthatják az immunrendszert, fáradtságot okozhatnak, vagy hozzájárulhatnak a krónikus gyulladás kialakulásához.
+
+## Nyelvdiagnosztika
+
+A nyelv testén egy ugyanolyan mikro-rendszer található, mint a fülkagyló belső részén, a tenyerén vagy a talp belső területein. Az egyik legfontosabb kínai belgyógyászati kórmegállapító módszer. Alakját, méretét, felszínét, szélét, színét és mozgását vizsgáljuk. A nyelven észlelhető elváltozások, lerakódások, elszíneződések a megfelelő belső szervnek a bajára utalnak.
+
+## Sötétlátóteres mikroszkópos vérvizsgálat
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+## Száj(üregi) akupunktúrás diagnózis
+
+Speciális szájüregi pontokba adott mikroinjekciókkal gyors gyógyulást lehet elérni.
+
+## Szájüregi galvánáram mérése
+
+A szájban levő fémek között kialakuló áram az idegi és akupunktúrás rendszer károsodásához vezethet!
+
+## Szájüreg mikroszkópos vizsgálata
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

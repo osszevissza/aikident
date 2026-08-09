@@ -2,9 +2,7 @@
 title: "Technológia"
 ---
 
-A legmodernebb fogászati technológia.
-
-Egyedülálló technikai felszereltséggel támogatott diagnosztika.
+A legmodernebb fogászati technológia – egyedülálló technikai felszereltséggel támogatott diagnosztika.
 
 ## Zeiss Extaro 300
 
@@ -13,21 +11,18 @@ Magyarországon az első készülék!
 Az alábbi fogászati beavatkozások során használjuk rendelőnkben:
 
 - mikroszkópos fogorvosi állapotfelmérés (szájüreg, fogak, íny), kamerás felvétel készítése és elemzése
-- fogkőeltávolítás, tömés, győkérkezelés, sebészeti beavatkozás
+- fogkőeltávolítás, tömés, gyökérkezelés, sebészeti beavatkozás
 
 ### Miért jobb a mikroszkópos kezelés, mint a hagyományos?
 
-Megelőzésre koncentrálunk.
-
-Minimális foganyag veszteséggel dolgozunk.
-
-A mikroszkóppal végzett kezelések, pontosságuk miatt a legprecízebb módon elvégzett beavatkozások közé tartoznak.
-
-A régen készült gyökértömések mikroszkóp segítségével jó eséllyel eltávolíthatóak.
+- Megelőzésre koncentrálunk.
+- Minimális foganyag-veszteséggel dolgozunk.
+- A mikroszkóppal végzett kezelések pontosságuk miatt a legprecízebb módon elvégzett beavatkozások közé tartoznak.
+- A régen készült gyökértömések mikroszkóp segítségével jó eséllyel eltávolíthatók.
 
 ## CBCT-vizsgálat
 
-Fejlett képalkotó technológia, amely lehetővé teszi a teljes kép megismerését, amikor a hagyományos röntgenfelvételek nem elegendőek.
+A rendelő zászlóshajója: 3D-s képalkotás, amely a felszín alá lát. [Részletesen a Vizsgálatok oldalon](/vizsgalatok/).
 
 ## Digitális röntgenfelvételek
 
