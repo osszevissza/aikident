@@ -1,5 +1,6 @@
 ---
 title: "Kezelések"
+content_layout: two-col
 ---
 
 Biológiai alapú kezelések, amelyek az egész embert támogatják – nem csak a fogat.

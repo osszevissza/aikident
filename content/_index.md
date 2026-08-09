@@ -5,7 +5,7 @@ lead: "3D-s CBCT-diagnosztika és biológiai szemlélet – a felszín alá lát
 
 ## Látjuk, amit a hagyományos röntgen nem mutat
 
-A CBCT (3D-s kúpos sugárnyalábos képalkotás) a rendelő zászlóshajója. Egyetlen, körülbelül 20 másodperces, fájdalommentes vizsgálat alatt részletes 3D-s képet kapunk a fogakról, az állkapocsról, a melléküregekről, az idegekről és a csontszerkezetről – minimális sugárterheléssel, különösebb előkészület nélkül.
+A CBCT 3D-s kúpos sugárnyalábos képalkotás. Egyetlen, körülbelül 20 másodperces, fájdalommentes vizsgálat alatt részletes 3D-s képet kapunk a fogakról, az állkapocsról, a melléküregekről, az idegekről és a csontszerkezetről – minimális sugárterheléssel, különösebb előkészület nélkül.
 
 **Ha fájdalma van, amire eddig nem kapott választ** – a hagyományos röntgenfelvétel sok mindent nem láttat: rejtett fertőzéseket, gyökérkezelési hibákat, az állcsontban rejtőző kavitációkat, sinusproblémákat. A CBCT ezeket is megmutatja, mielőtt bármilyen beavatkozásba kezdenénk.
 
@@ -61,4 +61,4 @@ Beszéljük meg a panaszait, és mondjuk el, miben segíthetünk.
 
 **Aiki Dent Fogászat** · 1136 Budapest, Hegedűs Gyula utca 29/b
 
-[**+36 30 193 2714**](tel:+36301932714) · [Időpontfoglalás](/kapcsolat/)
+[**+36 30 193 2714**](tel:+36301932714)

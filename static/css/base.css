@@ -180,6 +180,18 @@ figure { margin: 0; }
   align-items: center;
 }
 
+.content h2 {
+  margin-top: 3rem;
+  padding-top: 2rem;
+
+  border-top: 3px solid rgb(126 236 206 / 55%);
+}
+
+.content h2:first-of-type {
+  margin-top: 2.5rem;
+  border-top: none;
+}
+
 /* ---------- 07. FEJLÉC ---------- */
 
 .site-header {

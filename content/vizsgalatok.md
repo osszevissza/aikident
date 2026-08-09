@@ -64,7 +64,6 @@ Az egészsége túl fontos ahhoz, hogy a véletlenre bízza!
 
 [Időpontfoglalás telefonon](tel:+36301932714)
 
----
 
 ## Átfogó fogászati vizsgálatok
 

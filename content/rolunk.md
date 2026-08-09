@@ -14,7 +14,7 @@ Dr. Kelemen László fogorvos, a rendelő tulajdonosa. A holisztikus és biológ
 
 A SOTE Fogorvostudományi Karán szerzett diplomát, majd a magyarországi biológiai fogászat vezető szakértőitől tanult, többek között Dr. Csiszár Róberttől. Az amerikai IAOMT (International Academy of Oral Medicine and Toxicology) és az új MOK tagja.
 
-Dr. Eőry Ajándék által vezetett budapesti Kínai Klinikán hagyományos kínai orvosi diplomát szerzett; mesterei kínai professzorok és a világhírű Pálos István professzor voltak.
+Dr. Eőry Ajándok által vezetett budapesti Kínai Klinikán hagyományos kínai orvosi diplomát szerzett; mesterei kínai professzorok és a világhírű Pálos István professzor voltak.
 
 Természetgyógyászati végzettséggel, akupunktúrás szakvizsgával (HIETE), valamint lézerterapeuta és fülakupunktőr szakképzettséggel is rendelkezik. Folyamatosan képezi magát az integrált orvoslás szemléletének és módszereinek területén.
 
@@ -54,4 +54,4 @@ A holisztikus fogászat mellett döntve tudatos választást tesz, amellyel nemc
 
 Nem csupán fogakat kezelünk, hanem segítünk az embereknek abban, hogy egészségesebb, teljesebb életet éljenek. Az integritás, az együttérzés, a kíváncsiság, a felelősségvállalás és az együttműködés alapértékeink által vezérelve olyan ellátást nyújtunk, amely átgondolt, tiszteletteljes és valóban a páciensre összpontosít.
 
-**Foglaljon időpontot még ma, és tegye meg az első lépést egy egészségesebb, ragyogóbb önmaga felé.**
+**Foglaljon időpontot még ma, és tegye meg az első lépést egy egészségesebb, ragyogóbb mosoly felé.**
