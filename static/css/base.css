@@ -468,6 +468,11 @@ figure { margin: 0; }
     overflow: hidden;
 
     will-change: transform, opacity;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    overflow: hidden;
+    transform: translateY(-235px) scaleY(1.07);
   }
 
   .nav-wrapper.is-open {

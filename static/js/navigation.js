@@ -16,27 +16,30 @@
 
   function dropIn() {
     cancelAnimationFrame(raf);
-
+    // Előbb a linkek rejtése, utána a panel megmutatása.
     links.forEach(a => {
       a.style.opacity = 0;
       a.style.transform = 'translateX(-18px)';
     });
     panel.classList.add('is-open');
     panel.style.opacity = 1;
-
-
+    // Kezdőpozíció azonnal (fentről érkezik), hogy ne villanhasson
+    // be a panel a végső helyén az animáció első képkockája előtt.
+    panel.style.transform = 'translate3d(0,-235px,0) scaleY(1.07)';
     if (reduce) {
       panel.style.transform = 'translateY(0) scaleY(1) scaleX(1)';
       revealLinks(0);
       return;
     }
-
-    let y = -235;      // fentről érkezik
-    let v = 0;         // sebesség
+    let y = -235;
+    let v = 0;
     const gravity = 1850;
     const bounce = 0.47;
     const floor = 0;
     last = performance.now();
+    function frame(now) {
+    }
+
 
     function frame(now) {
       const dt = Math.min((now - last) / 1000, 0.032);
@@ -78,7 +81,7 @@
       if (t < 1) raf = requestAnimationFrame(frame);
       else {
         panel.style.transform = 'translate3d(0,0,0) scale(1)';
-        revealLinks(25);
+        revealLinks(0);
       }
     }
     raf = requestAnimationFrame(frame);
@@ -91,7 +94,7 @@
         'transform .38s cubic-bezier(.16,1,.3,1), opacity .22s ease';
         a.style.opacity = 1;
         a.style.transform = 'translateX(0)';
-      }, delay + i * 32);
+      }, delay + i * 18);
     });
   }
 
