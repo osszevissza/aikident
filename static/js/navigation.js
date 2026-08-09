@@ -39,8 +39,8 @@
 
     let y = -235;
     let v = 0;
-    const gravity = 1850;
-    const bounce = 0.47;
+    const gravity = 2700;   // gyorsabb zuhanás (volt 1850)
+    const bounce = 0.35;    // laposabb pattanások (volt 0.47)
     const floor = 0;
     last = performance.now();
 
@@ -53,7 +53,7 @@
       if (y >= floor) {
         y = floor;
         v = -v * bounce;
-        if (Math.abs(v) < 150) {
+        if (Math.abs(v) < 260) {
           v = 0;
           settle();
           return;
@@ -73,7 +73,7 @@
 
   function settle() {
     const start = performance.now();
-    const dur = 180;
+    const dur = 110;
     function ease(t) { return 1 - Math.pow(1 - t, 3); }
     function frame(now) {
       const t = Math.min(1, (now - start) / dur);
