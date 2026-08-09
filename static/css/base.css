@@ -643,7 +643,9 @@ figure { margin: 0; }
   transition: width 0.25s ease;
 }
 
-.treatment-item:hover::after {
+
+.treatment-item:hover::after,
+.treatment-item:focus-within::after {
   width: 100%;
 }
 
