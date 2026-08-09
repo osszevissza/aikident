@@ -580,3 +580,118 @@ figure { margin: 0; }
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- 12. KEZELÉSEK – EDITORIAL PRÓBA ---------- */
+
+/* Csak azon a tartalmon aktiválódik, ahol a próba-marker szerepel. */
+.content:has(.treatment-list-marker) {
+  max-width: min(100%, 1040px);
+}
+
+.treatment-list-marker {
+  height: 0;
+}
+
+.content:has(.treatment-list-marker) {
+  counter-reset: treatment;
+}
+
+.treatment-item {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  width: min(82%, 760px);
+  margin-block: clamp(1.25rem, 3vw, 2rem);
+  padding: clamp(1.5rem, 4vw, 2.6rem);
+
+  border: 1px solid var(--color-line);
+  border-radius: 0.9rem;
+  background: var(--color-surface);
+
+  counter-increment: treatment;
+}
+
+.treatment-item:nth-of-type(even) {
+  margin-left: auto;
+}
+
+.treatment-item::before {
+  content: counter(treatment, decimal-leading-zero);
+
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  z-index: -1;
+
+  color: rgb(129 19 49 / 10%);
+  font-family: var(--font-family-title);
+  font-size: clamp(4.5rem, 10vw, 8rem);
+  line-height: 0.8;
+}
+
+.treatment-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 34%;
+  height: 4px;
+  background: var(--color-accent);
+
+  transition: width 0.25s ease;
+}
+
+.treatment-item:hover::after {
+  width: 100%;
+}
+
+.treatment-title {
+  max-width: 82%;
+  margin: 0 0 1rem;
+  padding: 0;
+  border: 0;
+
+  color: var(--color-primary);
+  font-size: clamp(1.45rem, 3vw, 2.15rem);
+}
+
+.treatment-copy {
+  max-width: 62ch;
+}
+
+.treatment-copy p {
+  margin-bottom: 0.9rem;
+}
+
+.treatment-copy p:last-child {
+  margin-bottom: 0;
+}
+
+/* Enyhe ritmusváltás: minden harmadik blokk bordó felületet kap. */
+.treatment-item:nth-of-type(3n) {
+  background: var(--color-primary);
+  color: var(--color-bg);
+  border-color: var(--color-primary);
+}
+
+.treatment-item:nth-of-type(3n) .treatment-title {
+  color: var(--color-accent);
+}
+
+.treatment-item:nth-of-type(3n)::before {
+  color: rgb(126 236 206 / 12%);
+}
+
+@media (max-width: 700px) {
+  .treatment-item,
+  .treatment-item:nth-of-type(even) {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .treatment-title {
+    max-width: 88%;
+  }
+}
