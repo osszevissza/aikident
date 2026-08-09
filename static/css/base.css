@@ -714,14 +714,12 @@ figure { margin: 0; }
 }
 
 .parallax-image {
-
   position: relative;
 
-  width: 100vw;
+  width: min(calc(100% - 2rem), var(--content-max-width));
   height: clamp(320px, 58vh, 620px);
 
-  margin: clamp(4rem, 9vw, 7rem) 0;
-  margin-left: calc(50% - 50vw);
+  margin: clamp(4rem, 9vw, 7rem) auto;
 
   overflow: hidden;
 
