@@ -447,61 +447,38 @@ figure { margin: 0; }
     place-items: center;
   }
 
+  /* Mobil menü panel – a gravitációs animáció ehhez kötődik */
   .nav-wrapper {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: calc(100% + 0.6rem);
+    left: 1rem;
+    right: 1rem;
     z-index: 100;
 
-    width: 100%;
+    background: var(--color-primary);
+    border: 1px solid rgb(126 236 206 / 25%);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    box-shadow: 0 22px 55px rgb(0 0 0 / 18%);
 
-    background: rgb(129 19 49 / 70%);
-    backdrop-filter: blur(10px);
-
+    transform-origin: 50% 0;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    overflow: hidden;
 
-    transform: translateY(-1rem);
-
-    transition:
-    opacity 0.2s ease,
-    visibility 0.45s;
+    will-change: transform, opacity;
   }
 
-  .nav-wrapper:has(.menu-list.is-open) {
-    opacity: 1;
+  .nav-wrapper.is-open {
     visibility: visible;
     pointer-events: auto;
-
-    animation: menu-drop 0.46s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  @keyframes menu-drop {
-    0% {
-      transform: translateY(-1.25rem);
-      opacity: 0;
-    }
-
-    68% {
-      transform: translateY(0.3rem);
-      opacity: 1;
-    }
-
-    84% {
-      transform: translateY(-0.1rem);
-    }
-
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
   }
 
   .menu-list {
-    width: min(calc(100% - 2rem), var(--content-max-width));
+    width: 100%;
     margin-inline: auto;
-    padding-block: 0.75rem;
+    padding: 0;
 
     flex-direction: column;
     gap: 0;
@@ -511,9 +488,72 @@ figure { margin: 0; }
     width: 100%;
   }
 
+  /* Link sorok – a desktop aláhúzás a panelben nem kell */
   .menu-list a {
-    display: block;
-    padding-block: 0.75rem;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 54px;
+    padding: 0 1rem;
+    border-radius: 0.75rem;
+
+    border: 0;
+  }
+
+  .menu-list a:hover,
+  .menu-list a:focus-visible {
+    border-bottom-color: transparent;
+  }
+
+  .menu-list a[aria-current="page"] {
+    border-bottom: 0;
+    font-weight: 700;
+  }
+
+  /* Hover sweep – a barátod animációjának nyoma */
+  .menu-list a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: var(--color-accent);
+
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.34s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .menu-list a:hover::before,
+  .menu-list a:focus-visible::before {
+    transform: scaleX(1);
+  }
+
+  .menu-list a:hover,
+  .menu-list a:focus-visible {
+    color: var(--color-primary);
+  }
+
+  /* Kattintással bezáró háttér-felület */
+  .nav-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+
+    background: rgb(0 0 0 / 20%);
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.2s ease;
+  }
+
+  .nav-backdrop.is-visible {
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .intro-grid,
