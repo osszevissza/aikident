@@ -267,7 +267,8 @@ figure { margin: 0; }
   margin-inline: auto;
 
   display: flex;
-  gap: 1.1rem;
+  justify-content: center;
+  gap: 2.5rem;
   flex-wrap: wrap;
 
   padding: 1rem 0;
@@ -581,86 +582,39 @@ figure { margin: 0; }
   }
 }
 
-/* ---------- 12. KEZELÉSEK – EDITORIAL PRÓBA ---------- */
-
-/* Csak azon a tartalmon aktiválódik, ahol a próba-marker szerepel. */
-.content:has(.treatment-list-marker) {
-  max-width: min(100%, 1040px);
-}
-
-.treatment-list-marker {
-  height: 0;
-}
+/* ---------- 12. KEZELÉSEK – levegős lista + fogikon ---------- */
 
 .content:has(.treatment-list-marker) {
-  counter-reset: treatment;
+  max-width: min(100%, 940px);
 }
 
 .treatment-item {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-
-  width: min(82%, 760px);
-  margin-block: clamp(1.25rem, 3vw, 2rem);
-  padding: clamp(1.5rem, 4vw, 2.6rem);
-
-  border: 1px solid var(--color-line);
-  border-radius: 0.9rem;
-  background: var(--color-surface);
-
-  counter-increment: treatment;
+  margin-block: clamp(1.75rem, 4vw, 2.75rem);
 }
 
-.treatment-item:nth-of-type(even) {
-  margin-left: auto;
-}
-
-.treatment-item::before {
-  content: counter(treatment, decimal-leading-zero);
-
-  position: absolute;
-  top: 1rem;
-  right: 1.2rem;
-  z-index: -1;
-
-  color: rgb(129 19 49 / 10%);
-  font-family: var(--font-family-title);
-  font-size: clamp(4.5rem, 10vw, 8rem);
-  line-height: 0.8;
-}
-
-.treatment-item::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-
-  width: 34%;
-  height: 4px;
-  background: var(--color-accent);
-
-  transition: width 0.25s ease;
-}
-
-
-.treatment-item:hover::after,
-.treatment-item:focus-within::after {
-  width: 100%;
-}
-
+/* Cím + fogak */
 .treatment-title {
-  max-width: 82%;
-  margin: 0 0 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+
+  margin: 0 0 0.9rem;
   padding: 0;
   border: 0;
 
   color: var(--color-primary);
-  font-size: clamp(1.45rem, 3vw, 2.15rem);
+  font-size: clamp(1.4rem, 3vw, 2rem);
 }
 
-.treatment-copy {
-  max-width: 62ch;
+.treatment-title::before {
+  content: "";
+  flex: 0 0 auto;
+
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-top: 0.28em;
+
+  background: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%230e7c62'%20stroke-width='1.7'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M12%204C8.5%204%206%206%206%209.5C6%2013%207%2016%207.5%2019C7.7%2020.5%209.5%2020.8%2010.3%2019.5L12%2016.5L13.7%2019.5C14.5%2020.8%2016.3%2020.5%2016.5%2019C17%2016%2018%2013%2018%209.5C18%206%2015.5%204%2012%204Z'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 .treatment-copy p {
@@ -669,33 +623,6 @@ figure { margin: 0; }
 
 .treatment-copy p:last-child {
   margin-bottom: 0;
-}
-
-/* Enyhe ritmusváltás: minden harmadik blokk bordó felületet kap. */
-.treatment-item:nth-of-type(3n) {
-  background: var(--color-primary);
-  color: var(--color-bg);
-  border-color: var(--color-primary);
-}
-
-.treatment-item:nth-of-type(3n) .treatment-title {
-  color: var(--color-accent);
-}
-
-.treatment-item:nth-of-type(3n)::before {
-  color: rgb(126 236 206 / 12%);
-}
-
-@media (max-width: 700px) {
-  .treatment-item,
-  .treatment-item:nth-of-type(even) {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .treatment-title {
-    max-width: 88%;
-  }
 }
 
 /* ---------- 13. TECHNOLÓGIA – PARALLAX KÉPSÁVOK ---------- */
