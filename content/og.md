@@ -20,8 +20,6 @@ Az alábbi fogászati beavatkozások során használjuk rendelőnkben:
 - A mikroszkóppal végzett kezelések pontosságuk miatt a legprecízebb módon elvégzett beavatkozások közé tartoznak.
 - A régen készült gyökértömések mikroszkóp segítségével jó eséllyel eltávolíthatók.
 
-{{< parallax_image src="/img/demo4.webp" alt="Lézeres fogászat – demókép" >}}
-
 ## CBCT-vizsgálat
 
 A rendelő zászlóshajója: 3D-s képalkotás, amely a felszín alá lát. [Részletesen a Vizsgálatok oldalon](/vizsgalatok/).
@@ -33,8 +31,6 @@ A digitális röntgenfelvételeknél a hagyományos film helyett digitális kép
 ## Lézeres fogászat
 
 Minimálisan invazív lézertechnológia, amely precízióval és kényelemmel támogatja fogászati kezeléseit.
-
-{{< parallax_image src="/img/demo3.webp" alt="Digitális röntgen – demókép" >}}
 
 ## Ózonterápia
 

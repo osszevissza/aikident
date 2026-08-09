@@ -697,3 +697,76 @@ figure { margin: 0; }
     max-width: 88%;
   }
 }
+
+/* ---------- 13. TECHNOLÓGIA – PARALLAX KÉPSÁVOK ---------- */
+
+.content:has(.parallax-image) {
+  max-width: none;
+}
+
+.content:has(.parallax-image) > h2,
+.content:has(.parallax-image) > h3,
+.content:has(.parallax-image) > p,
+.content:has(.parallax-image) > ul {
+  width: min(calc(100% - 2rem), 820px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.parallax-image {
+
+  position: relative;
+
+  width: 100vw;
+  height: clamp(320px, 58vh, 620px);
+
+  margin: clamp(4rem, 9vw, 7rem) 0;
+  margin-left: calc(50% - 50vw);
+
+  overflow: hidden;
+
+  background-image:
+  linear-gradient(
+    rgb(129 19 49 / 55%),
+                  rgb(129 19 49 / 55%)
+  ),
+  var(--parallax-image);
+
+  background-blend-mode: color;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.parallax-image-fallback {
+  display: none;
+}
+
+
+/* Mobil – egyelőre ugyanazt az effektet próbáljuk */
+
+@media (max-width: 860px) {
+  .parallax-image {
+    height: clamp(280px, 65vh, 520px);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* direkt próbáljuk a fixedet mobilon is */
+    background-attachment: fixed;
+  }
+
+  .parallax-image-fallback {
+    display: none;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .parallax-image {
+    background-attachment: scroll;
+  }
+}

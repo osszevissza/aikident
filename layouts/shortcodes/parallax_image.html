@@ -1,0 +1,6 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+
+<figure class="parallax-image" style="--parallax-image: url('{{ $src }}');">
+  <img src="{{ $src }}" alt="{{ $alt }}" class="parallax-image-fallback">
+</figure>
