@@ -1,0 +1,23 @@
+{{- $image := .Get "image" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $title := .Get "title" -}}
+{{- $link := .Get "link" -}}
+{{- $linktext := .Get "linktext" | default "Részletek" -}}
+
+<article class="technology-card">
+  <div class="technology-card__media">
+    <img src="{{ $image }}" alt="{{ $alt }}" loading="lazy">
+  </div>
+
+  <div class="technology-card__content">
+    <h2 class="technology-card__title">{{ $title }}</h2>
+
+    <div class="technology-card__copy">
+      {{ .Inner | markdownify }}
+    </div>
+
+    {{- with $link }}
+      <a class="button technology-card__button" href="{{ . }}">{{ $linktext }}</a>
+    {{- end }}
+  </div>
+</article>
