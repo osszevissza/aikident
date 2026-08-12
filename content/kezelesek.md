@@ -6,6 +6,7 @@ Biológiai alapú kezelések, amelyek az egész embert támogatják – nem csak
 
 <div class="treatment-list-marker"></div>
 
+
 ## Akupunktúra
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

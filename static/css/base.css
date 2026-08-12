@@ -582,39 +582,116 @@ figure { margin: 0; }
   }
 }
 
-/* ---------- 12. KEZELÉSEK – levegős lista + fogikon ---------- */
+/* ---------- 12. KEZELÉSEK – levegős lista + ikonok ---------- */
 
 .content:has(.treatment-list-marker) {
   max-width: min(100%, 940px);
 }
 
+/* Kezelés címe */
+
 .content:has(.treatment-list-marker) h2 {
   display: flex;
-  align-items: flex-start;
-  gap: 0.8rem;
+  align-items: center;
+  gap: 1.25rem;
 
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 3px solid rgb(126 236 206 / 55%);
+
+  border-top: 2px solid rgb(126 236 206 / 40%);
 
   color: var(--color-primary);
   font-size: clamp(1.4rem, 3vw, 2rem);
 }
 
+/* Közös ikon */
+
 .content:has(.treatment-list-marker) h2::before {
   content: "";
+
   flex: 0 0 auto;
 
-  width: 1.8rem;
-  height: 1.8rem;
-  margin-top: 0.28em;
+  width: 3rem;
+  height: 3rem;
 
-  background: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%230e7c62'%20stroke-width='1.7'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M12%204C8.5%204%206%206%206%209.5C6%2013%207%2016%207.5%2019C7.7%2020.5%209.5%2020.8%2010.3%2019.5L12%2016.5L13.7%2019.5C14.5%2020.8%2016.3%2020.5%2016.5%2019C17%2016%2018%2013%2018%209.5C18%206%2015.5%204%2012%204Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  background-color: var(--color-primary);
+
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
 }
+
+
+/* ---------- IKON 1 – levél ---------- */
+
+.content:has(.treatment-list-marker) h2:nth-of-type(4n + 1)::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M19 4C12 4 6 8 6 14c0 3 2 5 5 5 6 0 9-7 8-15ZM5 20c3-5 7-8 12-11'/%3E%3C/svg%3E");
+
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M19 4C12 4 6 8 6 14c0 3 2 5 5 5 6 0 9-7 8-15ZM5 20c3-5 7-8 12-11'/%3E%3C/svg%3E");
+}
+
+
+/* ---------- IKON 2 – pajzs ---------- */
+
+.content:has(.treatment-list-marker) h2:nth-of-type(4n + 2)::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M12 3 19 6v5c0 4.8-2.8 8.2-7 10-4.2-1.8-7-5.2-7-10V6l7-3Z M9 12l2 2 4-5'/%3E%3C/svg%3E");
+
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M12 3 19 6v5c0 4.8-2.8 8.2-7 10-4.2-1.8-7-5.2-7-10V6l7-3Z M9 12l2 2 4-5'/%3E%3C/svg%3E");
+}
+
+
+/* ---------- IKON 3 – ragyogás ---------- */
+
+.content:has(.treatment-list-marker) h2:nth-of-type(4n + 3)::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M12 3c.7 4.5 2.5 6.3 7 7-4.5.7-6.3 2.5-7 7-.7-4.5-2.5-6.3-7-7 4.5-.7 6.3-2.5 7-7ZM19 16c.3 2 1 2.7 3 3-2 .3-2.7 1-3 3-.3-2-1-2.7-3-3 2-.3 2.7-1 3-3Z'/%3E%3C/svg%3E");
+
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M12 3c.7 4.5 2.5 6.3 7 7-4.5.7-6.3 2.5-7 7-.7-4.5-2.5-6.3-7-7 4.5-.7 6.3-2.5 7-7ZM19 16c.3 2 1 2.7 3 3-2 .3-2.7 1-3 3-.3-2-1-2.7-3-3 2-.3 2.7-1 3-3Z'/%3E%3C/svg%3E");
+}
+
+
+/* ---------- IKON 4 – koncentrikus kör / technológia ---------- */
+
+.content:has(.treatment-list-marker) h2:nth-of-type(4n)::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-width='1.6'%3E%3Ccircle cx='12' cy='12' r='8'/%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3Ccircle cx='12' cy='12' r='1' fill='black'/%3E%3C/g%3E%3C/svg%3E");
+
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-width='1.6'%3E%3Ccircle cx='12' cy='12' r='8'/%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3Ccircle cx='12' cy='12' r='1' fill='black'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+/* ---------- SZÍNVÁLTÁS ---------- */
+
+.content:has(.treatment-list-marker) h2:nth-of-type(odd)::before {
+  background-color: var(--color-primary);
+}
+
+.content:has(.treatment-list-marker) h2:nth-of-type(even)::before {
+  background-color: var(--color-accent-strong);
+}
+
+
+/* Első kezelés fölött ne legyen elválasztó */
 
 .content:has(.treatment-list-marker) h2:first-of-type {
   margin-top: 2.5rem;
   border-top: none;
+}
+
+
+/* Mobil */
+
+@media (max-width: 860px) {
+  .content:has(.treatment-list-marker) h2 {
+    gap: 0.9rem;
+  }
+
+  .content:has(.treatment-list-marker) h2::before {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 
 /* ---------- 13. TECHNOLÓGIA – KÉP + SZÖVEG KÁRTYÁK PRÓBA ---------- */
@@ -698,4 +775,36 @@ figure { margin: 0; }
     max-width: none;
     padding: 1.5rem;
   }
+}
+
+/* =========================================================
+ *  14. INTRO / MEDIA GRID
+ * = *======================================================== */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 400px);
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 1.5rem;
+}
+
+.media-figure {
+  margin: 0;
+}
+
+.media-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+}
+
+/* ----- Intro grid finomítás ----- */
+.intro-grid > div > :first-child {
+  margin-top: 0;
+}
+
+.intro-grid .media-figure {
+  margin-top: 0.35rem;
 }
