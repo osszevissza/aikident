@@ -1,0 +1,11 @@
+{{- $styles := slice
+    (resources.Get "css/01-base.css")
+    (resources.Get "css/02-site-chrome.css")
+    (resources.Get "css/03-responsive.css")
+    (resources.Get "css/04-treatments.css")
+    (resources.Get "css/05-content-sections.css")
+-}}
+{{- $css := $styles | resources.Concat "css/main.css" | minify | fingerprint -}}
+<link rel="stylesheet"
+      href="{{ $css.RelPermalink }}"
+      integrity="{{ $css.Data.Integrity }}">

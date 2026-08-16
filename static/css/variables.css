@@ -1,0 +1,18 @@
+/* ---------- 01. VÁLTOZÓK ---------- */
+:root {
+  --color-bg: #f7f4ef;
+  --color-surface: #ffffff;
+
+  --color-text: #242220;
+  --color-muted: #6d6965;
+  --color-line: #ded9d2;
+
+  --color-primary: #811331; /* bordó */
+  --color-accent: #7eecce; /* türkiz – sötét (bordó) háttérre */
+  --color-accent-strong: #0e7c62; /* sötét türkiz – fókuszgyűrű világos alapon */
+
+  --font-family-base: "GeneralSans", system-ui, sans-serif;
+  --font-family-title: "Comfortaa", Georgia, serif;
+
+  --content-max-width: 1180px;
+}

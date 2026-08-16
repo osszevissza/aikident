@@ -1,0 +1,198 @@
+/* ---------- 07. FEJLÉC ---------- */
+
+.site-header {
+  position: relative;
+
+  background: var(--color-primary);
+  color: var(--color-accent);
+}
+
+.header-inner {
+  min-height: 110px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  width: min(calc(100% - 2rem), var(--content-max-width));
+  margin-inline: auto;
+}
+
+/* ---------- 07/A. BRAND ---------- */
+
+.site-brand {
+  display: inline-flex;
+  flex-direction: column;
+
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.logo-placeholder {
+  font-family: var(--font-family-title);
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  line-height: 1;
+}
+
+.brand-subtitle {
+  margin-top: 0.35rem;
+
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* ---------- 07/B. FEJLÉC MŰVELETEK ---------- */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.header-phone {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.header-phone:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+/* ---------- 07/C. NAVIGÁCIÓ ---------- */
+
+.nav-wrapper {
+  position: relative;
+  border-top: 1px solid rgb(126 236 206 / 25%);
+}
+
+.menu-list {
+  width: min(calc(100% - 2rem), var(--content-max-width));
+  margin-inline: auto;
+
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+
+  padding: 1rem 0;
+
+  list-style: none;
+}
+
+.menu-list a {
+  color: var(--color-accent);
+  text-decoration: none;
+
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid transparent;
+}
+
+.menu-list a:hover,
+.menu-list a:focus-visible {
+  border-bottom-color: var(--color-accent);
+}
+
+.menu-list a[aria-current="page"] {
+  border-bottom-width: 3px;
+  border-bottom-color: var(--color-accent);
+}
+
+/* ---------- 07/C. GOMBOK ---------- */
+
+.button {
+  display: inline-block;
+
+  padding: 0.75rem 1.1rem;
+
+  border: 1px solid var(--color-accent);
+  border-radius: 0.5rem;
+
+  background: var(--color-accent);
+  color: var(--color-primary);
+
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--color-primary);
+  color: var(--color-accent);
+}
+
+/* ---------- 08. FOOTER (bordó háttér, türkiz szöveg) ---------- */
+.site-footer {
+  margin-top: auto;
+  padding: 3rem 0 1.5rem;
+
+  background: var(--color-primary);
+  color: var(--color-accent);
+}
+
+.site-footer ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.site-footer a {
+  color: var(--color-accent);
+  text-decoration: none;
+
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid transparent;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  border-bottom-color: var(--color-accent);
+}
+
+.footer-title { font-weight: 700; }
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.copyright {
+  width: min(calc(100% - 2rem), var(--content-max-width));
+
+  margin: 3rem auto 0;
+  padding-top: 1.5rem;
+
+  border-top: 1px solid rgb(126 236 206 / 40%);
+
+  font-size: 0.9rem;
+}
+
+/* ---------- 09. VISSZA A TETEJÉRE (scroll) ---------- */
+.scroll-to-top {
+  position: fixed;
+  right: 1.2rem;
+  bottom: 1.2rem;
+  z-index: 100;
+
+  width: 44px;
+  height: 44px;
+
+  display: none;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--color-primary);
+  color: var(--color-accent);
+
+  text-decoration: none;
+}
+
+.scroll-to-top.is-visible { display: grid; }
+

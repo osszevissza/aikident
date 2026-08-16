@@ -1,0 +1,9 @@
+<section class="media-text">
+  <figure class="media-text__image">
+    <img src="{{ .Get "image" }}" alt="{{ .Get "alt" }}">
+  </figure>
+
+  <div class="media-text__content">
+    {{ .Inner | markdownify }}
+  </div>
+</section>

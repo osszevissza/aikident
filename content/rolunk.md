@@ -8,6 +8,7 @@ Az Aiki Dent Fogászatban minden tevékenységünk a küldetésünkön alapul: o
 
 Hiszünk abban, hogy a szájápolás szorosan összefügg az általános egészségi állapottal, és átgondolt, integrált fogászati kezelésünk révén segítünk pácienseinknek abban, hogy magabiztosságot, önbizalmat és egész életen át tartó vitalitást nyerjenek.
 
+
 ## Dr. Kelemen László
 
 Dr. Kelemen László fogorvos, a rendelő tulajdonosa. A holisztikus és biológiai szemlélet képezi a rendelő alapját, és ő az, aki ezt a gyakorlatban képviseli.
@@ -20,7 +21,9 @@ Természetgyógyászati végzettséggel, akupunktúrás szakvizsgával (HIETE), 
 
 Melegszívűsége, lelkesedése és gondoskodó természete tökéletesen illeszkedik ehhez a filozófiához — pácienseink barátságosnak, együttérzőnek és elkötelezettnek ismerik meg őt mind fogászati egészségük, mind általános jólétük iránt.
 
+
 ## Milyen fogászatot kínálunk?
+
 
 ### Általános fogászat
 Fogait és ínyét kemény vegyszerek használata nélkül ápoljuk, támogatva ezzel általános egészségi állapotát.
@@ -34,6 +37,7 @@ A fogászati ellátás egészségi megközelítése, amely támogatja a test, a 
 ### Integrált fogászat
 Szájegészsége szoros összefüggésben áll az általános közérzetével. Mi az embert egészében kezeljük, nem csupán a fogait.
 
+
 ## A holisztikus szemléletünk a gyakorlatban
 
 Minden páciensünket egyedi személyiségként kezeljük, és tudjuk, hogy az igazi gyógyulás túlmutat a tüneteken: az egyensúlyhiány alapvető okait kezeljük.
@@ -43,6 +47,7 @@ Minden páciensünket egyedi személyiségként kezeljük, és tudjuk, hogy az i
 - **A test egészének figyelembevétele:** Minden ajánlásunk figyelembe veszi az Ön általános jólétét, nem csak a fogait vagy az ínyét.
 - **Megelőzésre való összpontosítás:** Célunk, hogy segítsünk Önnek egészségesnek maradni, nem csak a betegségeket kezelni. Az oktatás, a táplálkozás és az életmód támogatása minden látogatás részét képezi.
 - **Együttműködés a kezelésben:** Időt szánunk arra, hogy meghallgassuk Önt, megválaszoljuk kérdéseit és bevonjuk Önt az egészségével kapcsolatos döntésekbe.
+
 
 ## Miért fontos ez?
 
