@@ -1,0 +1,10 @@
+{{- $title := .Get "title" -}}
+{{- $variant := .Get "variant" | default "" -}}
+<section class="home-band{{ with $variant }} home-band--{{ . }}{{ end }}">
+  {{ with $title }}<h2>{{ . }}</h2>{{ end }}
+  <div class="home-band__grid">
+    {{- range $col := split .Inner "<!-- col -->" }}
+    <div class="home-band__col">{{ $col | markdownify }}</div>
+    {{- end }}
+  </div>
+</section>

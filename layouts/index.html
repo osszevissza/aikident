@@ -1,12 +1,28 @@
 {{ define "title" }}{{ .Site.Title }}{{ end }}
 {{ define "main" }}
 <article class="home page-shell">
-  <header class="hero">
-    <p class="eyebrow">Aiki-Dent Fogászat</p>
-    <h1>{{ .Title }}</h1>
-    {{ with .Params.lead }}<p class="hero-lead">{{ . }}</p>{{ end }}
-    <a class="button" href="/kapcsolat/">Időpontfoglalás</a>
+  <header class="hero home-hero">
+    <div class="home-hero__copy">
+      <p class="eyebrow">Aiki-Dent Fogászat</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.lead }}<p class="hero-lead">{{ . }}</p>{{ end }}
+    </div>
+
+    <figure class="home-hero__portrait">
+      <div class="home-media">
+        <img
+          src="/img/allo.webp"
+          alt="Dr. Kelemen László fogorvos portréja"
+          decoding="async"
+        >
+      </div>
+      <figcaption>
+        <span class="home-hero__portrait-name">Dr. Kelemen László</span>
+        <span class="home-hero__portrait-role">fogorvos – a rendelő alapítója</span>
+      </figcaption>
+    </figure>
   </header>
-  <div class="content">{{ .Content }}</div>
+
+  <div class="content home-content">{{ .Content }}</div>
 </article>
 {{ end }}
