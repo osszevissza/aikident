@@ -1,7 +1,14 @@
 {{- $title := .Get "title" -}}
 {{- $open := .Get "open" -}}
+{{- $level := .Get "level" | default "2" -}}
 <details class="vizsgalat"{{ with $open }} open{{ end }}>
-  <summary><h2>{{ $title }}</h2></summary>
+  <summary>
+    {{- if eq $level "3" }}
+    <h3>{{ $title }}</h3>
+    {{- else }}
+    <h2>{{ $title }}</h2>
+    {{- end }}
+  </summary>
   <div class="vizsgalat__body">
     <div class="vizsgalat__inner">
       {{ .Inner | markdownify }}

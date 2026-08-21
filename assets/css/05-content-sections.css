@@ -269,7 +269,8 @@
   display: none;
 }
 
-.vizsgalat summary h2 {
+.vizsgalat summary h2,
+.vizsgalat summary h3 {
   margin: 0;
   padding: 0;
   border: 0;

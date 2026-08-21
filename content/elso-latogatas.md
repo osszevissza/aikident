@@ -32,6 +32,8 @@ Fogászati biztosítást nem fogadunk el fizetési módként; a díjakat a szolg
 
 Amennyiben a felsoroltak között nem szerepel az Ön biztosítója, keressen bizalommal minket — felvesszük a kapcsolatot az adott egészségpénztárral.
 
-### Szerződött partnereink / Egészségpénztárak
+{{< vizsgalat title="Szerződött partnereink / Egészségpénztárak" level="3" >}}
 
 Allianz-Hungaria Eü.pénztár / Aranykor Egészségpénztár / AXA csoport egészségpénztárai / Budai Egészségpénztár / Danubius Egészségpénztár / Életút Egészségpénztár / ERSTE-Harmónia Egészségpénztár / Fitt Országos Önkéntes Kiegészítő / Generali Egészségpénztár / Honvéd Egészségpénztár / KHB Budai Egészségpénztár / MKB Budai Egészségpénztár / OTP Egészségpénztár / Patika Egészségpénztár / Postás Egészségpénztár / Quaestor / Tempo Egészségpénztár / Uniqa Egészségpénztár / Vasutas Egészségpénztár / Vitamin Egészségpénztár
+
+{{< /vizsgalat >}}
