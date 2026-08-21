@@ -112,6 +112,13 @@ figure { margin: 0; }
   box-shadow: 0 0 0 4px var(--color-bg);
 }
 
+/* Sötét (bordó) felületeken a világos türkiz fókuszgyűrű */
+.site-header :focus-visible,
+.site-footer :focus-visible,
+.scroll-to-top:focus-visible {
+  outline-color: var(--color-accent);
+}
+
 .skip-link {
   position: absolute;
   top: 0;
@@ -170,6 +177,23 @@ figure { margin: 0; }
 .content { max-width: 72ch; }
 .content p { margin-bottom: 1.1rem; }
 .content ul { padding-left: 1.25rem; }
+
+.content a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+
+  padding-bottom: 1px;
+  border-bottom: 1px solid rgb(126 236 206 / 70%);
+
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.content a:hover,
+.content a:focus-visible {
+  color: var(--color-accent-strong);
+  border-bottom-color: var(--color-accent-strong);
+}
 
 .hero {
   max-width: 920px;

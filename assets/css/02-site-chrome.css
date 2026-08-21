@@ -54,11 +54,14 @@
 .header-phone {
   color: var(--color-accent);
   text-decoration: none;
+
+  padding-bottom: 1px;
+  border-bottom: 1px solid transparent;
 }
 
-.header-phone:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+.header-phone:hover,
+.header-phone:focus-visible {
+  border-bottom-color: var(--color-accent);
 }
 
 /* ---------- 07/C. NAVIGÁCIÓ ---------- */
@@ -151,7 +154,7 @@
   text-decoration: none;
 
   padding-bottom: 0.3rem;
-  border-bottom: 2px solid transparent;
+  border-bottom: 1px solid rgb(126 236 206 / 45%);
 }
 
 .site-footer a:hover,

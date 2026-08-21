@@ -11,6 +11,16 @@
   backdrop.setAttribute('aria-hidden', 'true');
   document.body.appendChild(backdrop);
 
+  const inertTargets = [
+    document.querySelector('main'),
+    document.querySelector('.site-footer'),
+    document.getElementById('scrollToTopBtn')
+  ].filter(Boolean);
+
+  function setInert(value) {
+    inertTargets.forEach(el => { el.inert = value; });
+  }
+
   let open = false, raf = 0, last = 0;
   const revealTimers = [];
 
@@ -109,10 +119,13 @@
 
   function closeMenu() {
     if (!open) return;
+    const focusInside = panel.contains(document.activeElement);
     open = false;
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-label', 'Menü megnyitása');
     backdrop.classList.remove('is-visible');
+    setInert(false);
+    if (focusInside) toggle.focus();
     cancelAnimationFrame(raf);
     clearRevealTimers();
 
@@ -132,14 +145,18 @@
     }, 290);
   }
 
-  function toggleMenu() {
+  function toggleMenu(evt) {
     if (open) closeMenu();
     else {
       open = true;
       toggle.setAttribute('aria-expanded', 'true');
       toggle.setAttribute('aria-label', 'Menü bezárása');
       backdrop.classList.add('is-visible');
+      setInert(true);
       dropIn();
+      if (evt && evt.detail === 0) {
+        links[0].focus({ preventScroll: true });
+      }
     }
   }
 
