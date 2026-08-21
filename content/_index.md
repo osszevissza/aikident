@@ -84,13 +84,3 @@ A rendelő alapja Dr. Kelemen László, a SOTE-n végzett fogorvos, aki a bioló
 Az első vizit előtt töltheti az [új páciens adatlapot](/uj-paciensek/).
 
 {{< /homeband >}}
-
-{{< homeband title="Hívjon minket" variant="dark" >}}
-
-Beszéljük meg a panaszait, és mondjuk el, miben segíthetünk.
-
-**Aiki Dent Fogászat** · 1136 Budapest, Hegedűs Gyula utca 29/b
-
-[+36 30 193 2714](tel:+36301932714)
-
-{{< /homeband >}}

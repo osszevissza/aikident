@@ -257,38 +257,6 @@
   font-size: 1rem;
 }
 
-/* --- Hívjon minket (sötét sáv) --- */
-
-.home-band--dark {
-  background: var(--color-primary);
-  color: var(--color-accent);
-  border: 0;
-  box-shadow: 0 22px 55px rgb(129 19 49 / 25%);
-}
-
-.home-band--dark h2 {
-  color: var(--color-accent);
-}
-
-.home-band--dark .home-band__col {
-  max-width: 640px;
-}
-
-.home-band--dark a {
-  color: var(--color-accent);
-  border-bottom-color: rgb(126 236 206 / 40%);
-}
-
-.home-band--dark .home-band__col p:last-child a {
-  font-family: var(--font-family-title);
-  font-size: clamp(1.4rem, 0.9rem + 2.5vw, 2rem);
-  border-bottom: none;
-}
-
-.home-band--dark .home-band__col p:last-child a:hover {
-  color: #ffffff;
-}
-
 /* ---------- 14/D. KEZELÉSLISTA ---------- */
 
 .home-treatments-marker ~ ul {
