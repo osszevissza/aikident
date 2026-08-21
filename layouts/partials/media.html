@@ -1,5 +1,6 @@
 {{ $src := .src }}
 {{ $alt := .alt | default "" }}
-<figure class="media-figure media-motif">
+{{ $invert := .invert }}
+<figure class="media-figure media-motif{{ with $invert }} media-motif--flip{{ end }}">
   <img src="/img/{{ $src }}" alt="{{ $alt }}" loading="lazy" decoding="async">
 </figure>

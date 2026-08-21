@@ -224,6 +224,16 @@
   border-radius: 6px;
 }
 
+/* Színváltó változat: bordó panel + türkiz pötty */
+
+.media-motif--flip::before {
+  background: var(--color-primary);
+}
+
+.media-motif--flip::after {
+  background: var(--color-accent-strong);
+}
+
 /* =========================================================
  *  17. VIZSGÁLATOK – FAQ-harmonika (details/summary)
  * ========================================================= */
@@ -329,4 +339,71 @@
 .vizsgalat__inner a:focus-visible {
   color: var(--color-accent-strong);
   border-bottom-color: var(--color-accent-strong);
+}
+
+/* =========================================================
+ *  18. RÓLUNK – fogászati pillérek ikonokkal
+ * ========================================================= */
+
+.content:has(.rolunk-pillars-marker) h3 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  color: var(--color-primary);
+}
+
+.content:has(.rolunk-pillars-marker) h3::before {
+  content: "";
+
+  flex: 0 0 auto;
+
+  width: 2rem;
+  height: 2rem;
+
+  background-color: var(--color-primary);
+
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+}
+
+/* pajzs – általános fogászat */
+
+.content:has(.rolunk-pillars-marker) h3:nth-of-type(4n + 1)::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M12 3 19 6v5c0 4.8-2.8 8.2-7 10-4.2-1.8-7-5.2-7-10V6l7-3Z M9 12l2 2 4-5'/%3E%3C/svg%3E");
+
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M12 3 19 6v5c0 4.8-2.8 8.2-7 10-4.2-1.8-7-5.2-7-10V6l7-3Z M9 12l2 2 4-5'/%3E%3C/svg%3E");
+}
+
+/* levél – biológiai fogászat */
+
+.content:has(.rolunk-pillars-marker) h3:nth-of-type(4n + 2)::before {
+  background-color: var(--color-accent-strong);
+
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M19 4C12 4 6 8 6 14c0 3 2 5 5 5 6 0 9-7 8-15ZM5 20c3-5 7-8 12-11'/%3E%3C/svg%3E");
+
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M19 4C12 4 6 8 6 14c0 3 2 5 5 5 6 0 9-7 8-15ZM5 20c3-5 7-8 12-11'/%3E%3C/svg%3E");
+}
+
+/* ragyogás – holisztikus fogászat */
+
+.content:has(.rolunk-pillars-marker) h3:nth-of-type(4n + 3)::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M12 3c.7 4.5 2.5 6.3 7 7-4.5.7-6.3 2.5-7 7-.7-4.5-2.5-6.3-7-7 4.5-.7 6.3-2.5 7-7ZM19 16c.3 2 1 2.7 3 3-2 .3-2.7 1-3 3-.3-2-1-2.7-3-3 2-.3 2.7-1 3-3Z'/%3E%3C/svg%3E");
+
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M12 3c.7 4.5 2.5 6.3 7 7-4.5.7-6.3 2.5-7 7-.7-4.5-2.5-6.3-7-7 4.5-.7 6.3-2.5 7-7ZM19 16c.3 2 1 2.7 3 3-2 .3-2.7 1-3 3-.3-2-1-2.7-3-3 2-.3 2.7-1 3-3Z'/%3E%3C/svg%3E");
+}
+
+/* koncentrikus körök – integrált fogászat */
+
+.content:has(.rolunk-pillars-marker) h3:nth-of-type(4n)::before {
+  background-color: var(--color-accent-strong);
+
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-width='1.6'%3E%3Ccircle cx='12' cy='12' r='8'/%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3Ccircle cx='12' cy='12' r='1' fill='black'/%3E%3C/g%3E%3C/svg%3E");
+
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-width='1.6'%3E%3Ccircle cx='12' cy='12' r='8'/%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3Ccircle cx='12' cy='12' r='1' fill='black'/%3E%3C/g%3E%3C/svg%3E");
 }

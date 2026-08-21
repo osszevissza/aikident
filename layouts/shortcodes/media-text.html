@@ -2,8 +2,9 @@
 {{- $embed := .Get "embed" -}}
 {{- $alt := .Get "alt" | default "" -}}
 {{- $flip := .Get "flip" -}}
+{{- $invert := .Get "invert" -}}
 <section class="media-text{{ with $flip }} media-text--flip{{ end }}">
-  <figure class="media-text__image media-motif">
+  <figure class="media-text__image media-motif{{ with $invert }} media-motif--flip{{ end }}">
     {{- with $embed }}
     <iframe
       src="{{ . }}"

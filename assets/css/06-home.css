@@ -66,17 +66,7 @@
   color: var(--color-muted);
 }
 
-/* ---------- 14/G. KÉPMOTÍVUM – CBCT színváltozat ---------- */
-
-.home-content .media-text__image::before {
-  background: var(--color-primary);
-}
-
-.home-content .media-text__image::after {
-  background: var(--color-accent-strong);
-}
-
-/* ---------- 14/H. CBCT-SZEKCIÓ (kép + szöveg) ---------- */
+/* ---------- 14/G. CBCT-SZEKCIÓ (kép + szöveg) ---------- */
 
 .home-content .media-text {
   align-items: center;
@@ -257,9 +247,10 @@
   font-size: 1rem;
 }
 
-/* ---------- 14/D. KEZELÉSLISTA ---------- */
+/* ---------- 14/D. KEZELÉSLISTA (főoldal + Rólunk) ---------- */
 
-.home-treatments-marker ~ ul {
+.home-treatments-marker ~ ul,
+.rolunk-list-marker ~ ul {
   max-width: 72ch;
 
   list-style: none;
@@ -267,16 +258,19 @@
   padding-left: 0;
 }
 
-.home-treatments-marker ~ ul li {
+.home-treatments-marker ~ ul li,
+.rolunk-list-marker ~ ul li {
   padding-block: 1.1rem;
   border-top: 1px solid rgb(14 124 98 / 25%);
 }
 
-.home-treatments-marker ~ ul li:first-child {
+.home-treatments-marker ~ ul li:first-child,
+.rolunk-list-marker ~ ul li:first-child {
   border-top: none;
 }
 
-.home-treatments-marker ~ ul li strong {
+.home-treatments-marker ~ ul li strong,
+.rolunk-list-marker ~ ul li strong {
   display: block;
 
   margin-bottom: 0.35rem;

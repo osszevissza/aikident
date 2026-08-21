@@ -5,7 +5,7 @@ lead: "3D-s CBCT-diagnosztika és biológiai szemlélet"
 
 ## Látjuk, amit a hagyományos röntgen nem mutat
 
-{{< media-text image="/img/demo2.webp" alt="CBCT-vizsgálat – demókép" >}}
+{{< media-text image="/img/demo2.webp" alt="CBCT-vizsgálat – demókép" invert="true" >}}
 
 A CBCT 3D-s kúpos sugárnyalábos képalkotás. Egyetlen, körülbelül 20 másodperces, fájdalommentes vizsgálat alatt részletes 3D-s képet kapunk a fogakról, az állkapocsról, a melléküregekről, az idegekről és a csontszerkezetről. Minimális sugárterheléssel, különösebb előkészület nélkül.
 
