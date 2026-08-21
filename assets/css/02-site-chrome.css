@@ -108,7 +108,11 @@
 /* ---------- 07/C. GOMBOK ---------- */
 
 .button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.5rem;
 
   padding: 0.7rem 1.15rem;
 
@@ -121,12 +125,15 @@
   font: inherit;
   font-size: 1rem;
   font-weight: 600;
+  line-height: 1;
+  text-align: center;
   text-decoration: none;
 
   cursor: pointer;
 }
 
-.button:hover {
+.button:hover,
+.button:focus-visible {
   background: var(--color-primary);
   color: var(--color-accent);
 }

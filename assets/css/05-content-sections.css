@@ -328,7 +328,7 @@
   margin-bottom: 0;
 }
 
-.vizsgalat__inner a {
+.vizsgalat__inner a:not(.button) {
   color: var(--color-primary);
   font-weight: 600;
   text-decoration: none;
@@ -336,8 +336,8 @@
   border-bottom: 1px solid rgb(126 236 206 / 70%);
 }
 
-.vizsgalat__inner a:hover,
-.vizsgalat__inner a:focus-visible {
+.vizsgalat__inner a:not(.button):hover,
+.vizsgalat__inner a:not(.button):focus-visible {
   color: var(--color-accent-strong);
   border-bottom-color: var(--color-accent-strong);
 }

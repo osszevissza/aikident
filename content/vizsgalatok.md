@@ -10,7 +10,7 @@ Kattintson a vizsgálat nevére a részletekért.
 
 Fejlett képalkotás a biztonságosabb, teljes testre kiterjedő fogászati ellátásért.
 
-→ [Részletes leírás](/cbct/)
+<a class="button" href="/cbct/">Részletek</a>
 
 {{< /vizsgalat >}}
 
