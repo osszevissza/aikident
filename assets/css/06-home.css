@@ -4,6 +4,10 @@
   max-width: min(100%, var(--content-max-width));
 }
 
+.content:has(.home-band) {
+  max-width: min(100%, var(--content-max-width));
+}
+
 .home.page-shell {
   padding-top: clamp(2rem, 5vw, 4rem);
 }
@@ -247,6 +251,33 @@
   font-size: 1rem;
 }
 
+/* --- Két kártya egymás mellett (Első látogatás) --- */
+
+.home-band--cards2 {
+  background: none;
+  padding: 0;
+}
+
+.home-band--cards2 .home-band__grid {
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.home-band--cards2 .home-band__col {
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: 6px;
+  box-shadow: 0 18px 45px rgb(0 0 0 / 5%);
+}
+
+.home-band--cards2 .home-band__col h3 {
+  margin-top: 0;
+
+  color: var(--color-primary);
+}
+
 /* ---------- 14/D. KEZELÉSLISTA (főoldal + Rólunk) ---------- */
 
 .home-treatments-marker ~ ul,
@@ -326,6 +357,10 @@
   .home-band--steps .home-band__grid {
     grid-template-columns: 1fr;
     gap: 1.1rem;
+  }
+
+  .home-band--cards2 .home-band__grid {
+    grid-template-columns: 1fr;
   }
 
   .home-band--steps li {

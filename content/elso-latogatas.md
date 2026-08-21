@@ -6,6 +6,8 @@ Az első vizitnek nem kell kérdésnek lennie. Itt összegyűjtöttük, hogyan z
 
 ## Az első vizit menete
 
+{{< media-text image="/img/fekvo.webp" alt="Dr. Kelemen László a rendelőben – demókép" >}}
+
 Első látogatásakor időt szánunk arra, hogy megismerjük Önt (és Ön is minket), és megbeszéljük fogászati igényeit.
 
 Az Aiki Dent Fogászat a következőket végzi el:
@@ -16,15 +18,23 @@ Az Aiki Dent Fogászat a következőket végzi el:
 
 Az Ön általános jóléte és egészsége a legfontosabb számunkra. Minden páciens egyedi, és célunk az, hogy segítsünk Önnek megőrizni fogait funkcionálisan, kényelmesen és esztétikailag egy életen át.
 
-## Új páciens adatlap
+{{< /media-text >}}
+
+{{< homeband variant="cards2" >}}
+
+### Új páciens adatlap
 
 Kérjük, az első vizit előtt töltse ki az adatlapot: töltse le a számítógépére, töltse ki otthon, és hozza magával az első vizitre.
 
-[Új páciens adatlap letöltése (PDF)](/files/uj-paciens-adatlap.pdf)
+→ [Új páciens adatlap letöltése (PDF)](/files/uj-paciens-adatlap.pdf)
 
-## Pénzügyi információk
+<!-- col -->
+
+### Pénzügyi információk
 
 A kezelés költsége az Ön egyéni igényeitől és a kezelési tervtől függően változhat. A rendelőben tett látogatása során megbeszéljük a kezelés költségét és az elérhető fizetési lehetőségeket, hogy Ön a legjobb döntést hozhassa meg.
+
+{{< /homeband >}}
 
 ## Biztosítás
 
