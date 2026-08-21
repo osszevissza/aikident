@@ -168,9 +168,7 @@
 
 .content .media-text + h2 {
   margin-top: 2.75rem;
-  padding-top: 1.5rem;
-
-  border-top: 3px solid rgb(126 236 206 / 55%);
+  border-top: 3px solid transparent;
 }
 
 @media (max-width: 860px) {

@@ -206,7 +206,8 @@ figure { margin: 0; }
   margin-top: 2.75rem;
   padding-top: 1.5rem;
 
-  border-top: 3px solid rgb(126 236 206 / 55%);
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(90deg, rgb(14 124 98 / 65%), rgb(14 124 98 / 0%)) 1;
 }
 
 .content h2:first-of-type {
