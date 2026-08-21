@@ -101,7 +101,7 @@ figure { margin: 0; }
 
 .gallery-item img {
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 6px;
 }
 
 /* ---------- 05. AKADÁLYMENTESSÉG ---------- */

@@ -2,24 +2,18 @@
 title: "Kapcsolat"
 ---
 
-Hívjon még ma vagy az alábbi űrlap segítségével vegye fel a kapcsolatot rendelőnkkel.
+Keressen minket bizalommal – telefonon, e-mailben vagy személyesen a rendelőben.
 
-## Aiki Dent Fogászat
+{{< media-text embed="https://www.openstreetmap.org/export/embed.html?bbox=19.0509%2C47.5132%2C19.0590%2C47.5182&layer=mapnik&marker=47.5157%2C19.0550" flip="true" >}}
 
-1136 Budapest
+[+36 30 193 2714](tel:+36301932714)
 
-Hegedűs Gyula utca 29/b
+**Aiki Dent Fogászat**
 
-Hívjon minket még ma!
-
-[+36301932714](tel:+36301932714)
+1136 Budapest, Hegedűs Gyula utca 29/b
 
 [info@aikident.hu](mailto:info@aikident.hu)
 
-## Nyitvatartási idő
+**Nyitvatartási idő:** előzetes egyeztetés alapján.
 
-Előzetes egyeztetés alapján
-
-## Kapcsolati űrlap
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+{{< /media-text >}}

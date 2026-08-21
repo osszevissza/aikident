@@ -1,6 +1,20 @@
-<section class="media-text">
-  <figure class="media-text__image home-media">
-    <img src="{{ .Get "image" }}" alt="{{ .Get "alt" }}">
+{{- $image := .Get "image" -}}
+{{- $embed := .Get "embed" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $flip := .Get "flip" -}}
+<section class="media-text{{ with $flip }} media-text--flip{{ end }}">
+  <figure class="media-text__image media-motif">
+    {{- with $embed }}
+    <iframe
+      src="{{ . }}"
+      title="Térkép – Aiki Dent Fogászat"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      allowfullscreen
+    ></iframe>
+    {{- else }}
+    <img src="{{ $image }}" alt="{{ $alt }}">
+    {{- end }}
   </figure>
 
   <div class="media-text__content">

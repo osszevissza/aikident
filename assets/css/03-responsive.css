@@ -78,7 +78,7 @@
 
     background: var(--color-primary);
     border: 1px solid rgb(126 236 206 / 25%);
-    border-radius: 1rem;
+    border-radius: 6px;
     padding: 0.5rem;
     box-shadow: 0 22px 55px rgb(0 0 0 / 18%);
 
@@ -124,7 +124,7 @@
 
     min-height: 54px;
     padding: 0 1rem;
-    border-radius: 0.75rem;
+    border-radius: 6px;
 
     border: 0;
 

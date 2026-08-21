@@ -66,49 +66,7 @@
   color: var(--color-muted);
 }
 
-/* ---------- 14/G. KÉPMOTÍVUM (eltolt panel + pötty) ---------- */
-
-.home-media {
-  position: relative;
-  isolation: isolate;
-}
-
-.home-media::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-
-  border-radius: 0.9rem;
-  background: var(--color-accent-strong);
-
-  transform: translate(1rem, 1rem);
-}
-
-.home-media::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-
-  top: 0;
-  left: 0;
-
-  width: 0.9rem;
-  height: 0.9rem;
-
-  border-radius: 50%;
-  background: var(--color-primary);
-
-  transform: translate(-0.45rem, -0.45rem);
-}
-
-.home-media img {
-  display: block;
-  width: 100%;
-  border-radius: 0.9rem;
-}
-
-/* CBCT-képnél a motívum színei megfordulnak */
+/* ---------- 14/G. KÉPMOTÍVUM – CBCT színváltozat ---------- */
 
 .home-content .media-text__image::before {
   background: var(--color-primary);
@@ -121,21 +79,9 @@
 /* ---------- 14/H. CBCT-SZEKCIÓ (kép + szöveg) ---------- */
 
 .home-content .media-text {
-  display: grid;
-  grid-template-columns: minmax(300px, 0.95fr) minmax(0, 1.35fr);
-  gap: clamp(2rem, 4vw, 3rem);
   align-items: center;
 
   margin-block: clamp(2rem, 4vw, 3rem);
-}
-
-.home-content .media-text__image {
-  margin: 0;
-}
-
-.home-content .media-text__image img {
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
 }
 
 .home-content .media-text__content p strong {
@@ -167,7 +113,7 @@
   margin-block: clamp(2rem, 4.5vw, 3.5rem);
   padding: clamp(1.5rem, 4vw, 3rem);
 
-  border-radius: 0.9rem;
+  border-radius: 6px;
 }
 
 .home-band h2 {
@@ -380,10 +326,6 @@
   .home-hero__portrait {
     max-width: 340px;
     margin-inline: auto;
-  }
-
-  .home-content .media-text {
-    grid-template-columns: 1fr;
   }
 
   .home-band--audience .home-band__grid {
