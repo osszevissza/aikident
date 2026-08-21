@@ -12,13 +12,12 @@
   align-items: center;
   gap: 1.25rem;
 
-  margin-top: 3rem;
-  padding-top: 2rem;
+  margin-top: 2.75rem;
+  padding-top: 1.5rem;
 
   border-top: 2px solid rgb(126 236 206 / 40%);
 
   color: var(--color-primary);
-  font-size: clamp(1.4rem, 3vw, 2rem);
 }
 
 /* Közös ikon */
@@ -28,8 +27,8 @@
 
   flex: 0 0 auto;
 
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
 
   background-color: var(--color-primary);
 
@@ -106,8 +105,8 @@
   }
 
   .content:has(.treatment-list-marker) h2::before {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.25rem;
+    height: 2.25rem;
   }
 }
 

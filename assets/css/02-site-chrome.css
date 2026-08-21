@@ -8,7 +8,7 @@
 }
 
 .header-inner {
-  min-height: 110px;
+  min-height: 96px;
 
   display: flex;
   justify-content: space-between;
@@ -31,7 +31,7 @@
 
 .logo-placeholder {
   font-family: var(--font-family-title);
-  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  font-size: clamp(1.5rem, 1.2rem + 1.2vw, 1.9rem);
   line-height: 1;
 }
 
@@ -80,6 +80,8 @@
   padding: 1rem 0;
 
   list-style: none;
+
+  font-size: 1rem;
 }
 
 .menu-list a {
@@ -105,7 +107,7 @@
 .button {
   display: inline-block;
 
-  padding: 0.75rem 1.1rem;
+  padding: 0.7rem 1.15rem;
 
   border: 1px solid var(--color-accent);
   border-radius: 0.5rem;
@@ -114,6 +116,7 @@
   color: var(--color-primary);
 
   font: inherit;
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
 
@@ -132,6 +135,8 @@
 
   background: var(--color-primary);
   color: var(--color-accent);
+
+  font-size: 0.95rem;
 }
 
 .site-footer ul {
@@ -170,7 +175,7 @@
 
   border-top: 1px solid rgb(126 236 206 / 40%);
 
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 /* ---------- 09. VISSZA A TETEJÉRE (scroll) ---------- */
