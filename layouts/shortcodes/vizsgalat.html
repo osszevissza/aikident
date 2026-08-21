@@ -1,0 +1,10 @@
+{{- $title := .Get "title" -}}
+{{- $open := .Get "open" -}}
+<details class="vizsgalat"{{ with $open }} open{{ end }}>
+  <summary>{{ $title }}</summary>
+  <div class="vizsgalat__body">
+    <div class="vizsgalat__inner">
+      {{ .Inner | markdownify }}
+    </div>
+  </div>
+</details>

@@ -19,7 +19,7 @@ Nem találgatunk: alaposan felmérjük a helyzetet, és a felvételeket azonnal 
 
 {{< /media-text >}}
 
-→ [Tudjon meg többet a CBCT-vizsgálatról](/vizsgalatok/)
+→ [Tudjon meg többet a CBCT-vizsgálatról](/cbct/)
 
 {{< homeband title="Önnek szól, ha..." variant="audience" >}}
 

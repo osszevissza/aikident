@@ -14,7 +14,7 @@ Fogkőeltávolítás, tömés, gyökérkezelés, sebészeti beavatkozás
 
 {{< /technology >}}
 
-{{< technology image="/img/demo2.webp" alt="CBCT-vizsgálat – demókép" title="CBCT-vizsgálat" link="/vizsgalatok/" linktext="Részletek" >}}
+{{< technology image="/img/demo2.webp" alt="CBCT-vizsgálat – demókép" title="CBCT-vizsgálat" link="/cbct/" linktext="Részletek" >}}
 
 3D-s képalkotás, amely a felszín alá lát.
 
