@@ -184,7 +184,26 @@
     pointer-events: auto;
   }
 
+  /* Kompakt mobil lábléc: menü nélkül, szorosabb elrendezés */
+  .site-footer {
+    padding-block: 2rem 1.25rem;
+  }
+
   .footer-inner {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .footer-nav {
+    display: none;
+  }
+
+  .footer-brand .footer-title {
+    font-size: 1.2rem;
+  }
+
+  .copyright {
+    margin-top: 1.5rem;
+    padding-top: 0.9rem;
   }
 }

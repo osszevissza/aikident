@@ -131,7 +131,7 @@
 /* ---------- 08. FOOTER (bordó háttér, türkiz szöveg) ---------- */
 .site-footer {
   margin-top: auto;
-  padding: 3rem 0 1.5rem;
+  padding: 2.5rem 0 1.5rem;
 
   background: var(--color-primary);
   color: var(--color-accent);
@@ -159,19 +159,46 @@
   border-bottom-color: var(--color-accent);
 }
 
-.footer-title { font-weight: 700; }
-
 .footer-inner {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 2rem;
 }
 
+.footer-inner p {
+  margin-bottom: 0.6rem;
+}
+
+.footer-inner > div > :last-child {
+  margin-bottom: 0;
+}
+
+.footer-inner .footer-title {
+  margin-bottom: 0.85rem;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.footer-brand .footer-title {
+  font-family: var(--font-family-title);
+  font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.footer-nav li + li {
+  margin-top: 0.4rem;
+}
+
 .copyright {
   width: min(calc(100% - 2rem), var(--content-max-width));
 
-  margin: 3rem auto 0;
-  padding-top: 1.5rem;
+  margin: 1.75rem auto 0;
+  padding-top: 1.1rem;
 
   border-top: 1px solid rgb(126 236 206 / 40%);
 

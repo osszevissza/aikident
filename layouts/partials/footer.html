@@ -1,15 +1,21 @@
 <footer class="site-footer">
   <div class="footer-inner">
-    <div>
+    <div class="footer-brand">
       <p class="footer-title">Aiki Dent Fogászat</p>
-      <p>1136 Budapest<br>Hegedűs Gyula utca 29/b</p>
-      <p><a href="tel:+36301932714">+36301932714</a><br><a href="mailto:info@aikident.hu">info@aikident.hu</a></p>
+      <p class="footer-address">1136 Budapest, Hegedűs Gyula utca 29/b</p>
+      <p class="footer-contact">
+        <a href="tel:+36301932714">+36 30 193 2714</a>
+        <span aria-hidden="true"> · </span>
+        <a href="mailto:info@aikident.hu">info@aikident.hu</a>
+      </p>
     </div>
-    <div>
+
+    <div class="footer-hours">
       <p class="footer-title">Nyitvatartási idő</p>
       <p>Előzetes egyeztetés alapján</p>
     </div>
-    <nav aria-label="Lábléc navigáció">
+
+    <nav class="footer-nav" aria-label="Lábléc navigáció">
       <ul>
         {{ range .Site.Menus.footer }}
           <li><a href="{{ .URL }}">{{ .Name }}</a></li>
