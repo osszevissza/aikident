@@ -36,6 +36,10 @@ A kezelés költsége az Ön egyéni igényeitől és a kezelési tervtől függ
 
 {{< /homeband >}}
 
+<div class="section-divider" aria-hidden="true">
+  <span></span>
+</div>
+
 ## Biztosítás
 
 Fogászati biztosítást nem fogadunk el fizetési módként; a díjakat a szolgáltatások igénybevételekor közvetlenül a páciensnek kell megfizetnie a rendelőben. Szolgáltatásként számlát állítunk ki a fogászati biztosítóknak, így pácienseink közvetlenül a saját fogászati biztosítójuktól kaphatják meg a visszatérítést. A visszatérítés mértéke a konkrét fogászati biztosítási csomagtól függ.

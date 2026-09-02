@@ -57,6 +57,10 @@ A rendelő alapja Dr. Kelemen László, a SOTE-n végzett fogorvos, aki a bioló
 
 <div class="home-treatments-marker"></div>
 
+<div class="section-divider" aria-hidden="true">
+  <span></span>
+</div>
+
 ## Legkeresettebb kezeléseink
 
 - **Amalgámtömések biztonságos eltávolítása** – szigorú biztonsági előírásokkal, hogy a káros anyagoknak való kitettség minimális legyen.

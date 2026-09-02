@@ -10,6 +10,10 @@ Hiszünk abban, hogy a szájápolás szorosan összefügg az általános egészs
 
 {{< /media-text >}}
 
+<div class="section-divider" aria-hidden="true">
+  <span></span>
+</div>
+
 ## Dr. Kelemen László
 
 {{< introgrid src="allo.webp" alt="Dr. Kelemen László portréja" invert="true" >}}
@@ -27,6 +31,10 @@ Melegszívűsége, lelkesedése és gondoskodó természete tökéletesen illesz
 {{< /introgrid >}}
 
 <div class="rolunk-pillars-marker"></div>
+
+<div class="section-divider" aria-hidden="true">
+  <span></span>
+</div>
 
 ## Milyen fogászatot kínálunk?
 
@@ -46,6 +54,10 @@ A fogászati ellátás egészségi megközelítése, amely támogatja a test, a 
 
 Szájegészsége szoros összefüggésben áll az általános közérzetével. Mi az embert egészében kezeljük, nem csupán a fogait.
 
+<div class="section-divider" aria-hidden="true">
+  <span></span>
+</div>
+
 ## A holisztikus szemléletünk a gyakorlatban
 
 Minden páciensünket egyedi személyiségként kezeljük, és tudjuk, hogy az igazi gyógyulás túlmutat a tüneteken: az egyensúlyhiány alapvető okait kezeljük.
@@ -58,11 +70,19 @@ Minden páciensünket egyedi személyiségként kezeljük, és tudjuk, hogy az i
 - **Megelőzésre való összpontosítás:** Célunk, hogy segítsünk Önnek egészségesnek maradni, nem csak a betegségeket kezelni. Az oktatás, a táplálkozás és az életmód támogatása minden látogatás részét képezi.
 - **Együttműködés a kezelésben:** Időt szánunk arra, hogy meghallgassuk Önt, megválaszoljuk kérdéseit és bevonjuk Önt az egészségével kapcsolatos döntésekbe.
 
+<div class="section-divider" aria-hidden="true">
+  <span></span>
+</div>
+
 ## Miért fontos ez?
 
 A száj a szervezet kapuja. A kutatások folyamatosan bizonyítják a szájápolás és olyan betegségek közötti összefüggéseket, mint a szívbetegségek, a cukorbetegség, az autoimmun rendellenességek vagy a kognitív egészség. A szájban található mérgező anyagok, a krónikus gyulladások vagy a rejtett fertőzések idővel észrevétlenül ronthatják az általános egészségi állapotot.
 
 A holisztikus fogászat mellett döntve tudatos választást tesz, amellyel nemcsak a mosolyát, hanem jövőbeli egészségét és életerejét is védi.
+
+<div class="section-divider" aria-hidden="true">
+  <span></span>
+</div>
 
 ## Elkötelezettségünk
 
