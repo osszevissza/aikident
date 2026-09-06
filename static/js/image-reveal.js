@@ -1,4 +1,7 @@
 (() => {
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
   const options = {
     root: null,
     rootMargin: '0px',
