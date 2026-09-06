@@ -1,22 +1,26 @@
 (() => {
-  document.documentElement.classList.add('js');
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5,
+  };
 
-  const imgs = document.querySelectorAll('.media-motif img');
-  if (!imgs.length) return;
+  const observer = new IntersectionObserver(fuggveny, options);
 
-  if (!('IntersectionObserver' in window)) {
-    imgs.forEach(img => img.classList.add('is-visible'));
-    return;
+  const figyelendok = document.querySelectorAll('.media-motif img');
+
+  for (const figyelendo of figyelendok) {
+    figyelendo.style.filter = 'grayscale(90%) sepia(10%)';
+    observer.observe(figyelendo);
   }
 
-  const io = new IntersectionObserver(entries => {
-    for (const entry of entries) {
+  function fuggveny(entries) {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        io.unobserve(entry.target);
+        entry.target.style.filter = 'grayscale(30%) sepia(20%)';
+      } else {
+        entry.target.style.filter = 'grayscale(90%) sepia(10%)';
       }
-    }
-  }, { threshold: 0.5 });
-
-  imgs.forEach(img => io.observe(img));
+    });
+  }
 })();

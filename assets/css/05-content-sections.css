@@ -223,15 +223,8 @@
   border-radius: 6px;
 }
 
-/* Kép-befúvás: JS nélkül színes, JS-sel halvány, 50% láthatóságnál színes lesz */
-
-.js .media-motif img {
-  filter: saturate(0.35) sepia(0.15);
+.media-motif img {
   transition: filter 0.9s ease;
-}
-
-.js .media-motif img.is-visible {
-  filter: none;
 }
 
 /* Színváltó változat: bordó panel + türkiz pötty */
