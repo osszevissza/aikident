@@ -316,6 +316,35 @@
   margin-top: 1.75rem;
 }
 
+/* Rólunk lista: türkiz pipa a tételnév előtt */
+
+.rolunk-list-marker ~ ul li strong {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.rolunk-list-marker ~ ul li strong::before {
+  content: "";
+
+  flex: 0 0 auto;
+
+  width: 1.25rem;
+  height: 1.25rem;
+
+  background-color: var(--color-accent-strong);
+
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='3' stroke-linecap='square' stroke-linejoin='miter' d='M4.5 12.5l5 5L19.5 7.5'/%3E%3C/svg%3E");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='3' stroke-linecap='square' stroke-linejoin='miter' d='M4.5 12.5l5 5L19.5 7.5'/%3E%3C/svg%3E");
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+}
+
 /* ---------- 14/E. ORVOS-BLOKK ---------- */
 
 @media (min-width: 861px) {
