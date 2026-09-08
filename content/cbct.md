@@ -60,8 +60,6 @@ Mivel alacsony sugárterhelésű, rendkívül fókuszált kúpos sugártechnoló
 
 A teljes testre kiterjedő egészség iránti elkötelezettségünk azt jelenti, hogy a kezelés megkezdése előtt a lehető legteljesebb és legpontosabb információkra van szükségünk. Nem találgatunk – hanem alaposan felmérjük a helyzetet.
 
-Ennek a képalkotási módszernek a használatával:
-
 <div class="tick-list-marker"></div>
 
 - Elkerüljük a felesleges beavatkozásokat
@@ -95,8 +93,6 @@ Ez összhangban áll az integritás, a kíváncsiság és a felelősségvállal�
 {{< /homeband >}}
 
 ## Mikor ajánlott a kúpos sugárnyalábos képalkotás?
-
-A következő esetekben javasolhatunk CBCT-vizsgálatot:
 
 <div class="when-list-marker"></div>
 
