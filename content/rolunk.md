@@ -54,11 +54,7 @@ A fogászati ellátás egészségi megközelítése, amely támogatja a test, a 
 
 Szájegészsége szoros összefüggésben áll az általános közérzetével. Mi az embert egészében kezeljük, nem csupán a fogait.
 
-<div class="section-divider" aria-hidden="true">
-  <span></span>
-</div>
-
-## A holisztikus szemléletünk a gyakorlatban
+{{< homeband title="A holisztikus szemléletünk a gyakorlatban" variant="tinted" >}}
 
 Minden páciensünket egyedi személyiségként kezeljük, és tudjuk, hogy az igazi gyógyulás túlmutat a tüneteken: az egyensúlyhiány alapvető okait kezeljük.
 
@@ -70,9 +66,8 @@ Minden páciensünket egyedi személyiségként kezeljük, és tudjuk, hogy az i
 - **Megelőzésre való összpontosítás:** Célunk, hogy segítsünk Önnek egészségesnek maradni, nem csak a betegségeket kezelni. Az oktatás, a táplálkozás és az életmód támogatása minden látogatás részét képezi.
 - **Együttműködés a kezelésben:** Időt szánunk arra, hogy meghallgassuk Önt, megválaszoljuk kérdéseit és bevonjuk Önt az egészségével kapcsolatos döntésekbe.
 
-<div class="section-divider" aria-hidden="true">
-  <span></span>
-</div>
+{{< /homeband >}}
+
 
 ## Miért fontos ez?
 

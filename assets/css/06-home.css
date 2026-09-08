@@ -127,7 +127,8 @@
 
 /* --- Közönség-sáv --- */
 
-.home-band--audience {
+.home-band--audience,
+.home-band--tinted {
   background: #eef7f3;
   border: 1px solid rgb(14 124 98 / 18%);
 }
