@@ -169,7 +169,7 @@
 
 .content .media-text + h2 {
   margin-top: 2.75rem;
-  border-top: 3px solid transparent;
+  border-top: 1px solid rgb(14 124 98 / 10%);
 }
 
 @media (max-width: 860px) {
