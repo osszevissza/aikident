@@ -7,39 +7,53 @@ Biológiai alapú kezelések, amelyek az egész embert támogatják – nem csak
 <div class="treatment-list-marker"></div>
 
 
-## Akupunktúra
+## 1. Fogak megőrzése
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+{{< vizsgalat title="Természetes fogtisztítás" level="3" >}}
 
-## Amalgámtömések biztonságos eltávolítása
+Fogtisztítási eljárásaink összhangban állnak holisztikus filozófiánkkal: amennyiben lehetséges, kíméletes, természetes termékeket használunk.
 
-A régi fémtömések eltávolításakor szigorú biztonsági előírásokat követünk, hogy a káros anyagoknak való kitettséget a lehető legkisebb mértékre csökkentsük.
+{{< /vizsgalat >}}
 
-## BPA-mentes tömések
+{{< vizsgalat title="BPA-mentes tömések" level="3" >}}
 
 Minden tömésünk 100%-ban BPA-mentes – mert minden anyag számít.
 
-## Fémmentes fogászati hidak
+{{< /vizsgalat >}}
 
-Pótolja a hiányzó fogakat biztonságosan tartós, természetes megjelenésű, fémmentes hidakkal.
+{{< vizsgalat title="Higanymentes tömések" level="3" >}}
 
-## Fémmentes, kivehető részleges fogsor
+Fogai biztonságos helyreállítása mérgező fémektől mentes anyagokkal.
 
-Kényelmes, fémmentes kivehető fogsorok, amelyek biztonságosabb alternatívát kínálnak mosolyának helyreállításához.
+{{< /vizsgalat >}}
 
-## Fémmentes koronacsere
+{{< vizsgalat title="Amalgámtömések biztonságos eltávolítása" level="3" >}}
 
-A régi fémkoronákat biztonságosan kicseréljük fémmentes, biokompatibilis anyagokra.
+A régi fémtömések eltávolításakor szigorú biztonsági előírásokat követünk, hogy a káros anyagoknak való kitettséget a lehető legkisebb mértékre csökkentsük.
 
-## Fluoridmentes fogászat
+{{< /vizsgalat >}}
+
+{{< vizsgalat title="Higanymentes fogászat" level="3" >}}
+
+Rendelőnk a higany kezelése során a legszigorúbb biztonsági előírásokat követi, így védve mind az Ön egészségét, mind a környezetünket.
+
+{{< /vizsgalat >}}
+
+{{< vizsgalat title="Fluoridmentes fogászat" level="3" >}}
 
 Úgy véljük, hogy a fluoridnak nincs helye a szájban, ezért olyan hatékony alternatívákat kínálunk, amelyek összhangban állnak az Ön egészségügyi érdekeivel.
 
-## Fogeltávolítás
+{{< /vizsgalat >}}
 
-Ha egy fogat el kell távolítani, kíméletes, a szervezetet támogató módszert alkalmazunk. Huggins fogeltávolítási protokollon alapul, és PRF-fel (vérlemezkékben gazdag fibrin) fertőtlenítjük és tápláljuk a területet, hogy elősegítsük a csont megfelelő gyógyulását, és minimalizáljuk a tartós fertőzés vagy kavitáció kialakulásának kockázatát. Kiegészítő kezelések is rendelkezésre állnak az immunrendszer és a természetes gyógyulás támogatására.
+{{< vizsgalat title="Lézeres fogászat" level="3" >}}
 
-## Fotodinámiás lézerterápia (PDT)
+Minimálisan invazív lézertechnológia, amely precízióval és kényelemmel támogatja fogászati kezeléseit.
+
+{{< /vizsgalat >}}
+
+## 2. Fogágy, szájsebészet és fogpótlás
+
+{{< vizsgalat title="Fotodinámiás lézerterápia (PDT)" level="3" >}}
 
 Már kialakult fogágybetegség és az implantátumok mellett fellépő gyulladások kezelésére a folyamat lassítását célzó eljárás, melynek során tisztítást követően a tasakot fenntartó baktériumokat lézerfénnyel szemben érzékennyé tesszük, majd lágylézerrel „megvilágítjuk”, elpusztítva ezáltal a kórokozókat.
 
@@ -47,26 +61,48 @@ Háromszori kezelést követően új, feszes hámtapadás jön létre, mely áll
 
 A kezelés fájdalmatlan, mellékhatásoktól mentes, és a tasak felszámolásáig ismételendő.
 
-## Higanymentes fogászat
+{{< /vizsgalat >}}
 
-Rendelőnk a higany kezelése során a legszigorúbb biztonsági előírásokat követi, így védve mind az Ön egészségét, mind a környezetünket.
+{{< vizsgalat title="Fogeltávolítás" level="3" >}}
 
-## Higanymentes tömések
+Ha egy fogat el kell távolítani, kíméletes, a szervezetet támogató módszert alkalmazunk. Huggins fogeltávolítási protokollon alapul, és PRF-fel (vérlemezkékben gazdag fibrin) fertőtlenítjük és tápláljuk a területet, hogy elősegítsük a csont megfelelő gyógyulását, és minimalizáljuk a tartós fertőzés vagy kavitáció kialakulásának kockázatát. Kiegészítő kezelések is rendelkezésre állnak az immunrendszer és a természetes gyógyulás támogatására.
 
-Fogai biztonságos helyreállítása mérgező fémektől mentes anyagokkal.
+{{< /vizsgalat >}}
 
-## Homeopátia
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-## Lézeres fogászat
-
-Minimálisan invazív lézertechnológia, amely precízióval és kényelemmel támogatja fogászati kezeléseit.
-
-## PRF membrán
+{{< vizsgalat title="PRF membrán" level="3" >}}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-## Természetes fogtisztítás
+{{< /vizsgalat >}}
 
-Fogtisztítási eljárásaink összhangban állnak holisztikus filozófiánkkal: amennyiben lehetséges, kíméletes, természetes termékeket használunk.
+{{< vizsgalat title="Fémmentes fogászati hidak" level="3" >}}
+
+Pótolja a hiányzó fogakat biztonságosan tartós, természetes megjelenésű, fémmentes hidakkal.
+
+{{< /vizsgalat >}}
+
+{{< vizsgalat title="Fémmentes, kivehető részleges fogsor" level="3" >}}
+
+Kényelmes, fémmentes kivehető fogsorok, amelyek biztonságosabb alternatívát kínálnak mosolyának helyreállításához.
+
+{{< /vizsgalat >}}
+
+{{< vizsgalat title="Fémmentes koronacsere" level="3" >}}
+
+A régi fémkoronákat biztonságosan kicseréljük fémmentes, biokompatibilis anyagokra.
+
+{{< /vizsgalat >}}
+
+## 3. Kiegészítő biológiai kezelések
+
+{{< vizsgalat title="Akupunktúra" level="3" >}}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+{{< /vizsgalat >}}
+
+{{< vizsgalat title="Homeopátia" level="3" >}}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+{{< /vizsgalat >}}
