@@ -197,9 +197,58 @@ figure { margin: 0; }
   border-bottom-color: var(--color-accent-strong);
 }
 
-.hero {
-  max-width: 920px;
-  padding-block: clamp(1.5rem, 5vw, 4rem);
+/* ---------- 07. HERO SÁV (háttérkép + fedett címblokk) ---------- */
+.hero-banner {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  align-items: center;
+
+  min-height: clamp(20rem, 42vw, 32rem);
+
+  background-image:
+    linear-gradient(rgb(255 255 255 / 65%), rgb(255 255 255 / 65%)),
+    url("/img/hatter.webp");
+  background-size: auto, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-banner--compact {
+  min-height: clamp(13rem, 26vw, 20rem);
+}
+
+.hero-banner__inner {
+  width: min(calc(100% - 2rem), var(--content-max-width));
+  margin-inline: auto;
+}
+
+.hero-banner h1 {
+  max-width: 22ch;
+  color: var(--color-primary);
+  text-wrap: balance;
+}
+
+.hero-banner .eyebrow {
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.hero-banner .eyebrow::after {
+  content: "";
+  display: block;
+
+  width: 3rem;
+  height: 3px;
+  margin-top: 0.9rem;
+
+  background: var(--color-primary);
+}
+
+.hero-banner .hero-lead {
+  margin-top: 1.25rem;
+  color: var(--color-text);
 }
 
 .content h2 {

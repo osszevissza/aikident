@@ -1,9 +1,7 @@
 ---
 title: "Technológia"
+lead: "A legmodernebb fogászati technológia. Egyedülálló technikai felszereltséggel támogatott diagnosztika."
 ---
-
-A legmodernebb fogászati technológia. 
-Egyedülálló technikai felszereltséggel támogatott diagnosztika.
 
 {{< technology image="/img/demo1.webp" alt="Zeiss Extaro 300 – demókép" title="Zeiss Extaro 300" link="/vizsgalatok/" linktext="Részletek">}}
 

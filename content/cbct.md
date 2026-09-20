@@ -1,8 +1,7 @@
 ---
 title: "3D-s CBCT képalkotás"
+lead: "Fejlett képalkotás a biztonságosabb, teljes testre kiterjedő fogászati ellátásért."
 ---
-
-Fejlett képalkotás a biztonságosabb, teljes testre kiterjedő fogászati ellátásért.
 
 {{< media-text image="/img/demo2.webp" alt="CBCT-vizsgálat – demókép" >}}
 

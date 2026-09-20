@@ -1,8 +1,7 @@
 ---
 title: "Első látogatás"
+lead: "Az első vizitnek nem kell kérdésnek lennie. Itt összegyűjtöttük, hogyan zajlik, mit hozzon magával, és mennyibe kerülhet — hogy felkészülten érkezzen."
 ---
-
-Az első vizitnek nem kell kérdésnek lennie. Itt összegyűjtöttük, hogyan zajlik, mit hozzon magával, és mennyibe kerülhet — hogy felkészülten érkezzen.
 
 ## Az első vizit menete
 
