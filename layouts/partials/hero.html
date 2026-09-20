@@ -1,8 +1,0 @@
-{{/* Közös hero-sáv: hatter.webp háttérkép, a címblokk a képre fedve. */}}
-<header class="hero-banner{{ if not .lead }} hero-banner--compact{{ end }}">
-  <div class="hero-banner__inner">
-    {{ with .eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
-    <h1>{{ .title }}</h1>
-    {{ with .lead }}<p class="hero-lead">{{ . }}</p>{{ end }}
-  </div>
-</header>

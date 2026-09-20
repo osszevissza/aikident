@@ -1,7 +1,8 @@
 ---
 title: "Kezelések"
-lead: "Biológiai alapú kezelések, amelyek az egész embert támogatják – nem csak a fogat."
 ---
+
+Biológiai alapú kezelések, amelyek az egész embert támogatják – nem csak a fogat.
 
 <div class="treatment-list-marker"></div>
 

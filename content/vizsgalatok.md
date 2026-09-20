@@ -1,7 +1,8 @@
 ---
 title: "Vizsgálatok"
-lead: "Rendelőnk diagnosztikáját a modern eszközpark és a holisztikus szemlélet együttese adja: előbb feltárjuk és megértjük a problémát, csak utána javasolunk bármit."
 ---
+
+Rendelőnk diagnosztikáját a modern eszközpark és a holisztikus szemlélet együttese adja: előbb feltárjuk és megértjük a problémát, csak utána javasolunk bármit.
 
 Kattintson a vizsgálat nevére a részletekért.
 

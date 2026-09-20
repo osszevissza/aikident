@@ -1,9 +1,10 @@
 ---
 title: "Rólunk"
-lead: "Az Aiki Dent Fogászatban minden tevékenységünk a küldetésünkön alapul: olyan empatikus, biológiai alapú fogászati ellátást nyújtani, amely az embert egészében támogatja."
 ---
 
 {{< media-text image="/img/fekvo.webp" alt="Dr. Kelemen László a rendelőben – demókép" >}}
+
+Az Aiki Dent Fogászatban minden tevékenységünk a küldetésünkön alapul: olyan empatikus, biológiai alapú fogászati ellátást nyújtani, amely az embert egészében támogatja.
 
 Hiszünk abban, hogy a szájápolás szorosan összefügg az általános egészségi állapottal, és átgondolt, integrált fogászati kezelésünk révén segítünk pácienseinknek abban, hogy magabiztosságot, önbizalmat és egész életen át tartó vitalitást nyerjenek.
 
