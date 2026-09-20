@@ -13,3 +13,5 @@
 .Rhistory
 tools/a11y/node_modules/
 /.logo-build/
+/.pw-browsers/
+.npmcache/
