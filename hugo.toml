@@ -4,6 +4,8 @@ defaultContentLanguage = 'hu'
 title = 'Aiki Dent Fogászat'
 enableRobotsTXT = true
 enableGitInfo = false
+# a rebuild must never leave pages from a previous build behind
+cleanDestinationDir = true
 disableKinds = ['taxonomy', 'term', 'rss']
 
 [params]
