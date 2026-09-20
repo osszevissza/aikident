@@ -12,3 +12,4 @@
 *.swp
 .Rhistory
 tools/a11y/node_modules/
+/.logo-build/
