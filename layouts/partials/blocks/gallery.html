@@ -1,0 +1,23 @@
+{{- /* Image gallery. */ -}}
+{{- $b := .b -}}
+{{- $images := $b.images | default slice -}}
+{{- $bg := $b.bg | default "paper" -}}
+<section class="section section--{{ $bg }}{{ if $b.tight }} section--tight{{ end }}"{{ with $b.id }} id="{{ . }}"{{ end }}>
+  <div class="shell">
+    {{- if or $b.eyebrow $b.title }}
+    <div class="sec-head{{ if eq ($b.align | default "center") "center" }} sec-head--center{{ end }} reveal">
+      {{- with $b.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end -}}
+      {{- with $b.title }}<h2>{{ . }}</h2>{{ end -}}
+      {{- with $b.lead }}<p>{{ . }}</p>{{ end -}}
+    </div>
+    {{- end }}
+    <div class="gallery{{ if $b.wide }} gallery--wide{{ end }} reveal">
+      {{- range $images }}
+      {{- $alt := .alt | default "Rendelői fotó" }}
+      <a href="{{ .src }}" target="_blank" rel="noopener" aria-label="Nagyobb kép megnyitása új lapon: {{ $alt }}">
+        <img src="{{ .src }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+      </a>
+      {{- end }}
+    </div>
+  </div>
+</section>

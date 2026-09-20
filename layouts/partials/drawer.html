@@ -1,0 +1,24 @@
+<div class="drawer" id="drawer" hidden>
+  <div class="drawer__scrim" data-drawer-close></div>
+  <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="Főmenü">
+    <div class="drawer__top">
+      <img src="/img/logo.svg" alt="{{ site.Title }}" width="140" height="62">
+      <button class="drawer__close" type="button" data-drawer-close aria-label="Menü bezárása">{{ partial "icon" "close" }}</button>
+    </div>
+
+    <ul class="drawer__nav">
+      {{- range site.Menus.main }}
+      <li><a href="{{ .URL | relURL }}"><span>{{ .Name }}</span>{{ partial "icon" "arrow-right" }}</a></li>
+      {{- end }}
+    </ul>
+
+    <div class="drawer__contact">
+      <a href="tel:{{ site.Params.phoneHref }}">{{ partial "icon" "phone" }}<span>{{ site.Params.phoneDisplay }}</span></a>
+      <a href="mailto:{{ site.Params.email }}">{{ partial "icon" "mail" }}<span>{{ site.Params.email }}</span></a>
+      <a href="{{ site.Params.mapsUrl }}" target="_blank" rel="noopener">{{ partial "icon" "pin" }}<span>{{ site.Params.city }}, {{ site.Params.street }}</span></a>
+      <span>{{ partial "icon" "clock" }}<span>Előzetes egyeztetés alapján</span></span>
+    </div>
+
+    <a class="btn btn--block" href="{{ "/kapcsolat/" | relURL }}">{{ partial "icon" "calendar" }}<span>Időpontfoglalás</span></a>
+  </aside>
+</div>

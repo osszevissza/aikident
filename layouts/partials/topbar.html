@@ -1,0 +1,10 @@
+<aside class="topbar" aria-label="Elérhetőségek">
+  <div class="shell topbar__inner">
+    <ul class="topbar__list">
+      <li><a href="tel:{{ site.Params.phoneHref }}">{{ partial "icon" "phone" }}<span>{{ site.Params.phoneDisplay }}</span></a></li>
+      <li><a href="mailto:{{ site.Params.email }}">{{ partial "icon" "mail" }}<span>{{ site.Params.email }}</span></a></li>
+      <li><a href="{{ site.Params.mapsUrl }}" target="_blank" rel="noopener">{{ partial "icon" "pin" }}<span>{{ site.Params.city }}, {{ site.Params.street }}</span></a></li>
+    </ul>
+    <span class="topbar__note">{{ partial "icon" "clock" }}<span>Nyitvatartás: {{ site.Params.hours }}</span></span>
+  </div>
+</aside>

@@ -1,0 +1,58 @@
+{{- /* Icon-card grid.
+     Fields: bg, eyebrow, title, lead, align, cols, style (mini|wine|tint),
+             data (key of site.Data), key, items, limit, numbered, cta, footnote,
+             linkTo (prefix that turns each item anchor into a real link),
+             linkLabel (visible affordance text, default "Részletek")
+
+     A card only gets interactive styling when it actually leads somewhere —
+     otherwise it stays a static, non-clickable information card.            */ -}}
+{{- $b := .b -}}
+{{- $bg := $b.bg | default "paper" -}}
+{{- $cols := $b.cols | default 3 -}}
+{{- $items := $b.items -}}
+{{- with $b.data }}{{ $items = (index (index site.Data .) ($b.key | default "items")) }}{{ end -}}
+{{- $items = $items | default slice -}}
+{{- with $b.limit }}{{ $items = first . $items }}{{ end -}}
+{{- $linkLabel := $b.linkLabel | default "Részletek" -}}
+<section class="section section--{{ $bg }}{{ if $b.tight }} section--tight{{ end }}"{{ with $b.id }} id="{{ . }}"{{ end }}>
+  <div class="shell">
+    {{- if or $b.eyebrow $b.title }}
+    <div class="sec-head{{ if eq ($b.align | default "") "center" }} sec-head--center{{ end }} reveal">
+      {{- with $b.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end -}}
+      {{- with $b.title }}<h2>{{ . }}</h2>{{ end -}}
+      {{- with $b.lead }}<p>{{ . }}</p>{{ end -}}
+    </div>
+    {{- end }}
+
+    <div class="grid grid--{{ $cols }}">
+      {{- range $i, $item := $items }}
+      {{- $style := $item.style | default $b.style | default "" -}}
+      {{- /* resolve a destination, if there is a genuine one */ -}}
+      {{- $href := "" -}}
+      {{- with $item.url }}{{ $href = . | relURL }}{{ end -}}
+      {{- if and (not $href) $item.anchor $b.linkTo }}{{ $href = printf "%s#%s" ($b.linkTo | relURL) $item.anchor }}{{ end -}}
+      {{- if and (not $href) (not $item.anchor) $b.linkTo }}{{ $href = $b.linkTo | relURL }}{{ end -}}
+      <article class="card{{ with $style }} card--{{ . }}{{ end }}{{ if $href }} card--link{{ end }} reveal" data-delay="{{ add (mod $i 3) 1 }}">
+        <span class="card__icon" aria-hidden="true">{{ partial "icon" (.icon | default "sparkles") }}</span>
+        {{- with $b.numbered }}<span class="card__num">{{ printf "%02d" (add $i 1) }}</span>{{ end -}}
+        <h3{{ with $item.anchor }} id="{{ . }}"{{ end }}>
+          {{- if $href }}<a class="card__link" href="{{ $href }}">{{ $item.title }}</a>
+          {{- else }}{{ $item.title }}{{ end -}}
+        </h3>
+        {{- with $item.text }}<p>{{ . }}</p>{{ end -}}
+        {{- if $href }}
+        <span class="card__more" aria-hidden="true">{{ $linkLabel }}{{ partial "icon" "arrow-right" }}</span>
+        {{- end }}
+      </article>
+      {{- end }}
+    </div>
+
+    {{- with $b.cta }}
+    <div class="btn-row mt-3">
+      <a class="btn {{ .style | default "btn--ghost" }}" href="{{ .url | relURL }}">{{ with .icon }}{{ partial "icon" . }}{{ end }}<span>{{ .label }}</span></a>
+    </div>
+    {{- end }}
+
+    {{- with $b.footnote }}<p class="mt-3" style="color:var(--ink-3);font-size:.92rem">{{ . }}</p>{{ end }}
+  </div>
+</section>

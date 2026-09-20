@@ -1,0 +1,36 @@
+{{- /* Numbered process steps. */ -}}
+{{- $b := .b -}}
+{{- $items := $b.items -}}
+{{- with $b.data }}{{ $items = (index (index site.Data .) ($b.key | default "items")) }}{{ end -}}
+{{- $items = $items | default slice -}}
+{{- with $b.limit }}{{ $items = first . $items }}{{ end -}}
+{{- $bg := $b.bg | default "cream" -}}
+<section class="section section--{{ $bg }}{{ if $b.tight }} section--tight{{ end }}"{{ with $b.id }} id="{{ . }}"{{ end }}>
+  <div class="shell">
+    {{- if or $b.eyebrow $b.title }}
+    <div class="sec-head{{ if eq ($b.align | default "") "center" }} sec-head--center{{ end }} reveal">
+      {{- with $b.eyebrow }}<p class="eyebrow{{ if eq $bg "wine" }} eyebrow--onwine{{ end }}">{{ . }}</p>{{ end -}}
+      {{- with $b.title }}<h2>{{ . }}</h2>{{ end -}}
+      {{- with $b.lead }}<p>{{ . }}</p>{{ end -}}
+    </div>
+    {{- end }}
+
+    <div class="steps reveal">
+      {{- range $items }}
+      <div class="step">
+        <span class="step__n" aria-hidden="true"></span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .text }}</p>
+      </div>
+      {{- end }}
+    </div>
+
+    {{- with $b.actions }}
+    <div class="btn-row mt-4">
+      {{- range . }}
+      <a class="btn {{ .style | default "" }}" href="{{ .url | relURL }}">{{ with .icon }}{{ partial "icon" . }}{{ end }}<span>{{ .label }}</span></a>
+      {{- end }}
+    </div>
+    {{- end }}
+  </div>
+</section>

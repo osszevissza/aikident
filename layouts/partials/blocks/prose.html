@@ -1,0 +1,16 @@
+{{- /* Markdown body wrapped in a constrained prose column. */ -}}
+{{- $ctx := .ctx -}}
+{{- $b := .b -}}
+{{- $bg := $b.bg | default "paper" -}}
+<section class="section section--{{ $bg }}{{ if $b.tight }} section--tight{{ end }}">
+  <div class="shell">
+    {{- if $b.title }}
+    <div class="sec-head reveal">
+      {{- with $b.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end -}}
+      <h2>{{ $b.title }}</h2>
+      {{- with $b.lead }}<p>{{ . }}</p>{{ end -}}
+    </div>
+    {{- end }}
+    <div class="prose reveal">{{ $ctx.Content }}</div>
+  </div>
+</section>

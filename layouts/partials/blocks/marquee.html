@@ -1,0 +1,11 @@
+{{- /* Scrolling trust strip. */ -}}
+{{- $items := .b.items | default slice -}}
+{{- if $items }}
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    {{- range seq 2 }}{{ range $items }}
+    <span class="marquee__item">{{ partial "icon" (.icon | default "sparkles") }}<span>{{ .text }}</span></span>
+    {{- end }}{{ end }}
+  </div>
+</div>
+{{- end }}

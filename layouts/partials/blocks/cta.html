@@ -1,0 +1,26 @@
+{{- /* Call-to-action band. */ -}}
+{{- $b := .b -}}
+{{- $actions := $b.actions | default slice -}}
+<section class="section section--cream section--tight"{{ with $b.id }} id="{{ . }}"{{ end }}>
+  <div class="shell">
+    <div class="cta-band reveal">
+      <div class="cta-band__inner">
+        <div>
+          {{- with $b.eyebrow }}<p class="eyebrow eyebrow--onwine">{{ . }}</p>{{ end -}}
+          {{- with $b.title }}<h2>{{ . }}</h2>{{ end -}}
+          {{- with $b.lead }}<p>{{ . }}</p>{{ end -}}
+        </div>
+        <div class="cta-band__actions">
+          {{- range $actions }}
+          <a class="btn {{ .style | default "btn--mint" }}{{ if .large }} btn--lg{{ end }}" href="{{ .url | relURL }}">
+            {{- with .icon }}{{ partial "icon" . }}{{ end }}<span>{{ .label }}</span>
+          </a>
+          {{- end }}
+          {{- if $b.showPhone | default true }}
+          <a class="cta-band__phone" href="tel:{{ site.Params.phoneHref }}">{{ partial "icon" "phone" }}<span>{{ site.Params.phoneDisplay }}</span></a>
+          {{- end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

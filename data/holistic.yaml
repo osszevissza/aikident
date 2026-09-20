@@ -1,0 +1,75 @@
+# A holisztikus megközelítés ismertetői és a CBCT diagnosztika.
+differentiators:
+  - title: Biokompatibilis anyagok
+    icon: leaf
+    text: >-
+      Kerüljük az olyan káros anyagokat, mint a higany, a BPA és a fluorid, és
+      helyettük biztonságosabb alternatívákat alkalmazunk, amelyek támogatják
+      szervezetének hosszú távú egészségét.
+
+  - title: Minimál invazív kezelés
+    icon: shield
+    text: >-
+      Hiszünk abban, hogy a természetes fogszerkezetet a lehető legnagyobb mértékben
+      meg kell őrizni, és kíméletes kezelési módszereket kell alkalmazni.
+
+  - title: A test egészének figyelembevétele
+    icon: heart-pulse
+    text: >-
+      Minden ajánlásunk figyelembe veszi az Ön általános jólétét, nem csak a fogait
+      vagy az ínyét.
+
+  - title: Megelőzésre való összpontosítás
+    icon: sparkles
+    text: >-
+      Célunk, hogy segítsünk Önnek egészséges maradni, nem csak a betegségeket
+      kezelni. Az oktatás, a táplálkozás és az életmód támogatása minden látogatás
+      részét képezi.
+
+  - title: Együttműködés a kezelésben
+    icon: users
+    text: >-
+      Időt szánunk arra, hogy meghallgassuk Önt, megválaszoljuk kérdéseit és bevonjuk
+      Önt az egészségével kapcsolatos döntésekbe.
+
+cbct_findings:
+  - label: Rejtett fertőzések
+    text: Tályogok, csontfertőzések vagy gyökérkezelés alatt kialakuló krónikus gyulladások.
+  - label: Gyökérkezelési hibák
+    text: Kihagyott gyökércsatornák, törések vagy fennmaradó fertőzések, amelyek a hagyományos röntgenfelvételeken nem láthatók.
+  - label: Fogászati kavitációk
+    text: Az állcsont elhalása vagy nekrózisa által érintett területek, amelyeket a szokásos röntgenfelvételeken gyakran nem vesznek észre.
+  - label: Beékelődött fogak vagy gyökerek
+    text: Beleértve a bölcsességfogakat és azok idegekhez vagy szomszédos struktúrákhoz fűződő viszonyát.
+  - label: Sinusproblémák
+    text: Sinusgyulladások vagy -fertőzések, amelyek hozzájárulhatnak fogászati vagy arcbeli tünetek kialakulásához.
+  - label: Az állcsont minősége és térfogata
+    text: Elengedhetetlen az implantátumok vagy fémmentes fogpótlások tervezéséhez.
+  - label: Idegpályák
+    text: Segítenek elkerülni az idegkárosodást foghúzás vagy egyéb beavatkozások során.
+  - label: A légutak felépítése
+    text: Segíthet a légúti problémák vagy az alvási légzési rendellenességek szűrésében.
+
+cbct_benefits:
+  - Elkerüljük a felesleges beavatkozásokat.
+  - Felfedezzük a rejtett fertőzés- vagy gyulladásforrásokat.
+  - Pontosan és biztonságosan tervezzük meg a fogpótlásokat és a műtéteket.
+  - Megvédjük az érzékeny szöveteket, például az idegeket és a melléküregeket.
+  - Együttműködünk Önnel, hogy jól tájékozott, közös döntéseket hozzunk.
+
+cbct_comfort:
+  - title: Gyors, fájdalommentes vizsgálat
+    text: Az egész folyamat körülbelül 20 másodpercet vesz igénybe.
+  - title: Minimális sugárterhelés
+    text: Alacsonyabb dózis, mint a hagyományos CT-vizsgálatoknál.
+  - title: Nincs szükség különleges előkészületre
+    text: Csak pihenjen és lélegezzen normálisan a vizsgálat alatt.
+  - title: Azonnali eredmények
+    text: A 3D-felvételeket azonnal áttekintjük Önnel, így Ön magabiztosnak és jól tájékozottnak érezheti magát.
+
+cbct_when:
+  - Megmagyarázhatatlan fájdalom vagy tünetek jelentkeznek.
+  - Higanytömések eltávolítását vagy gyökérkezelést tervez.
+  - Fogászati implantátumra vagy hídra készül.
+  - Korábban már voltak orrmelléküreg-problémái, állkapocs-fájdalmai vagy arcizom-feszültsége.
+  - Olyan, az egész testet érintő tüneteire keres választ, amelyek lehetséges, hogy a szájüregből erednek.

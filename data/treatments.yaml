@@ -1,0 +1,102 @@
+# Kezelések — a Szolgáltatások oldal „Kezelések” szekciója.
+items:
+  - title: Akupunktúra
+    icon: needle
+    text: >-
+      Hagyományos kínai orvosi módszer, amely a szervezet saját szabályozó
+      rendszereit aktiválja — a fogászati kezelések kiegészítéseként, fájdalom- és
+      szorongáscsökkentésre is.
+
+  - title: Amalgámtömések biztonságos eltávolítása
+    icon: shield
+    text: >-
+      A régi fémtömések eltávolításakor szigorú biztonsági előírásokat követünk,
+      hogy a káros anyagoknak való kitettséget a lehető legkisebb mértékre
+      csökkentsük.
+
+  - title: BPA-mentes tömések
+    icon: droplet
+    text: >-
+      Minden tömésünk 100%-ban BPA-mentes — mert minden anyag számít.
+
+  - title: Fémmentes fogászati hidak
+    icon: tooth
+    text: >-
+      Pótolja a hiányzó fogakat biztonságos, tartós, természetes megjelenésű,
+      fémmentes hidakkal.
+
+  - title: Fémmentes, kivehető részleges fogsor
+    icon: smile
+    text: >-
+      Kényelmes, fémmentes kivehető fogsorok, amelyek biztonságosabb alternatívát
+      kínálnak mosolya helyreállításához.
+
+  - title: Fémmentes koronacsere
+    icon: sparkles
+    text: >-
+      A régi fémkoronákat biztonságosan kicseréljük fémmentes, biokompatibilis
+      anyagokra.
+
+  - title: Fluoridmentes fogászat
+    icon: leaf
+    text: >-
+      Úgy véljük, hogy a fluoridnak nincs helye a szájban, ezért olyan hatékony
+      alternatívákat kínálunk, amelyek összhangban állnak az Ön egészségügyi
+      érdekeivel.
+
+  - title: Fogeltávolítás
+    icon: hand-heart
+    text: >-
+      Ha egy fogat el kell távolítani, kíméletes, a szervezetet támogató módszert
+      alkalmazunk. A Huggins fogeltávolítási protokollon alapul, és PRF-fel
+      (vérlemezkékben gazdag fibrin) fertőtlenítjük, illetve tápláljuk a területet,
+      hogy elősegítsük a csont megfelelő gyógyulását, és minimalizáljuk a tartós
+      fertőzés vagy kavitáció kialakulásának kockázatát. Kiegészítő kezelések is
+      rendelkezésre állnak az immunrendszer és a természetes gyógyulás támogatására.
+
+  - title: Fotodinámiás lézerterápia (PDT)
+    icon: zap
+    text: >-
+      Már kialakult fogágybetegség és az implantátumok mellett fellépő gyulladások
+      kezelésére szolgáló, a folyamat lassítását célzó eljárás: a tisztítást követően
+      a tasakot fenntartó baktériumokat lézerfénnyel szemben érzékennyé tesszük, majd
+      lágy lézerrel „megvilágítjuk”, elpusztítva ezáltal a kórokozókat. Háromszori
+      kezelést követően új, feszes hámtapadás jön létre, amely állapot megfelelő
+      szájhigiénével és rendszeres professzionális fogtisztítással hosszabb ideig
+      fenntartható. A kezelés fájdalmatlan, mellékhatásoktól mentes, és a tasak
+      felszámolásáig ismételendő.
+
+  - title: Higanymentes fogászat
+    icon: shield
+    text: >-
+      Rendelőnk a higany kezelése során a legszigorúbb biztonsági előírásokat követi,
+      így védve mind az Ön egészségét, mind a környezetünket.
+
+  - title: Higanymentes tömések
+    icon: droplet
+    text: >-
+      Fogai biztonságos helyreállítása mérgező fémektől mentes anyagokkal.
+
+  - title: Homeopátia
+    icon: flask
+    text: >-
+      Kíméletes, a szervezet öngyógyító folyamatait támogató kiegészítő módszer a
+      fogászati beavatkozások előtt és után.
+
+  - title: Lézeres fogászat
+    icon: zap
+    text: >-
+      Minimálisan invazív lézertechnológia, amely precizitással és kényelemmel
+      támogatja fogászati kezeléseit.
+
+  - title: PRF membrán
+    icon: dna
+    text: >-
+      A páciens saját véréből készülő vérlemezkékben gazdag fibrin membrán, amely
+      természetes módon segíti a sebgyógyulást és a csontregenerációt.
+
+  - title: Természetes fogtisztítás
+    icon: leaf
+    text: >-
+      Fogtisztítási eljárásaink összhangban állnak holisztikus filozófiánkkal:
+      amennyiben lehetséges, kíméletes, természetes termékeket használunk.

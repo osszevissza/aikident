@@ -1,0 +1,23 @@
+# Páciensvélemények — bemutató (lorem ipsum) tartalom, éles indulás előtt cserélendő.
+items:
+  - quote: >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+      nostrud exercitation ullamco.
+    name: Kovács Anna
+    meta: Biológiai fogászat · 2025
+    photo: /img/demo2.webp
+  - quote: >-
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+      fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+      culpa qui officia deserunt.
+    name: Nagy Péter
+    meta: Higanymentes tömések · 2025
+    photo: /img/demo1.webp
+  - quote: >-
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+      doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore
+      veritatis.
+    name: Szabó Eszter
+    meta: Holisztikus kezelési terv · 2024
+    photo: /img/demo4.webp

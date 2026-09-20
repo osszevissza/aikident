@@ -1,0 +1,47 @@
+{{- /* Two-column checklist section, optionally beside an image. */ -}}
+{{- $b := .b -}}
+{{- $items := $b.items -}}
+{{- with $b.data }}{{ $items = (index (index site.Data .) ($b.key | default "items")) }}{{ end -}}
+{{- $items = $items | default slice -}}
+{{- with $b.limit }}{{ $items = first . $items }}{{ end -}}
+{{- $bg := $b.bg | default "paper" -}}
+<section class="section section--{{ $bg }}{{ if $b.tight }} section--tight{{ end }}"{{ with $b.id }} id="{{ . }}"{{ end }}>
+  <div class="shell">
+    <div class="split{{ if $b.flip }} split--flip{{ end }}{{ if not $b.image }} split--nosplit{{ end }}">
+      <div class="reveal">
+        {{- with $b.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end -}}
+        {{- with $b.title }}<h2>{{ . }}</h2>{{ end -}}
+        {{- with $b.lead }}<p class="lead mb-0">{{ . }}</p>{{ end -}}
+        <ul class="checks{{ if $b.twoCol }} checks--2{{ end }} mt-3">
+          {{- range $items }}
+          {{- $icon := "check" }}
+          {{- $text := . }}
+          {{- $bold := "" }}
+          {{- if reflect.IsMap . }}
+            {{- with .icon }}{{ $icon = . }}{{ end }}
+            {{- $bold = .label | default .title | default "" }}
+            {{- $text = .text | default "" }}
+          {{- end }}
+          <li>
+            {{ partial "icon" $icon }}
+            <span>{{ with $bold }}<b>{{ . }}</b>{{ end }}{{ $text }}</span>
+          </li>
+          {{- end }}
+        </ul>
+        {{- with $b.actions }}
+        <div class="btn-row mt-3">
+          {{- range . }}
+          <a class="btn {{ .style | default "btn--ghost" }}" href="{{ .url | relURL }}">{{ with .icon }}{{ partial "icon" . }}{{ end }}<span>{{ .label }}</span></a>
+          {{- end }}
+        </div>
+        {{- end }}
+      </div>
+
+      {{- if $b.image }}
+      <div class="split__media{{ if $b.tall }} split__media--tall{{ end }} reveal" data-delay="2">
+        <img src="{{ $b.image }}" alt="{{ $b.imageAlt | default "" }}" loading="lazy" decoding="async">
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>

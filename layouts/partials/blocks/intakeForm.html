@@ -1,0 +1,127 @@
+{{- /* Printable new-patient intake form. */ -}}
+{{- $b := .b -}}
+<section class="section section--cream"{{ with $b.id }} id="{{ . }}"{{ end }}>
+  <div class="shell">
+    <div class="iform reveal" id="adatlap-urlap">
+      <div class="iform__head">
+        <div>
+          <h2>{{ $b.title | default "Új páciens adatlap" }}</h2>
+          <p>{{ $b.subtitle | default "Biológiai és holisztikus fogászat" }}</p>
+        </div>
+        <address>
+          <b>{{ site.Params.brandName }}</b>
+          {{ site.Params.city }}<br>
+          {{ site.Params.street }}<br>
+          {{ site.Params.phoneDisplay }} · {{ site.Params.email }}
+        </address>
+      </div>
+
+      <p class="iform__note">
+        <b>Kérjük, az első vizit előtt töltse ki ezt az adatlapot</b> — nyugodtan, otthon.
+        Az első vizit alkalmával hozza magával. Az adatokra azért van szükségünk, hogy a
+        kezelési tervet az Ön teljes egészségi állapotához igazíthassuk. Minden adatot
+        bizalmasan kezelünk.
+      </p>
+
+      <form data-intake-form novalidate>
+        <fieldset class="iform__set" aria-labelledby="if-set-1">
+          <p class="iform__grouplabel" id="if-set-1">1. Személyes adatok</p>
+          <div class="iform__grid">
+            <div class="iform__f"><label for="if-name">Név</label><input id="if-name" name="name" type="text" autocomplete="name"></div>
+            <div class="iform__f"><label for="if-birth">Születési dátum</label><input id="if-birth" name="birth" type="text" placeholder="éééé. hh. nn."></div>
+            <div class="iform__f"><label for="if-addr">Lakcím</label><input id="if-addr" name="address" type="text" autocomplete="street-address"></div>
+            <div class="iform__f"><label for="if-mother">Anyja neve</label><input id="if-mother" name="mother" type="text"></div>
+            <div class="iform__f"><label for="if-phone">Telefonszám</label><input id="if-phone" name="phone" type="tel" autocomplete="tel"></div>
+            <div class="iform__f"><label for="if-email">E-mail cím</label><input id="if-email" name="email" type="email" autocomplete="email"></div>
+            <div class="iform__f"><label for="if-job">Foglalkozás</label><input id="if-job" name="job" type="text"></div>
+            <div class="iform__f"><label for="if-gp">Háziorvos / elérhetősége</label><input id="if-gp" name="gp" type="text"></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="iform__set" aria-labelledby="if-set-2">
+          <p class="iform__grouplabel" id="if-set-2">2. Egészségi állapot</p>
+          <div class="iform__grid iform__grid--1">
+            <div class="iform__f"><label for="if-meds">Jelenleg szedett gyógyszerek</label><textarea id="if-meds" name="meds"></textarea></div>
+            <div class="iform__f"><label for="if-allergy">Ismert allergia / érzékenység (étel, fém, fogászati anyag, gyógyszer)</label><textarea id="if-allergy" name="allergy"></textarea></div>
+            <div class="iform__f"><label for="if-history">Korábbi műtétek, kórházi kezelések, krónikus betegségek</label><textarea id="if-history" name="history"></textarea></div>
+          </div>
+          <p class="iform__grouplabel" id="if-cond-label">Az alábbiak közül jelenleg fennáll-e Önnél valamelyik?</p>
+          <div class="iform__opts" role="group" aria-labelledby="if-cond-label">
+            {{- range slice "szívbetegség" "magas vérnyomás" "cukorbetegség" "pajzsmirigy-probléma" "véralvadási zavar" "autoimmun betegség" "vesebetegség" "légúti / asztmás panasz" "terhesség / szoptatás" }}
+            <label class="iform__opt"><input type="checkbox" name="cond" value="{{ . }}"><span>{{ . }}</span></label>
+            {{- end }}
+          </div>
+        </fieldset>
+
+        <fieldset class="iform__set" aria-labelledby="if-set-3">
+          <p class="iform__grouplabel" id="if-set-3">3. Fogászati előzmények</p>
+          <div class="iform__grid">
+            <div class="iform__f"><label for="if-last">Utolsó fogászati vizsgálat</label><input id="if-last" name="lastVisit" type="text"></div>
+            <div class="iform__f"><label for="if-dentist">Kezelő fogorvos neve</label><input id="if-dentist" name="dentist" type="text"></div>
+          </div>
+          <p class="iform__grouplabel" id="if-dental-label">Az alábbiak jellemzőek Önre?</p>
+          <div class="iform__opts" role="group" aria-labelledby="if-dental-label">
+            {{- range slice "higany (amalgám) töméseim vannak" "fémkoronám / fémhidam van" "gyökérkezelt fogam van" "implantátumom van" "fogszabályozásban vettem részt" "ínybetegséggel kezeltek" }}
+            <label class="iform__opt"><input type="checkbox" name="dental" value="{{ . }}"><span>{{ . }}</span></label>
+            {{- end }}
+          </div>
+          <div class="iform__grid iform__grid--1 mt-2">
+            <div class="iform__f"><label for="if-complaint">Jelenlegi panasz, kérés — mit szeretne megbeszélni velünk?</label><textarea id="if-complaint" name="complaint"></textarea></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="iform__set" aria-labelledby="if-set-4">
+          <p class="iform__grouplabel" id="if-set-4">4. Életmód és holisztikus szempontok</p>
+          <p class="iform__hint">
+            Ezek a kérdések a biológiai és holisztikus szemléletünkhöz kapcsolódnak.
+            Kitöltésük nem kötelező, de segít abban, hogy a szájüregi állapotot a teljes
+            szervezet összefüggésében lássuk.
+          </p>
+          <div class="iform__grid">
+            <div class="iform__f"><label for="if-diet">Étrend (vegetáriánus, vegán, egyéb)</label><input id="if-diet" name="diet" type="text"></div>
+            <div class="iform__f"><label for="if-sleep">Naponta hány órát alszik?</label><input id="if-sleep" name="sleep" type="text"></div>
+            <div class="iform__f"><label for="if-habits">Dohányzás / alkohol / kávé</label><input id="if-habits" name="habits" type="text"></div>
+            <div class="iform__f"><label for="if-water">Napi folyadékbevitel</label><input id="if-water" name="water" type="text"></div>
+            <div class="iform__f"><label for="if-sport">Rendszeres mozgás, sport</label><input id="if-sport" name="sport" type="text"></div>
+            <div class="iform__f"><label for="if-stress">Stressz szintje (alacsony / közepes / magas)</label><input id="if-stress" name="stress" type="text"></div>
+            <div class="iform__f iform__f--wide"><label for="if-alt">Korábbi vagy jelenlegi kiegészítő kezelések (akupunktúra, homeopátia, természetgyógyászat)</label><textarea id="if-alt" name="alternative"></textarea></div>
+            <div class="iform__f iform__f--wide"><label for="if-note">Egyéb megjegyzés, amit fontosnak tart megosztani velünk</label><textarea id="if-note" name="note"></textarea></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="iform__set" aria-labelledby="if-set-5">
+          <p class="iform__grouplabel" id="if-set-5">5. Hozzájáruló nyilatkozat</p>
+          <div class="iform__consent">
+            <p>
+              Aláírásommal megerősítem, hogy a fenti adatokat a valóságnak megfelelően
+              töltöttem ki, és hozzájárulok ahhoz, hogy az {{ site.Params.brandName }} a
+              kezelésemhez kapcsolódóan ezeket az adatokat kezelje.
+            </p>
+            <label class="iform__opt" style="margin-top:.4rem">
+              <input type="checkbox" name="reminder">
+              <span>Hozzájárulok, hogy a rendelő a kezeléssel kapcsolatos emlékeztetőt küldjön e-mailben vagy telefonon.</span>
+            </label>
+            <p>
+              Az adatkezelés célja a fogászati ellátás biztonságos megtervezése és
+              elvégzése. Adatait harmadik félnek nem adjuk át, kivéve, ha ahhoz Ön külön
+              hozzájárul, vagy jogszabály kötelez. Kérésére adatait bármikor
+              megtekintheti, módosíttathatja vagy töröltetheti.
+            </p>
+          </div>
+          <div class="iform__sign">
+            <div class="iform__f"><label for="if-date">Dátum</label><input id="if-date" name="date" type="text"></div>
+            <div class="iform__f"><label for="if-sign">Páciens aláírása</label><input id="if-sign" name="signature" type="text"></div>
+          </div>
+        </fieldset>
+
+        <div class="iform__actions">
+          <button class="btn" type="button" data-print>
+            {{ partial "icon" "download" }}<span>Adatlap nyomtatása</span>
+          </button>
+          <button class="btn btn--ghost" type="submit">{{ partial "icon" "check" }}<span>Kitöltött adatlap mentése</span></button>
+          <span class="note" data-form-status role="status" aria-live="polite" hidden style="font-size:.9rem;color:var(--ink-3)"></span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

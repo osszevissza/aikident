@@ -1,0 +1,34 @@
+{{- /* Inner-page hero. */ -}}
+{{- $b := .b -}}
+{{- $ctx := .ctx -}}
+<section class="page-hero">
+  <div class="shell page-hero__inner reveal">
+    <ol class="crumbs">
+      <li><a href="{{ "/" | relURL }}">Főoldal</a></li>
+      {{- if $b.crumb }}
+      <li><span>{{ $b.crumb }}</span></li>
+      {{- else }}
+      <li><span>{{ $ctx.Title }}</span></li>
+      {{- end }}
+    </ol>
+    {{- with $b.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end -}}
+    <h1>{{ $b.title | default $ctx.Title }}</h1>
+    {{- with $b.lead }}<p class="lead">{{ . }}</p>{{ end -}}
+
+    {{- with $b.actions }}
+    <div class="btn-row mt-3">
+      {{- range . }}
+      <a class="btn {{ .style }}" href="{{ .url | relURL }}">
+        {{- with .icon }}{{ partial "icon" . }}{{ end }}<span>{{ .label }}</span>
+      </a>
+      {{- end }}
+    </div>
+    {{- end }}
+
+    {{- with $b.pills }}
+    <div class="pills mt-3">
+      {{- range . }}<span class="pill">{{ partial "icon" (.icon | default "check") }}<span>{{ .text }}</span></span>{{ end }}
+    </div>
+    {{- end }}
+  </div>
+</section>

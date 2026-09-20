@@ -1,9 +1,23 @@
 {{ define "main" }}
-<article class="page-shell">
-  <header class="page-header"><h1>Az oldal nem található</h1></header>
-  <div class="content">
-    <p>Kérjük, használja a fenti menüt a továbblépéshez.</p>
-    <p><a href="/">Vissza a kezdőoldalra →</a></p>
+<section class="section section--cream" style="padding-block:clamp(4rem,9vw,8rem)">
+  <div class="shell center">
+    <p class="eyebrow eyebrow--center">404 — az oldal nem található</p>
+    <h1 style="max-width:18ch;margin-inline:auto">Úgy tűnik, ez a fog elveszett</h1>
+    <p class="lead mx-auto" style="max-width:52ch">
+      A keresett oldal nem létezik vagy elköltözött. Semmi baj — itt vannak a
+      leggyakrabban keresett helyek.
+    </p>
+
+    <div class="btn-row mt-3" style="justify-content:center">
+      <a class="btn" href="{{ "/" | relURL }}">{{ partial "icon" "arrow-right" }}<span>Vissza a főoldalra</span></a>
+      <a class="btn btn--ghost" href="{{ "/kapcsolat/" | relURL }}">{{ partial "icon" "calendar" }}<span>Időpontfoglalás</span></a>
+    </div>
+
+    <div class="pills mt-4" style="justify-content:center">
+      {{- range site.Menus.main }}
+      <a class="pill pill--action" href="{{ .URL | relURL }}">{{ partial "icon" "arrow-up-right" }}<span>{{ .Name }}</span></a>
+      {{- end }}
+    </div>
   </div>
-</article>
+</section>
 {{ end }}

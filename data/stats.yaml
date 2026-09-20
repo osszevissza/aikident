@@ -1,0 +1,14 @@
+# Számok a „miért mi” sávhoz. A data-count értékek animálva jelennek meg.
+items:
+  - value: 20
+    suffix: ' év'
+    label: Több mint két évtizede a fogászatban és a természetgyógyászatban
+  - value: 300
+    suffix: '+'
+    label: Elégedett páciens, aki holisztikus szemléletben gondolkodik
+  - value: 5
+    suffix: ' szakterület'
+    label: Fogászat, kínai orvoslás, akupunktúra, lézerterápia és homeopátia egy helyen
+  - value: 20
+    suffix: ' mp'
+    label: A 3D-s CBCT felvétel elkészítésének ideje — fájdalommentesen

@@ -1,0 +1,47 @@
+# Új páciensek — első látogatás, adatlap, pénzügyek.
+intro: >-
+  Gondozási filozófiánk minden tevékenységünket áthatja. Az Ön általános jóléte és
+  egészsége a legfontosabb számunkra. Tudatában vagyunk annak, hogy minden páciens
+  egyedi, és célunk az, hogy segítsünk Önnek megőrizni fogait funkcionálisan,
+  kényelmesen és esztétikailag egy életen át.
+
+steps:
+  - title: Adatlap kitöltése
+    text: >-
+      Töltse le az Új páciens adatlapot, töltse ki otthon nyugodtan, és hozza
+      magával az első vizit alkalmával.
+  - title: Ismerkedés és meghallgatás
+    text: >-
+      Első látogatásakor időt szánunk arra, hogy megismerjük Önt (és Ön is minket),
+      valamint megbeszéljük fogászati igényeit.
+  - title: Átfogó vizsgálat
+    text: >-
+      Átfogó fogászati vizsgálatot végzünk, és szükség esetén elkészítjük a
+      röntgenfelvételeket.
+  - title: Személyre szabott terv
+    text: >-
+      Összegyűjtjük az információkat, majd közösen áttekintjük a személyre szabott
+      kezelési tervet és a költségeket.
+
+we_do:
+  - Átfogó fogászati vizsgálat elvégzése
+  - Szükséges röntgenfelvételek elkészítése
+  - Információk gyűjtése az Ön számára személyre szabott terv elkészítéséhez
+  - A leletek közös áttekintése és érthető magyarázata
+
+bring:
+  - Új páciens adatlap (kitöltve)
+  - Korábbi röntgen- és leletanyagok
+  - A jelenleg szedett gyógyszerek listája
+  - Ismert allergiák, érzékenységek
+
+finance:
+  title: Pénzügyi információk
+  paragraphs:
+    - >-
+      A kezelés költsége az Ön egyéni igényeitől és a kezelési tervtől függően
+      változhat.
+    - >-
+      A rendelőnkben tett látogatása során megbeszéljük Önnel a kezelés költségét,
+      valamint az elérhető fizetési lehetőségeket, hogy Ön a legjobb döntést
+      hozhassa meg.

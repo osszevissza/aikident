@@ -1,4 +1,13 @@
-public/
-resources/_gen/
+# Hugo build output
+/public/
+/resources/_gen/
 .hugo_build.lock
+
+# Local verification builds
+/.build-public/
+/.check-*/
+
+# Editor / OS noise
+.DS_Store
+*.swp
 .Rhistory

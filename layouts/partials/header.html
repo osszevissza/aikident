@@ -1,38 +1,27 @@
 <header class="site-header" id="site-header">
-  <div class="header-inner">
-    <a
-      class="site-brand"
-      href="{{ "/" | relURL }}"
-      aria-label="Aiki Dent Fogászat – Főoldal"
-    >
-      <span class="logo-placeholder">Aiki Dent</span>
-      <span class="brand-subtitle">Fogászat</span>
+  <div class="shell site-header__inner">
+    <a class="brand" href="{{ "/" | relURL }}" aria-label="{{ site.Title }} — főoldal">
+      <img src="/img/logo.svg" alt="{{ site.Title }}" width="186" height="82">
     </a>
 
-    <div class="header-actions">
-      <a
-        class="button"
-        href="tel:+36301932714"
-        aria-label="Telefonhívás: +36 30 193 2714"
-      >
-        +36 30 193 2714
-      </a>
+    <nav class="nav" aria-label="Főmenü">
+      <ul class="nav__list">
+        {{- $here := $.RelPermalink }}
+        {{- range site.Menus.main }}
+          {{- $url := .URL | relURL }}
+          {{- $active := eq $url $here }}
+          {{- if and (not $active) (ne $url "/") (hasPrefix $here $url) }}{{ $active = true }}{{ end }}
+        <li><a class="nav__link" href="{{ $url }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+        {{- end }}
+      </ul>
+    </nav>
 
-      <button
-        class="nav-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="main-menu"
-        aria-label="Menü megnyitása"
-      >
-        <span class="hamburger" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-      </button>
+    <div class="header__cta">
+      <a class="btn btn--sm" href="{{ "/kapcsolat/" | relURL }}">{{ partial "icon" "calendar" }}<span>Időpontfoglalás</span></a>
     </div>
-  </div>
 
-  {{ partial "nav.html" . }}
+    <button class="burger" type="button" data-drawer-open aria-label="Menü megnyitása" aria-controls="drawer" aria-expanded="false">
+      {{ partial "icon" "menu" }}
+    </button>
+  </div>
 </header>

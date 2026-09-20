@@ -1,60 +1,56 @@
 baseURL = 'https://aikident.hu/'
 languageCode = 'hu-HU'
+defaultContentLanguage = 'hu'
 title = 'Aiki Dent Fogászat'
-disableKinds = ['taxonomy', 'term']
+enableRobotsTXT = true
+enableGitInfo = false
+disableKinds = ['taxonomy', 'term', 'rss']
 
 [params]
-  description = 'Aiki Dent Fogászat'
-  phone = '+36301932714'
+  description = 'Biológiai és holisztikus fogászat Budapesten. Dr. Kelemen László fogszabályozó és biológiai fogorvos rendelője a XIII. kerületben.'
+  brandName = 'Aiki Dent Fogászat'
+  tagline = 'Biológiai és holisztikus fogászat'
+  phoneDisplay = '+36 30 193 2714'
+  phoneHref = '+36301932714'
   email = 'info@aikident.hu'
-  address = '1136 Budapest, Hegedűs Gyula utca 29/b'
+  street = 'Hegedűs Gyula utca 29/b'
+  city = '1136 Budapest'
+  hours = 'Előzetes egyeztetés alapján'
+  mapsUrl = 'https://www.google.com/maps/search/?api=1&query=Heged%C5%B1s+Gyula+utca+29%2Fb%2C+1136+Budapest'
 
-[menus]
-  [[menus.main]]
+[params.theme]
+  wine = '#811331'
+  mint = '#7eecc3'
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
+[menu]
+  [[menu.main]]
     name = 'Főoldal'
     url = '/'
     weight = 10
-  [[menus.main]]
+  [[menu.main]]
     name = 'Rólunk'
     url = '/rolunk/'
     weight = 20
-  [[menus.main]]
-    name = 'Vizsgálatok'
-    url = '/vizsgalatok/'
-    weight = 40
-  [[menus.main]]
-    name = 'Kezelések'
-    url = '/kezelesek/'
-    weight = 50
-  [[menus.main]]
+  [[menu.main]]
+    name = 'Szolgáltatások'
+    url = '/szolgaltatasok/'
+    weight = 30
+  [[menu.main]]
     name = 'Technológia'
     url = '/technologia/'
-    weight = 60
-  [[menus.main]]
-    name = 'Első látogatás'
-    url = '/elso-latogatas/'
-    weight = 70
-  [[menus.main]]
-    name = 'Kapcsolat'
-    url = '/kapcsolat/'
-    weight = 80
-
-  [[menus.footer]]
-    name = 'Rólunk'
-    url = '/rolunk/'
-    weight = 10
-  [[menus.footer]]
-    name = 'Vizsgálatok'
-    url = '/vizsgalatok/'
-    weight = 20
-  [[menus.footer]]
-    name = 'Kezelések'
-    url = '/kezelesek/'
-    weight = 30
-  [[menus.footer]]
-    name = 'Kapcsolat'
-    url = '/kapcsolat/'
     weight = 40
-
-[markup.goldmark.renderer]
-  unsafe = true
+  [[menu.main]]
+    name = 'Új páciensek'
+    url = '/uj-paciens/'
+    weight = 50
+  [[menu.main]]
+    name = 'Kapcsolat'
+    url = '/kapcsolat/'
+    weight = 60

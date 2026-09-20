@@ -1,0 +1,21 @@
+# Alapértékeink — a Rólunk oldal és a főoldal „Értékeink” blokkja.
+items:
+  - title: Integritás
+    icon: shield
+    text: Minden cselekedetünkben őszinték és átláthatók vagyunk — a diagnózistól a kezelési tervig.
+
+  - title: Jelenlét és együttérzés
+    icon: heart
+    text: Meghallgatunk, időt adunk, és valóban jelen vagyunk minden páciensünk mellett.
+
+  - title: Kíváncsiság és fejlődés
+    icon: sparkles
+    text: Folyamatosan képezzük magunkat, hogy a legújabb tudományos eredményeket hozhassuk el Önnek.
+
+  - title: Felelősségvállalás
+    icon: hand-heart
+    text: Felelősséget vállalunk döntéseinkért — Önért és a környezetünkért egyaránt.
+
+  - title: Együttműködés
+    icon: users
+    text: "Az egyéniség helyett a közös munka vezet eredményre: Ön és mi, ugyanazon az oldalon."

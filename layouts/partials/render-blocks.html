@@ -1,0 +1,10 @@
+{{- /*
+  Renders every entry of a page's `blocks` front-matter list using the matching
+  partial in layouts/partials/blocks/<type>.html
+*/ -}}
+{{- $ctx := . -}}
+{{- range $i, $b := $ctx.Params.blocks -}}
+  {{- $type := "prose" -}}
+  {{- with index $b "type" }}{{ $type = . }}{{ end -}}
+  {{- partial (printf "blocks/%s.html" $type) (dict "b" $b "ctx" $ctx "i" $i) -}}
+{{- end -}}

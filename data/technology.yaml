@@ -1,0 +1,63 @@
+# Technológiai eszközpark — főoldali kiemelés és a Technológia oldal.
+featured:
+  name: Zeiss Extaro 300
+  badge: Magyarországon az első készülék!
+  icon: microscope
+  text: >-
+    Rendelőnkben a Zeiss Extaro 300 mikroszkóppal dolgozunk: a nagyításnak és a
+    kiváló mélységélességnek köszönhetően olyan részletek is láthatóvá válnak,
+    amelyek szabad szemmel rejtve maradnak. Ez teszi lehetővé a minimális
+    foganyag-veszteséggel járó, rendkívül precíz kezeléseket.
+  uses:
+    - Mikroszkópos fogorvosi állapotfelmérés (szájüreg, fogak, íny)
+    - Kamerás felvétel készítése és elemzése
+    - Fogkőeltávolítás
+    - Tömés
+    - Gyökérkezelés
+    - Sebészeti beavatkozás
+  advantages:
+    - Megelőzésre koncentrálunk.
+    - Minimális foganyag-veszteséggel dolgozunk.
+    - A mikroszkóppal végzett kezelések pontosságuk miatt a legprecízebb módon elvégzett beavatkozások közé tartoznak.
+    - A régen készült gyökértömések mikroszkóp segítségével jó eséllyel eltávolíthatóak.
+
+items:
+  - title: CBCT-vizsgálat
+    icon: scan
+    text: >-
+      Fejlett képalkotó technológia, amely lehetővé teszi a teljes kép megismerését,
+      amikor a hagyományos röntgenfelvételek nem elegendőek.
+
+  - title: Digitális röntgenfelvételek
+    icon: film
+    text: >-
+      A digitális röntgenfelvételeknél a hagyományos film helyett digitális képalkotó
+      eszközt használunk, amely a képet azonnal továbbítja a számítógépre. Az
+      eredmény rendkívül részletgazdag szájüreg-felvétel, amelynek kontrasztja és
+      felbontása javítható, így a fogászati problémák könnyebben diagnosztizálhatók,
+      és a legmegfelelőbb kezelés kevesebb sugárterhelés mellett határozható meg.
+
+  - title: Lézeres fogászat
+    icon: zap
+    text: >-
+      Minimálisan invazív lézertechnológia, amely precízióval és kényelemmel
+      támogatja fogászati kezeléseit.
+
+  - title: Ózonterápia
+    icon: droplet
+    text: >-
+      Használja ki a természetes ózon erejét egy biztonságos, hatékony kezeléshez,
+      amely kiegészíti holisztikus ellátásunkat.
+
+  - title: PRF (vérlemezkékben gazdag fibrin)
+    icon: dna
+    text: >-
+      A PRF-et a páciens saját véréből vett kis mintából állítjuk elő, amelyet
+      centrifugában centrifugálunk, hogy a szervezet természetes gyógyító tényezőit
+      koncentráljuk.
+
+  - title: Mikroszkópos diagnosztika
+    icon: microscope
+    text: >-
+      A Zeiss Extaro 300 minden kezelés alapja: nagyobb pontosság, kisebb
+      beavatkozás, kiszámíthatóbb eredmény.

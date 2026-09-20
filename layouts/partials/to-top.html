@@ -1,0 +1,6 @@
+{{- /* Floating scroll-to-top control. Hidden until the page is scrolled, and
+       kept non-focusable while hidden via `visibility` (not display/opacity
+       alone) so keyboard users never land on an invisible button. */ -}}
+<button class="to-top" type="button" data-to-top aria-label="Vissza a tetejére">
+  {{ partial "icon" "arrow-up" }}
+</button>

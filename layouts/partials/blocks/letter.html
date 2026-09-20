@@ -1,0 +1,39 @@
+{{- /* Full-width testimonial / letter card. */ -}}
+{{- $b := .b -}}
+{{- $bg := $b.bg | default "cream" -}}
+<section class="section section--{{ $bg }}{{ if $b.tight }} section--tight{{ end }}"{{ with $b.id }} id="{{ . }}"{{ end }}>
+  <div class="shell">
+    <div class="split{{ if $b.flip }} split--flip{{ end }}">
+      <div class="letter reveal">
+        {{- with $b.quote }}<p class="letter__quote">„{{ . }}”</p>{{ end -}}
+        {{- range $b.paragraphs }}<p class="mt-2">{{ . }}</p>{{ end -}}
+        {{- with $b.sign }}
+        {{- $sign := . }}
+        <div class="letter__sign">
+          {{- with .photo }}<img src="{{ . }}" alt="{{ $sign.name }}" loading="lazy">{{ end }}
+          <span><b>{{ $sign.name }}</b><span>{{ $sign.role }}</span></span>
+        </div>
+        {{- end }}
+      </div>
+
+      <div class="split__body reveal" data-delay="2">
+        {{- with $b.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end -}}
+        {{- with $b.title }}<h2>{{ . }}</h2>{{ end -}}
+        {{- with $b.lead }}<p class="lead">{{ . }}</p>{{ end -}}
+        {{- range $b.body }}<p>{{ . }}</p>{{ end -}}
+        {{- with $b.credentials }}
+        <ul class="checks mt-3">
+          {{- range . }}<li>{{ partial "icon" (.icon | default "check") }}<span><b>{{ .title }}</b>{{ .text }}</span></li>{{ end }}
+        </ul>
+        {{- end }}
+        {{- with $b.actions }}
+        <div class="btn-row mt-3">
+          {{- range . }}
+          <a class="btn {{ .style | default "btn--ghost" }}" href="{{ .url | relURL }}">{{ with .icon }}{{ partial "icon" . }}{{ end }}<span>{{ .label }}</span></a>
+          {{- end }}
+        </div>
+        {{- end }}
+      </div>
+    </div>
+  </div>
+</section>

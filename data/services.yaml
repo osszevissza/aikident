@@ -1,0 +1,30 @@
+# A négy fő ellátási pillér — a főoldalon és a Szolgáltatások oldalon is megjelenik.
+items:
+  - title: Általános fogászat
+    anchor: altalanos-fogaszat
+    icon: tooth
+    text: >-
+      Fogait és ínyét kemény vegyszerek használata nélkül ápoljuk, támogatva ezzel
+      általános egészségi állapotát.
+
+  - title: Biológiai fogászat
+    anchor: biologiai-fogaszat
+    icon: leaf
+    text: >-
+      Tisztában vagyunk azzal, hogy a fogászati anyagok és eljárások milyen hatással
+      lehetnek az Ön általános egészségi állapotára, ezért a teljes körű jóllét
+      érdekében biokompatibilis megoldásokat választunk.
+
+  - title: Holisztikus fogászat
+    anchor: holisztikus-fogaszat
+    icon: heart-pulse
+    text: >-
+      A fogászati ellátás egészségi megközelítése — támogatja a test, a lélek és
+      az elme egészségét.
+
+  - title: Integrált fogászat
+    anchor: integralt-fogaszat
+    icon: balance
+    text: >-
+      Szájegészsége szoros összefüggésben áll az általános közérzetével. Mi az embert
+      egészében kezeljük, nem csupán a fogait.

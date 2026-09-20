@@ -1,0 +1,63 @@
+{{- /* Home hero. */ -}}
+{{- $b := .b -}}
+{{- $actions := $b.actions | default slice -}}
+<section class="hero">
+  <div class="shell hero__inner">
+    <div class="hero__body reveal">
+      {{- with $b.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end -}}
+      <h1 class="hero__title">
+        {{- $b.title -}}
+        {{- with $b.accent }} <span class="hl">{{ . }}</span>{{ end -}}
+      </h1>
+      {{- with $b.lead }}<p class="lead hero__lead">{{ . }}</p>{{ end -}}
+
+      {{- if $actions }}
+      <div class="btn-row hero__actions">
+        {{- range $actions }}
+          {{- $style := .style | default "btn" -}}
+          <a class="btn {{ if ne $style "btn" }}{{ $style }}{{ end }}{{ if .large }} btn--lg{{ end }}" href="{{ .url | relURL }}">
+            {{- with .icon }}{{ partial "icon" . }}{{ end -}}
+            <span>{{ .label }}</span>
+          </a>
+        {{- end }}
+      </div>
+      {{- end }}
+
+      {{- with $b.proof }}
+      <div class="hero__proof">
+        {{- if .stars }}
+        <span class="hero__stars" role="img" aria-label="{{ .stars }} csillagos értékelés">
+          {{- range seq .stars }}{{ partial "icon" "star" }}{{ end -}}
+        </span>
+        {{- end }}
+        <small>
+          {{- with .bold }}<b>{{ . }}</b> {{ end -}}
+          {{- .text -}}
+        </small>
+      </div>
+      {{- end }}
+    </div>
+
+    <div class="hero__media reveal" data-delay="2">
+      <span class="hero__blob" aria-hidden="true"></span>
+      <figure class="hero__frame">
+        <img src="{{ $b.image | default "/img/fekvo.webp" }}" alt="{{ $b.imageAlt | default "" }}" width="1313" height="878" fetchpriority="high" decoding="async">
+      </figure>
+      {{- with $b.badge }}
+      <div class="hero__badge">
+        <span class="chip">{{ partial "icon" (.icon | default "sparkles") }}</span>
+        <span>
+          <b>{{ .title }}</b>
+          <span>{{ .text }}</span>
+        </span>
+      </div>
+      {{- end }}
+      {{- with $b.float }}
+      <div class="hero__float">
+        <b>{{ .value }}{{ .suffix }}</b>
+        <span>{{ .label }}</span>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,56 @@
+{{- $css := resources.Get "css/main.css" | minify | fingerprint "sha256" -}}
+{{- $js := resources.Get "js/main.js" | minify | fingerprint "sha256" -}}
+{{- $title := cond .IsHome (printf "%s — %s" site.Title site.Params.tagline) (printf "%s — %s" .Title site.Title) -}}
+{{- $desc := .Description | default site.Params.description -}}
+{{- $og := .Params.image | default "/img/fekvo.webp" -}}
+<!doctype html>
+<html lang="{{ site.LanguageCode | default "hu-HU" }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta name="theme-color" content="{{ site.Params.theme.wine }}">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ $og | absURL }}">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="preload" href="/fonts/GeneralSans/GeneralSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Playfair/Playfair-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+<link rel="stylesheet" href="/fonts/GeneralSans/GeneralSans.css">
+<link rel="stylesheet" href="/fonts/Comfortaa/Comfortaa.css">
+<link rel="stylesheet" href="/fonts/Playfair/Playfair.css">
+
+{{ block "head" . }}{{ end }}
+<script>document.documentElement.className += ' js';</script>
+</head>
+<body class="{{ block "bodyclass" . }}page{{ end }}">
+<a class="skip-link" href="#main">Ugrás a tartalomra</a>
+
+{{ partial "topbar.html" . }}
+{{ partial "header.html" . }}
+{{ partial "drawer.html" . }}
+
+<main id="main" tabindex="-1">
+{{ block "main" . }}{{ end }}
+</main>
+
+{{ partial "to-top.html" . }}
+
+{{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
+
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+</body>
+</html>

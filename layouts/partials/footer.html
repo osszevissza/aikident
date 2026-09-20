@@ -1,27 +1,24 @@
 <footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <p class="footer-title">Aiki Dent Fogászat</p>
-      <p class="footer-address">1136 Budapest, Hegedűs Gyula utca 29/b</p>
-      <p class="footer-contact">
-        <a href="tel:+36301932714">+36 30 193 2714</a>
-        <span aria-hidden="true"> · </span>
-        <a href="mailto:info@aikident.hu">info@aikident.hu</a>
-      </p>
+  <div class="shell">
+    <div class="site-footer__grid">
+      <div class="site-footer__brand">
+        <img src="/img/logo-white.svg" alt="{{ site.Title }}" width="190" height="84">
+        <p>Biológiai és holisztikus fogászat Budapesten. A high-tech diagnosztika és a több ezer éves kínai orvosi szemlélet találkozása — az egész embert támogató ellátásért.</p>
+      </div>
+
+      <div>
+        <h2>Kapcsolat</h2>
+        <ul class="site-footer__contact">
+          <li>{{ partial "icon" "pin" }}<span>{{ site.Params.city }}<br>{{ site.Params.street }}</span></li>
+          <li>{{ partial "icon" "phone" }}<a href="tel:{{ site.Params.phoneHref }}">{{ site.Params.phoneDisplay }}</a></li>
+          <li>{{ partial "icon" "mail" }}<a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></li>
+          <li>{{ partial "icon" "clock" }}<span>{{ site.Params.hours }}</span></li>
+        </ul>
+      </div>
     </div>
 
-    <div class="footer-hours">
-      <p class="footer-title">Nyitvatartási idő</p>
-      <p>Előzetes egyeztetés alapján</p>
+    <div class="site-footer__bottom">
+      <span>© {{ now.Year }} {{ site.Params.brandName }}. Minden jog fenntartva.</span>
     </div>
-
-    <nav class="footer-nav" aria-label="Lábléc navigáció">
-      <ul>
-        {{ range .Site.Menus.footer }}
-          <li><a href="{{ .URL }}"{{ if eq .URL $.RelPermalink }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
-        {{ end }}
-      </ul>
-    </nav>
   </div>
-  <p class="copyright">© {{ now.Year }} {{ .Site.Title }}</p>
 </footer>

@@ -1,0 +1,34 @@
+{{- /* Patient testimonials. */ -}}
+{{- $b := .b -}}
+{{- $items := $b.items -}}
+{{- with $b.data }}{{ $items = (index (index site.Data .) ($b.key | default "items")) }}{{ end -}}
+{{- $items = $items | default slice -}}
+{{- with $b.limit }}{{ $items = first . $items }}{{ end -}}
+{{- $bg := $b.bg | default "cream" -}}
+<section class="section section--{{ $bg }}{{ if $b.tight }} section--tight{{ end }}"{{ with $b.id }} id="{{ . }}"{{ end }}>
+  <div class="shell">
+    <div class="sec-head{{ if eq ($b.align | default "center") "center" }} sec-head--center{{ end }} reveal">
+      {{- with $b.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end -}}
+      {{- with $b.title }}<h2>{{ . }}</h2>{{ end -}}
+      {{- with $b.lead }}<p>{{ . }}</p>{{ end -}}
+    </div>
+
+    <div class="quotes">
+      {{- range $i, $q := $items }}
+      <figure class="quote reveal" data-delay="{{ add (mod $i 3) 1 }}">
+        <span class="quote__mark">{{ partial "icon" "quote" }}</span>
+        {{- if $q.stars | default true }}
+        <span class="quote__stars" role="img" aria-label="5 csillagos értékelés">{{ range seq 5 }}{{ partial "icon" "star" }}{{ end }}</span>
+        {{- end }}
+        <blockquote><p>{{ $q.quote }}</p></blockquote>
+        <figcaption class="quote__by">
+          {{- with $q.photo }}<img src="{{ . }}" alt="" loading="lazy">{{ end }}
+          <span><b>{{ $q.name }}</b><span>{{ $q.meta }}</span></span>
+        </figcaption>
+      </figure>
+      {{- end }}
+    </div>
+
+    {{- with $b.footnote }}<p class="center mt-3" style="color:var(--ink-3);font-size:.9rem">{{ . }}</p>{{ end }}
+  </div>
+</section>

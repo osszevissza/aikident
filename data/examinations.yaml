@@ -1,0 +1,81 @@
+# Vizsgálatok — a Szolgáltatások oldal „Vizsgálatok” szekciója.
+items:
+  - title: 3D-s CBCT képalkotás
+    icon: scan
+    text: >-
+      Fejlett képalkotási technológia, amely lehetővé teszi a teljes kép megtekintését,
+      amikor a hagyományos röntgenfelvételek nem elegendőek.
+
+  - title: Átfogó fogászati vizsgálatok
+    icon: check-circle
+    text: >-
+      A rendszeres vizsgálatok segítik mosolya egészségének és ragyogásának megőrzését.
+      Javasoljuk, hogy félévente keressen fel minket.
+
+  - title: Ételintolerancia vizsgálat
+    icon: flask
+    text: >-
+      Feltárjuk, hogy a gyakori ételintoleranciák hogyan befolyásolhatják a szájüregi
+      gyulladást és a szervezet egészének terhelését.
+
+  - title: Fogászati anyagok allergiavizsgálata
+    icon: shield
+    text: >-
+      A tervezett tömőanyagok és fémmentes pótlások biokompatibilitását előzetesen
+      ellenőrizzük, így elkerülhetjük a későbbi érzékenységi reakciókat.
+
+  - title: Fogászati meridián-táblázat
+    icon: grid
+    text: >-
+      Minden fog kapcsolatban áll a test különböző szerveivel, mirigyeivel és
+      energiacsatornáival. A fogászati meridiánok elveinek alkalmazásával feltárjuk
+      a szájüregi egészségügyi problémák és a szisztémás tünetek közötti lehetséges
+      összefüggéseket, így mélyebb betekintést nyerünk, és személyre szabottabb,
+      az egész testet átfogó ellátást tudunk nyújtani.
+
+  - title: Hajanalízis
+    icon: activity
+    text: >-
+      Ásványianyag- és nehézfémterheltség vizsgálata hajmintából — a szervezet
+      hosszú távú terhelésének kíméletes feltérképezése.
+
+  - title: Kavitációk (FDOJ/NICO) diagnózis
+    icon: eye
+    text: >-
+      A kavitációk az állcsontban rejtőző fertőzések vagy rosszul gyógyuló területek,
+      amelyek gyakran régi foghúzási vagy gyökérkezelési helyeken fordulnak elő. Bár
+      helyi fájdalmat nem okoznak, csendben károsíthatják az immunrendszert,
+      fáradtságot okozhatnak, vagy hozzájárulhatnak a krónikus gyulladás kialakulásához.
+
+  - title: Nyelvdiagnosztika
+    icon: smile
+    text: >-
+      A nyelv testén ugyanolyan mikro-rendszer található, mint a fülkagyló belső
+      részén, a tenyerén vagy a talp belső területein. Az egyik legfontosabb kínai
+      belgyógyászati kórmegállapító módszer. Alakját, méretét, felszínét, szélét,
+      színét és mozgását vizsgáljuk — a nyelven észlelhető elváltozások, lerakódások,
+      elszíneződések a megfelelő belső szerv bajára utalnak.
+
+  - title: Sötétlátóteres mikroszkópos vérvizsgálat
+    icon: microscope
+    text: >-
+      Az élő vér mikroszkópos képe betekintést ad a vérsejtek állapotába, a
+      keringésbe és a szervezet terheltségi szintjébe.
+
+  - title: Szájüregi akupunktúrás diagnózis
+    icon: needle
+    text: >-
+      Speciális szájüregi pontokba adott mikroinjekciókkal gyors gyógyulást lehet
+      elérni.
+
+  - title: Szájüregi galvánáram mérése
+    icon: zap
+    text: >-
+      A szájban levő fémek között kialakuló áram az idegi és akupunktúrás rendszer
+      károsodásához vezethet.
+
+  - title: Szájüreg mikroszkópos vizsgálata
+    icon: scan
+    text: >-
+      A Zeiss Extaro 300 mikroszkóppal a legkisebb elváltozások is láthatóvá válnak,
+      így a diagnózis pontossá válik és a beavatkozás minimálisan invazív marad.
