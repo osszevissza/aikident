@@ -293,11 +293,15 @@ letter, accordion, form, info, notice) — összesen 44 deklaráció.
   László nevével** (a Rólunk oldal köszöntőjében, a bemutatkozásban és a
   galériában). Amíg nincs valódi portré, érdemes kivenni vagy semleges `alt`
   szöveggel szerepeltetni.
-- **Nyitvatartás:** minden felület ugyanazt a mondatot írja: „Előzetes
-  egyeztetés alapján" (`site.Params.hours`). Ez igaz, de nem válaszolja meg azt,
-  hogy „nyitva vannak szombaton?" — a valós heti rendet a megbízó adja meg
-  (`_brief/HIANYLISTA.md` §1). Cserélni: `hugo.toml` (`hours`), a `/kapcsolat/`
-  oldal szövegei és a GYIK „Van fix nyitvatartásuk?" kérdése.
+- **Nyitvatartás — nincs mit cserélni.** Minden felület ugyanazt írja: „Előzetes
+  egyeztetés alapján" (`site.Params.hours`). Ez **nem helykitöltő szöveg**: a
+  rendelő egyfős praxis, kötött heti rend nélkül, tehát ez a valós válasz.
+  Kérjük, ne „javítsd" kitalált nyitvatartással, és ne várd a megbízótól heti
+  rendet. Amit érdemes tudni: a GYIK „Van fix nyitvatartásuk?" kérdése
+  elmagyarázza, mit jelent az egyeztetés a gyakorlatban. Ha egyszer mégis lesz
+  rend, itt kell átírni: `hugo.toml` (`hours`), a
+  `layouts/partials/blocks/contact.html` info-listája, a `/kapcsolat/` oldal és
+  az említett GYIK-válasz.
 - **Páciensvélemények:** a `quotes` blokk egyetlen oldalon sem szerepel, a
   `data/testimonials.yaml` szándékosan üres. Csak **írásos páciens-hozzájárulás**
   birtokában kerüljön vissza tartalom (és akkor a `claims.js` megfelelő sora is

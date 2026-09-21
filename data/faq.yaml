@@ -2,13 +2,17 @@
 #
 # Sorrend szándékos: elöl a gyakorlati kérdések (időpont, fizetés, ár, első vizit),
 # mert a rövidebb oldalak csak az első néhány tételt mutatják (limit).
+#
+# Az első kérdés arra válaszol, hogy nincs kötött rendelési idő — a rendelő egyfős
+# praxis, kötött heti rend nélkül. Ez nem helykitöltő szöveg: ne írjunk be kitalált
+# nyitvatartást.
 items:
   - q: Van fix nyitvatartásuk? Mikor tudok jönni?
     a: >-
-      Rendelésünk előzetes egyeztetés alapján működik: minden látogatást előre
-      egyeztetünk telefonon vagy e-mailben, így biztosított, hogy Önre annyi idő
-      jusson, amennyire a vizsgálathoz és a beszélgetéshez szükség van. Hívjon minket
-      a +36 30 193 2714 számon, vagy írjon az info@aikident.hu címre.
+      Nincs kötött rendelési idő: minden látogatást előre egyeztetünk telefonon vagy
+      e-mailben, így biztosított, hogy Önre annyi idő jusson, amennyire a vizsgálathoz
+      és a beszélgetéshez szükség van. Hívjon minket a +36 30 193 2714 számon, vagy
+      írjon az info@aikident.hu címre.
 
   - q: Elfogadnak fogászati biztosítást?
     a: >-

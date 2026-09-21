@@ -193,18 +193,22 @@ Two notes on the tooling itself:
 
 ## 7. Open items waiting on the client
 
-1. **Opening hours.** Still the single least informative line on the site: every
-   surface says "Előzetes egyeztetés alapján". That is *true*, but it does not answer
-   "are you open on Saturday?". The client explicitly chose to leave it as it is for
-   now; when the weekly schedule arrives (`_brief/HIANYLISTA.md` §1), the places to
-   change are `site.Params.hours` (topbar, footer, contact info list) and the
-   `/kapcsolat/` page — plus the FAQ answer "Van fix nyitvatartásuk?".
+1. ~~**Opening hours.**~~ **Closed — there are none to get.** The practice is a
+   one-man private practice without a fixed weekly schedule, so "Előzetes egyeztetés
+   alapján" (`site.Params.hours`) is not a placeholder: it is the answer. Do not
+   "fix" it by inventing hours, and do not send the client back to
+   `_brief/HIANYLISTA.md` §1 for a schedule that does not exist. The FAQ answer
+   "Van fix nyitvatartásuk?" explains what by-appointment means in practice, which
+   is the useful part. If a schedule ever becomes real, the places to change are
+   `hugo.toml` (`hours`), the contact info list in
+   `layouts/partials/blocks/contact.html`, the `/kapcsolat/` page and that FAQ.
 2. Photos — a stock photo is still captioned as the dentist (3 places now).
    Needs ~9 real photos.
 3. The fill-in sheet `_brief/HIANYLISTA.md`: real testimonials (with written patient
-   consent), approval of the 8 descriptions, pricing decision, map check. The hours
-   item and §4's corrected sentence are the two places where that document is now
-   slightly out of step with the site.
+   consent), approval of the 8 descriptions, pricing decision, map check. Two of its
+   items are now moot or out of step: **§1 (opening hours) is dropped** — see above —
+   and §4's quoted sentence for `Szájüreg mikroszkópos vizsgálata` was a grammatical
+   error that the site has since corrected.
 4. `baseURL` is `https://aikident.hu/`, but that domain's HTTPS certificate does not match
    and it is not serving this build. `canonical` and `og:url` therefore point at a dead
    domain — and because Hugo's alias pages use absolute URLs, the four legacy
