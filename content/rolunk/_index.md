@@ -70,16 +70,10 @@ blocks:
     title: Dr. Kelemen László
     lead: >-
       Fogorvos, a rendelő alapítója és tulajdonosa.
-    body:
-      - >-
-        A Semmelweis Egyetem (SOTE) Fogorvostudományi Karán szerzett diplomát, majd
-        a magyarországi biológiai fogászat vezető szakértőitől tanult tovább, többek
-        között Dr. Csiszár Róberttől. Az amerikai IAOMT és az új MOK tagja.
-      - >-
-        A fogászat mellett a hagyományos kínai orvoslás és a természetgyógyászat is
-        a mindennapi munkájának része: a Dr. Eőry Ajándok által vezetett budapesti
-        Kínai Klinikán hagyományos kínai orvosi diplomát kapott, mesterei kínai
-        professzorok voltak, valamint a világhírű Pálos István professzor.
+    # A két bekezdést töröltük: szó szerint ugyanazokat a tényeket mondták el,
+    # mint a lenti `checks` lista (diploma, Csiszár Róbert, IAOMT/MOK, Kínai
+    # Klinika, természetgyógyászat, lézer/fülakupunktúra) — egyszer olvasható,
+    # strukturáltan. Információ nem veszett el.
     checks:
       - icon: award
         title: Fogorvosi diploma

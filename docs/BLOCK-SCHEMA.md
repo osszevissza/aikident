@@ -235,7 +235,9 @@ Give it `id: gyik` if other pages link to it.
 
 ## `partners` — health-fund wall
 
-`data: insurance` (renders `items`, `note` and `extra` from the data file).
+`data: insurance` (renders `items`, `note` and, if the data file sets it, `extra`).
+**Do not put the same sentence in the block's `lead` and in the data file's `extra`** —
+that is exactly how the partner section once printed its closing line twice.
 
 ## `gallery`
 
@@ -327,7 +329,7 @@ a `--wine` glyph; that pairing is in `tools/a11y/contrast.js`.
 | `values.yaml` | `items` (5 alapérték) | Rólunk |
 | `testimonials.yaml` | `items` — **szándékosan üres** | *nincs használatban* |
 | `faq.yaml` | `items` | főoldal, Szolgáltatások, Új páciensek, Kapcsolat |
-| `insurance.yaml` | `items`, `note`, `extra` | Új páciensek |
+| `insurance.yaml` | `items`, `note` (the block also renders `extra`, but this file no longer sets it — it duplicated the block's `lead`) | Új páciensek |
 | `holistic.yaml` | `differentiators`, `cbct_findings`, `cbct_benefits`, `cbct_comfort`, `cbct_when` | főoldal, Szolgáltatások, Technológia |
 | `patients.yaml` | `steps`, `we_do`, `fits` (used) · `intro`, `bring`, `notfits`, `finance` (unused) | Új páciensek, főoldal |
 | `doctor.yaml` | `name`, `role`, `photo`, `lead`, `letter`, `credentials` | *nincs használatban* (a Rólunk oldal a saját front matterében írja le) |

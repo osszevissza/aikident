@@ -124,6 +124,13 @@ site by a few words.
   the full list is one click away and already a dropdown on `/szolgaltatasok/`.
   That block is now 1433px, and the home page 18.9 → 17.7 screens on mobile.
 
+**Deduplication.** A budget of the same "cleaner, without self-promotion" pass:
+three places stated one thing twice inside a single section — the partner list's
+closing line (block `lead` + `insurance.yaml` `extra`), the "first visit" steps
+(block `lead` + step 2), and `/rolunk/`'s credentials (prose + the `checks` list).
+Each was reduced to one copy; no fact was dropped. `claims.js` now fails on any
+8-word passage repeated inside a section, so this cannot creep back.
+
 **Still open (needs the client):** see §7 — real photos and the rest.
 
 

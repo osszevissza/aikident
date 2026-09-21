@@ -114,6 +114,45 @@ for (const [here, { dom }] of docs) {
   check(missing.size === 0, `links on ${here}`, [...missing].slice(0, 4).join(', '));
 }
 
+console.log('\n== repeated sentences inside one section ==');
+/* A sentence that appears twice within the same section is always an accident —
+   it has happened here three times: a whole closing block that restated the
+   first-visit steps, another that duplicated them again, and the partner section
+   printing its closing line in both the block's `lead` and the data file's
+   `extra`. Compare whole sentences (>= 8 words) section by section. */
+/* textContent glues adjacent elements together ("…EgészségpénztárAmennyiben…"),
+   which hides a sentence sitting right after a list — so join text nodes with
+   explicit separators instead. */
+const sectionText = (node) => {
+  let out = '';
+  for (const child of node.childNodes) {
+    if (child.nodeType === 3) out += child.nodeValue;
+    else if (child.nodeType === 1) out += ' ' + sectionText(child) + ' ';
+  }
+  return out;
+};
+
+const SHINGLE = 8;
+for (const file of pages) {
+  const rel = '/' + path.relative(PUB, file).replace(/index\.html$/, '');
+  const dom = new JSDOM(read(file)).window.document;
+  const dupes = new Map();
+  for (const section of dom.querySelectorAll('main > section')) {
+    /* Word shingles rather than sentences: a repeated passage is often glued to
+       whatever precedes it (the partner list ends, then the closing line starts),
+       so punctuation-based splitting misses exactly the cases we care about. */
+    const words = sectionText(section).replace(/\s+/g, ' ').trim().toLowerCase().split(' ');
+    const seen = new Set();
+    for (let i = 0; i + SHINGLE <= words.length; i++) {
+      const shingle = words.slice(i, i + SHINGLE).join(' ');
+      if (seen.has(shingle)) dupes.set(shingle, (dupes.get(shingle) || 1) + 1);
+      seen.add(shingle);
+    }
+  }
+  const worst = [...dupes.entries()].sort((a, b) => b[1] - a[1]).slice(0, 2).map(([s, n]) => `×${n} "${s.slice(0, 60)}…"`);
+  check(dupes.size === 0, `no repeated passage within a section on ${rel}`, worst.join(' | '));
+}
+
 console.log('\n== legacy URL aliases ==');
 for (const [from, to] of Object.entries(ALIASES)) {
   const file = path.join(PUB, from.replace(/^\/|\/$/g, ''), 'index.html');

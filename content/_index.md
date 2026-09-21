@@ -194,8 +194,8 @@ blocks:
     align: center
     eyebrow: Új páciensek
     title: Így zajlik az első látogatás
-    lead: >-
-      Első látogatásakor időt szánunk arra, hogy megismerjük Önt — és Ön is minket.
+    # A leadet töröltük: szó szerint megismételte a második lépés szövegét
+    # (patients.yaml → steps → „Ismerkedés és meghallgatás”). A tartalom ott megvan.
     data: patients
     key: steps
     actions:

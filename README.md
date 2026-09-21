@@ -240,6 +240,14 @@ PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/type.js
   kontraszt- **és** target-size szabállyal; linkek és sorok akadálymentes neve,
   valamint hogy a díszítő ikonlemezek semmit ne adjanak az akadálymentesítési
   fához. Új interaktív komponensnél futtasd.
+- `claims.js` egyik ellenőrzése az **ismétlődő szövegrészeket** keresi: egy
+  szakaszon belül nyolc egymást követő szó nem szerepelhet kétszer. Ez a fajta
+  hiba háromszor is előfordult (egy záró blokk, amely megismételte az első
+  látogatás lépéseit; egy másik, amely ugyanezt tette; és a partnerek szakasz,
+  amely a záró mondatát a blokk `lead` mezőjében és az adatfájl `extra`
+  kulcsában is kiírta). A vizsgálat szavanként csúszó ablakkal dolgozik, mert a
+  mondatra bontás pont az ilyen eseteket véti el (a lista végéhez ragad a
+  mondat).
 - `type.js` — **az olvashatóság alsó korlátja.** Egy dizájn-fórum visszajelzése
   szerint a szöveg „túl kicsi és keskeny" volt, ezért ez mérhető: a script
   valódi böngészőben megköveteli, hogy a *olvasásra szánt* szöveg (kártyaszöveg,

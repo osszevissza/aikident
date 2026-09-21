@@ -68,9 +68,8 @@ blocks:
     align: center
     eyebrow: Így zajlik
     title: Az első látogatás menete
-    lead: >-
-      Első látogatásakor időt szánunk arra, hogy megismerjük Önt — és Ön is minket —,
-      valamint megbeszéljük fogászati igényeit.
+    # A leadet töröltük: ugyanez a mondat szerepel a második lépésben
+    # (patients.yaml → steps → „Ismerkedés és meghallgatás”).
     data: patients
     key: steps
 
