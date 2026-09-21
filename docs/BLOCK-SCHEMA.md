@@ -193,11 +193,14 @@ for any long list on a phone. Each entry is a native `<details>` row.
 | --- | --- |
 | `data` + `key` | a data file; `key` defaults to `items` |
 | `items` | inline list instead of a data file |
-| entry shape | `{q, a}` (FAQ) **or** `{title, text}` (services, examinations) — both work |
+| entry shape | `{q, a}` (FAQ) **or** `{title, text, icon}` (services, examinations) — both work |
 | `limit` | show only the first N entries |
 | `openFirst` | default `true`; set `false` to keep every row closed |
 | `actions` | `{label, url, icon, style}` buttons under the list |
 | `footnote` | small grey paragraph under the list |
+
+An entry with an `icon` shows it in a small mint plate before the label, the way
+the card grid did; entries without one (all the FAQ lists) simply have no plate.
 
 Give it `id: gyik` if other pages link to it.
 
@@ -285,11 +288,28 @@ prose; prefer structured blocks.
 
 ## Available icons
 
-`tooth leaf microscope scan shield heart heart-pulse sparkles balance users user
-calendar phone mail pin clock check check-circle arrow-right arrow-up-right
-chevron-down menu close plus minus star quote needle zap droplet dna eye flask grid
-film camera award book download info hand-heart activity sun smile globe facebook
-instagram youtube`
+The set lives in `layouts/partials/icon.html` (46 glyphs, 24×24, `currentColor`).
+The list below is generated from that file — if you add a glyph, add its name here
+and run `node tools/a11y/icons.js`.
+
+```
+tooth leaf microscope scan shield heart heart-pulse sparkles balance users
+user calendar phone mail pin clock check check-circle arrow-right arrow-up
+arrow-up-right chevron-down menu close plus minus star quote needle zap
+droplet dna eye flask grid film camera award book download info hand-heart
+activity sun smile globe
+```
+
+An unknown name does **not** break the build: the partial quietly falls back to
+`sparkles`. That is exactly why `tools/a11y/icons.js` fails when a name used in
+content or in a partial is not in the set — the fallback hides typos otherwise.
+Currently defined but unused: `user plus minus camera book sun globe`
+(`star` and `quote` are used only by the `quotes` block, which no page uses).
+`facebook`, `instagram` and `youtube` used to be listed here; they were removed
+with the social icons and no longer exist in the set.
+
+The mint plate behind an icon (`.card__icon`, `.acc__icon`) is `--mint-soft` with
+a `--wine` glyph; that pairing is in `tools/a11y/contrast.js`.
 
 ## Available data files (`aiki/data/…`)
 

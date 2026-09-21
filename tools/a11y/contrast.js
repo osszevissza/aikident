@@ -82,6 +82,7 @@ const PAIRS = [
   ['muted text on cream-2', 'var(--ink-3)', 'var(--cream-2)', 'text'],
   ['muted text on frost band', 'var(--ink-3)', 'var(--mint-tint)', 'text'],
   ['ink-2 on mint-soft', 'var(--ink-2)', 'var(--mint-soft)', 'text'],
+  ['icon glyph on mint plate', 'var(--wine)', 'var(--mint-soft)', 'ui'],
 
   // ---- headings / links
   ['heading on cream', 'var(--wine-deep)', 'var(--cream)', 'text'],

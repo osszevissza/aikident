@@ -1019,6 +1019,20 @@ blockquote { margin: 0; }
 }
 .acc summary::-webkit-details-marker { display: none; }
 .acc summary:hover { color: var(--wine); background: var(--wine-veil); }
+/* Optional per-row icon: the service lists carry one per entry — the same mint
+   plate as `.card__icon`, so the catalogue still reads like the card grid did.
+   The FAQ entries have no `icon`, so their label simply starts at the padding. */
+.acc__head { display: flex; align-items: center; gap: 0.85rem; }
+.acc__icon {
+  width: 30px; height: 30px;
+  flex: none;
+  border-radius: var(--radius);
+  background: var(--mint-soft);
+  color: var(--wine);
+  display: grid;
+  place-items: center;
+}
+.acc__icon svg { width: 17px; height: 17px; }
 .acc__sign {
   width: 30px; height: 30px;
   flex: none;

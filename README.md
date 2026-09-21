@@ -193,6 +193,7 @@ node tools/a11y/contrast.js             # WCAG kontraszt-párosítások
 node tools/a11y/selectors.js            # melyik CSS szabály nem illeszkedik semmire
 python3 tools/a11y/dead-css.py          # melyik osztálynév nem létezik a DOM-ban
 node tools/a11y/claims.js               # a törölt állítások nem jöttek-e vissza + aliasok
+node tools/a11y/icons.js                # ikonkészlet: ismeretlen név, üres glifa, ki nem rajzolt ikon
 ```
 
 Mobil túlcsordulás (igényel egy futó szervert, pl.
@@ -213,6 +214,14 @@ PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/overflow.js
   szelektorokat használt, így a lábléc összes szabálya csendben elveszett.
   Ha új blokkot vagy osztályt vezetsz be, futtasd le ezeket — a build ilyen
   hibát nem jelez.
+- `icons.js` — **az ikonok csendben hibázhatnak.** Ha egy tartalomban vagy
+  partialban használt név nincs benne a `layouts/partials/icon.html` készletében,
+  a partial észrevétlenül `sparkles`-re cseréli — a lapon tehát egy *másik*
+  ikon jelenik meg. A script ezt, a geometria nélküli glifákat és az üres
+  `<svg>`-ket jelzi. `BASE_URL=http://127.0.0.1:8099` esetén valódi
+  böngészőben minden ikont raszterizál is, és jelzi, ha valamelyik nem rajzol
+  semmit. Új glifa felvételekor futtasd, és a `docs/BLOCK-SCHEMA.md` listáját is
+  frissítsd.
 - `claims.js` — **a visszaesések elleni háló.** A honlapról eltávolított
   állítások (kitalált statisztikák, lorem ipsum vélemények, csillagos értékelés,
   marquee-sáv, szuperlatívuszok, a kitalált „fogszabályozó” végzettség) közül

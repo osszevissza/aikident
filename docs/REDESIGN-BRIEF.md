@@ -153,6 +153,7 @@ node tools/a11y/contrast.js       # 71 WCAG contrast pairings — add new colour
 node tools/a11y/selectors.js      # CSS selectors matching nothing (= typo'd class names)
 python3 tools/a11y/dead-css.py    # same idea, class level
 node tools/a11y/claims.js         # removed claims must not come back; #fragments; aliases
+node tools/a11y/icons.js          # unknown/empty icon glyphs; every icon still paints
 ```
 
 Plus, after any layout/CSS change:

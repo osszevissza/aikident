@@ -30,7 +30,12 @@
           {{- range $i, $item := $items }}
           <details class="acc"{{ if and (eq $i 0) $openFirst }} open{{ end }}>
             <summary>
-              <span>{{ $item.q | default $item.title }}</span>
+              <span class="acc__head">
+                {{- /* Service lists carry an `icon` per entry; FAQ entries do not,
+                       and simply render without one. */ -}}
+                {{- with $item.icon }}<span class="acc__icon" aria-hidden="true">{{ partial "icon" . }}</span>{{ end -}}
+                <span>{{ $item.q | default $item.title }}</span>
+              </span>
               <span class="acc__sign" aria-hidden="true">{{ partial "icon" "chevron-down" }}</span>
             </summary>
             <div class="acc__body"><p>{{ $item.a | default $item.text }}</p></div>
