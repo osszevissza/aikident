@@ -134,6 +134,16 @@ ambient one. Verified in rendered pixels: below a card the values now run
 rgb(225,218,219) → rgb(248,247,247) over ~14px, where before every pixel was pure
 white.
 
+**Hero glow softened (on request, not yet pushed).** The mint wash behind the
+hero went from 0.36 to 0.18 alpha (`--hero-glow`) and the blob behind the photo
+from opaque mint to `--mint-glow` (0.45 — a token that was defined but unused).
+Measured: pixels reading as mint fell from 10.0% to 6.0% of the hero. The palette
+itself is untouched — burgundy and mint are the client's brand colours, and a
+design forum's objection to the turquoise was about dosage, not hue: the accent
+now stays in small doses (icon plates, the highlighted word in the title, focus
+rings) instead of one large field. The bigger remaining lever, if wanted, is the
+`frost` band on the home page (43.6% of that section is mint).
+
 **Deduplication.** A budget of the same "cleaner, without self-promotion" pass:
 three places stated one thing twice inside a single section — the partner list's
 closing line (block `lead` + `insurance.yaml` `extra`), the "first visit" steps

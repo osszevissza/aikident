@@ -35,6 +35,12 @@
   --mint-deep: #38c79a;
   --mint-soft: #d9f9ec;
   --mint-tint: #f0fdf8;
+  /* Mint as an accent works in small doses: the hero wash used to be 0.36 alpha
+     over the cream, which made ~10% of the hero's pixels read green (measured),
+     and a large pale-green field reads "clinical" rather than branded. Half the
+     intensity keeps the warmth; the blob behind the photo uses --mint-glow, which
+     until now was defined but unused. */
+  --hero-glow: rgba(126, 236, 195, 0.18);
   --mint-glow: rgba(126, 236, 195, 0.45);
 
   /* neutrals (warm) */
@@ -581,7 +587,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
   position: relative;
   padding-block: clamp(2.5rem, 5vw, 4.25rem) clamp(3.5rem, 7vw, 6rem);
   background:
-    radial-gradient(1100px 620px at 88% -8%, rgba(126, 236, 195, 0.36), transparent 62%),
+    radial-gradient(1100px 620px at 88% -8%, var(--hero-glow), transparent 62%),
     radial-gradient(820px 520px at -6% 8%, rgba(129, 19, 49, 0.09), transparent 60%),
     linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 58%, var(--cream) 100%);
   overflow: hidden;
@@ -634,7 +640,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
   aspect-ratio: 1;
   right: -14%;
   top: -12%;
-  background: radial-gradient(circle at 40% 40%, var(--mint) 0%, rgba(126, 236, 195, 0.15) 68%, transparent 72%);
+  background: radial-gradient(circle at 40% 40%, var(--mint-glow) 0%, rgba(126, 236, 195, 0.12) 68%, transparent 72%);
   border-radius: 50%;
   z-index: -1;
   filter: blur(2px);
