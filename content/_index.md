@@ -101,17 +101,17 @@ blocks:
     cols: 3
     style: mini
     data: examinations
-    limit: 6
-    # Egyetlen hivatkozás a hat kártya alatt — korábban mindegyik kártyán külön
-    # „Részletek” felirat volt, pedig ugyanoda vittek.
+    # Három kártya: ez ízelítő, nem katalógus. Hat kártya mobilon három képernyőnyi
+    # görgetés volt; a teljes, kereshető lista a Szolgáltatások oldalon van, egy
+    # kattintásra (`cta` alatta) — és ott már lenyitható sorokban.
+    limit: 3
     cta:
       label: Összes vizsgálat
       url: /szolgaltatasok/#vizsgalatok
       icon: arrow-right
     footnote: >-
-      Az Ételintolerancia vizsgálat, a Fogászati anyagok allergiavizsgálata és a
-      Hajanalízis leírása még a rendelő szakorvosi jóváhagyására vár — a teljes lista
-      a Szolgáltatások oldalon olvasható.
+      Az Ételintolerancia vizsgálat leírása még a rendelő szakorvosi jóváhagyására
+      vár — a teljes lista a Szolgáltatások oldalon olvasható.
 
   # ---------------------------------------------------------- holistic ---
   - type: split

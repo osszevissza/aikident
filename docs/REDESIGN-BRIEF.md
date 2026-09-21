@@ -117,6 +117,10 @@ site by a few words.
 - measure cap on long paragraphs 82ch → 72ch.
 - cost, measured: pages ~4–6% taller on mobile, ~6–9% on desktop.
 - `tools/a11y/type.js` keeps the floor from slipping back.
+- the home examination teaser went from 6 cards to 3 (`limit: 3`): on a phone it
+  was 2472px ≈ three screens of stacked cards. It is a teaser, not a catalogue —
+  the full list is one click away and already a dropdown on `/szolgaltatasok/`.
+  That block is now 1433px, and the home page 18.9 → 17.7 screens on mobile.
 
 **Still open (needs the client):** see §7 — real photos and the rest.
 
