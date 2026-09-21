@@ -124,6 +124,16 @@ site by a few words.
   the full list is one click away and already a dropdown on `/szolgaltatasok/`.
   That block is now 1433px, and the home page 18.9 → 17.7 screens on mobile.
 
+**Card separation (design-forum feedback: "the cards merge into the white
+background, the whole thing is too white").** Measured, and it was site-wide, not
+just that block: a white card on a white section gave **1.00:1** edge contrast and
+its only boundary was a **1.28:1** border — and no shadow. Pale fills cannot fix
+this (cream vs white 1.04:1, mint-tint vs white 1.05:1), so `.card` and `.acc` got
+`--line-card` (1.73:1) plus `--shadow-card`, a 1px contact shadow and a soft
+ambient one. Verified in rendered pixels: below a card the values now run
+rgb(225,218,219) → rgb(248,247,247) over ~14px, where before every pixel was pure
+white.
+
 **Deduplication.** A budget of the same "cleaner, without self-promotion" pass:
 three places stated one thing twice inside a single section — the partner list's
 closing line (block `lead` + `insurance.yaml` `extra`), the "first visit" steps

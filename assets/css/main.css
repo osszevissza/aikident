@@ -82,6 +82,14 @@
   /* motion */
   --ease: cubic-bezier(0.22, 0.68, 0.31, 1);
   --shadow-sm: 0 2px 10px -4px rgba(63, 8, 23, 0.16);
+  /* Raised surfaces (cards, disclosure rows). They sit on white or near-white
+     sections: measured edge contrast was 1.00:1 on paper and 1.04:1 on cream,
+     with only a 1.28:1 border — so they read as one undifferentiated white
+     field. No pale fill can fix that (cream vs white is 1.04:1, mint-tint vs
+     white 1.05:1); the edge has to come from a border plus a shadow. Not a
+     control boundary, so it stays decorative and below the 3:1 UI rule. */
+  --line-card: rgba(129, 19, 49, 0.28);
+  --shadow-card: 0 1px 2px rgba(63, 8, 23, 0.05), 0 14px 30px -24px rgba(63, 8, 23, 0.45);
   --shadow-md: 0 22px 48px -30px rgba(63, 8, 23, 0.5);
   --shadow-lg: 0 40px 90px -50px rgba(63, 8, 23, 0.62);
   --shadow-mint: 0 26px 60px -34px rgba(56, 199, 154, 0.7);
@@ -661,8 +669,9 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
   position: relative;
   isolation: isolate;
   background: var(--paper);
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-card);
   border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
   padding: clamp(1.5rem, 2.4vw, 2.1rem);
   display: flex;
   flex-direction: column;
@@ -1002,12 +1011,13 @@ blockquote { margin: 0; }
 .accordion { display: grid; gap: 0.7rem; }
 .acc {
   background: var(--paper);
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-card);
   border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
   overflow: hidden;
   transition: border-color 0.28s var(--ease), box-shadow 0.28s var(--ease);
 }
-.acc[open] { border-color: rgba(56, 199, 154, 0.5); box-shadow: var(--shadow-sm); }
+.acc[open] { border-color: rgba(56, 199, 154, 0.5); box-shadow: var(--shadow-card); }
 .acc summary {
   list-style: none;
   cursor: pointer;

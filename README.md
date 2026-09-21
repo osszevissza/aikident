@@ -90,6 +90,15 @@ Az oldal a WCAG 2.1 AA szintre készült. Ami ezt biztosítja:
   (68 párosítás, mind megfelel). Az interaktív vezérlők azonosító keretei
   (bemeneti mező, ghost gomb, jelölőnégyzet) elérik a 3:1 nem-szöveg
   kontrasztot — ezért van külön `--line-ui` token a díszítő `--line` mellett.
+  A **kiemelt felületek** (`.card`, `.acc`) külön `--line-card` és `--shadow-card`
+  tokent kaptak: fehér kártya fehér szakaszon a mérés szerint **1.00:1** élt és
+  **1.28:1** keretet adott, azaz egyetlen fehér foltnak látszott (ezt jelezte egy
+  külső visszajelzés is). Halvány kitöltéssel ez nem javítható — a krém a fehéren
+  1.04:1, a menta 1.05:1 —, ezért a keret erősebb lett (1.73:1), és a kártyák
+  kaptak egy kontakt- meg egy lágy árnyékot (`--shadow-card`). Mérve: a kártya
+  alatt +1 px-nél rgb(225,218,219), +14 px-nél rgb(248,247,247) — korábban minden
+  pixel tiszta fehér volt. Ezek díszítő élek, nem vezérlőhatárok, ezért szándékosan
+  3:1 alatt vannak (a `--line-ui` az interaktív kontrolloké).
   A fókuszjelző a `--focus-ring` (wine, 10:1 világos háttéren), a sötét
   wine-felületeken automatikusan `--focus-ring-on-dark`-ra (mint, 7:1) vált.
 - **Szemantika.** A fejléc `header`, a tájékoztató sáv `aside[aria-label]`,
