@@ -162,6 +162,9 @@ Plus, after any layout/CSS change:
 python3 -m http.server 8099 --directory public &     # or BASE_URL=... 
 PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/overflow.js
                                   # horizontal overflow at 320–430px, names the culprit
+PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/interaction.js
+                                  # keyboard, focus, skip link, 200% zoom, reduced motion,
+                                  # axe with contrast + target-size in a real browser
 ```
 
 **All of these must be clean before committing.** Current state: 0 violations / 0 failures.

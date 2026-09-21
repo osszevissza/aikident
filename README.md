@@ -201,11 +201,12 @@ node tools/a11y/claims.js               # a törölt állítások nem jöttek-e 
 node tools/a11y/icons.js                # ikonkészlet: ismeretlen név, üres glifa, ki nem rajzolt ikon
 ```
 
-Mobil túlcsordulás (igényel egy futó szervert, pl.
+Böngészős ellenőrzések (igényelnek egy futó szervert, pl.
 `python3 -m http.server 8099 --directory public`):
 
 ```bash
 PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/overflow.js
+PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/interaction.js
 ```
 
 - `audit.js` — minden generált oldalt végigfut: axe-core szabályok,
@@ -227,6 +228,17 @@ PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/overflow.js
   böngészőben minden ikont raszterizál is, és jelzi, ha valamelyik nem rajzol
   semmit. Új glifa felvételekor futtasd, és a `docs/BLOCK-SCHEMA.md` listáját is
   frissítsd.
+- `interaction.js` — **amit a jsdom nem tud.** Az `audit.js` jsdom-ban futtatja az
+  axe-ot: ott nincs layout és nincs valódi billentyűzet, ezért ezek a vizsgálatok
+  eddig kézzel történtek. A script végigjárja: „Ugrás a tartalomra” link,
+  tab-sorrend, fókusz a `<main>`-en; a lenyitható sorok (a 27 szolgáltatás)
+  elérhetők-e Tab-bal, nyílnak-e Enterrel **és** szóközzel, látszik-e a
+  fókuszgyűrű, nincs-e fókuszálható elem egy csukott sorban; a „Vissza a
+  tetejére” gomb neve és fókuszkezelése; 200%-os szövegnagyítás (WCAG 1.4.4)
+  minden lapon; `prefers-reduced-motion`; axe valódi böngészőben, bekapcsolt
+  kontraszt- **és** target-size szabállyal; linkek és sorok akadálymentes neve,
+  valamint hogy a díszítő ikonlemezek semmit ne adjanak az akadálymentesítési
+  fához. Új interaktív komponensnél futtasd.
 - `claims.js` — **a visszaesések elleni háló.** A honlapról eltávolított
   állítások (kitalált statisztikák, lorem ipsum vélemények, csillagos értékelés,
   marquee-sáv, szuperlatívuszok, a kitalált „fogszabályozó” végzettség) közül

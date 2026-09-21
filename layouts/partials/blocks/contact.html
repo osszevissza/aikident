@@ -52,19 +52,19 @@
       <div class="reveal" data-delay="2">
         <div class="info-list">
           <div class="info">
-            <span class="info__icon">{{ partial "icon" "pin" }}</span>
+            <span class="info__icon" aria-hidden="true">{{ partial "icon" "pin" }}</span>
             <span><b>Rendelőnk címe</b><span>{{ site.Params.city }}<br>{{ site.Params.street }}</span></span>
           </div>
           <div class="info">
-            <span class="info__icon">{{ partial "icon" "phone" }}</span>
+            <span class="info__icon" aria-hidden="true">{{ partial "icon" "phone" }}</span>
             <span><b>Telefon</b><a href="tel:{{ site.Params.phoneHref }}">{{ site.Params.phoneDisplay }}</a></span>
           </div>
           <div class="info">
-            <span class="info__icon">{{ partial "icon" "mail" }}</span>
+            <span class="info__icon" aria-hidden="true">{{ partial "icon" "mail" }}</span>
             <span><b>E-mail</b><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></span>
           </div>
           <div class="info">
-            <span class="info__icon">{{ partial "icon" "clock" }}</span>
+            <span class="info__icon" aria-hidden="true">{{ partial "icon" "clock" }}</span>
             <span><b>Nyitvatartási idő</b><span>{{ site.Params.hours }}</span></span>
           </div>
         </div>
