@@ -43,7 +43,9 @@ blocks:
       fogászati ellátást nyújtani, amely az embert egészében támogatja.
     cols: 4
     data: services
-    linkTo: /szolgaltatasok/
+    # Nincs `linkTo`: minden kártya ugyanoda vinne, ezért egyetlen hivatkozás van
+    # alattuk (`cta`). A négy pillér saját horgonya (`/szolgaltatasok/#…`) ettől
+    # függetlenül működik, mert a kártyák `id`-t kapnak a Szolgáltatások oldalon.
     cta:
       label: Összes szolgáltatás
       url: /szolgaltatasok/
@@ -98,10 +100,11 @@ blocks:
     style: mini
     data: examinations
     limit: 6
-    linkTo: /szolgaltatasok/#vizsgalatok
+    # Egyetlen hivatkozás a hat kártya alatt — korábban mindegyik kártyán külön
+    # „Részletek” felirat volt, pedig ugyanoda vittek.
     cta:
       label: Összes vizsgálat
-      url: /szolgaltatasok/
+      url: /szolgaltatasok/#vizsgalatok
       icon: arrow-right
     footnote: >-
       Az Ételintolerancia vizsgálat, a Fogászati anyagok allergiavizsgálata és a

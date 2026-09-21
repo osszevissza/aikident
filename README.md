@@ -111,6 +111,11 @@ Fontos szabály a karbantartásnál: **csak az nézhet ki kattinthatónak, ami a
 - `.card` önmagában **statikus** információs kártya: nincs hover-emelés, nincs
   kurzorváltás. A `cards` blokk csak akkor adja hozzá a `card--link` osztályt,
   ha a kártyához tényleg tartozik cél (`url`, vagy `linkTo` + `anchor`).
+- **Egy cél = egy hivatkozás.** Ha egy kártyarács minden eleme ugyanoda visz, ne
+  a `linkTo`-t használd, hanem egyetlen `cta` gombot a rács alatt. A főoldalon
+  korábban tíz kártyánkénti „Részletek” felirat volt, pedig csak két úti célra
+  mutattak — ez zajként hatott, ezért rácsomként egy-egy gomb maradt helyettük.
+  A `linkTo` akkor való, ha minden kártyának saját célja van.
 - Kattintható kártyánál a teljes kártya a link felülete (stretched link), a
   címsorban lévő `<a class="card__link">` adja az akadálymentes nevet, a
   „Részletek →” felirat pedig `aria-hidden` díszítés (`pointer-events: none`),

@@ -40,6 +40,11 @@ RESERVED_PREFIXES = (
     # lorem-ipsum ones were removed). Kept so it is a content-only change to
     # bring back — same deal as the cta band.
     "quote",
+    # the clickable-card mechanism. No page uses it at the moment: every grid
+    # whose cards shared one destination now has a single `cta` button instead
+    # (see the README's "Egy cél = egy hivatkozás" rule). It stays for grids
+    # where each card has its own target.
+    "card--link", "card__link", "card__more",
 )
 
 css = (SITE / "assets" / "css" / "main.css").read_text(encoding="utf-8")

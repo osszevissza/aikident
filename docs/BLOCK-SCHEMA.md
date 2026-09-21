@@ -67,14 +67,21 @@ or twice per page. Never put two identical `bg` values back to back.
 | `items` | inline list of `{title, text, icon, anchor, url, linkLabel}` |
 | `limit` | show only the first N items |
 | `numbered` | `true` to show 01/02/03 labels |
-| `linkTo` | turn every card into a link to this URL (an item `url` wins over it) |
-| `linkLabel` | the visible affordance text, default `Részletek` |
 | `cta` | `{label, url, icon, style}` button under the grid |
 | `footnote` | small grey paragraph under the grid |
+| `linkTo` | makes **every** card a link to this URL — see the rule below |
+| `linkLabel` | the visible affordance text on such a card, default `Részletek` |
 
-A card only becomes clickable when it really has a destination. If an item has no
-`url`/`anchor` and the block has no `linkTo`, the card stays a static information
-card — that is deliberate (see the README's "Kattinthatóság" section).
+**House rule: one destination means one link.** If all the cards in a grid lead to
+the same place, do **not** use `linkTo` — put a single `cta` button under the grid
+instead. The home page once carried ten per-card "Részletek" affordances that all
+went to the same two URLs; it read as noise, so they were replaced by one button
+per grid. Use `linkTo` only when each card genuinely has its own destination
+(an item `url`, or `linkTo` + the item's `anchor`).
+
+A card with no destination stays a **static information card**: no hover lift, no
+pointer cursor, no affordance text. That is deliberate — see the README's
+"Kattinthatóság" section.
 
 ```yaml
   - type: cards
@@ -85,10 +92,9 @@ card — that is deliberate (see the README's "Kattinthatóság" section).
     style: mini
     data: examinations
     limit: 6
-    linkTo: /szolgaltatasok/#vizsgalatok   # every card leads to the full list
-    cta:
-      label: Kapcsolat
-      url: /kapcsolat/
+    cta:                                  # the one link for the whole grid
+      label: Összes vizsgálat
+      url: /szolgaltatasok/#vizsgalatok
       icon: arrow-right
     footnote: >-
       Az alábbi leírások még a rendelő szakorvosi jóváhagyására várnak: …
