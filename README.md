@@ -1,5 +1,8 @@
 # Aiki Dent Fogászat — weboldal
 
+> **Új munkamenetben először ezt olvasd el:** [`docs/REDESIGN-BRIEF.md`](docs/REDESIGN-BRIEF.md)
+> — a projekt kontextusa, mi nem valódi a demón, és a következő lépések.
+
 Hugo alapú, egyoldalas felépítésű többoldalas weboldal az Aiki Dent Fogászat
 (biológiai és holisztikus fogászat, Dr. Kelemen László) számára.
 
