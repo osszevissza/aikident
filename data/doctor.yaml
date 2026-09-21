@@ -1,23 +1,26 @@
 # Dr. Kelemen László — bemutatkozás.
+#
+# FIGYELEM: ez a fájl jelenleg egyetlen oldalon sincs blokkból meghívva (a Rólunk
+# oldal a content/rolunk/_index.md-ben írja le ugyanezt). Ha újra használatba
+# kerül, a szövegeknek egyezniük kell a Rólunk oldalon olvasható változattal.
 name: Dr. Kelemen László
 role: Fogorvos, a rendelő alapítója és tulajdonosa
 photo: /img/demo1.webp
 lead: >-
-  A holisztikus és biológiai fogászat képezi a rendelőnk alapját. Dr. Kelemen László
-  a fogorvos és tulajdonos.
+  A holisztikus és biológiai fogászat képezi a rendelőnk alapját — Dr. Kelemen
+  László fogorvos, a rendelő alapítója és tulajdonosa.
 
 letter:
   greeting: Kedves Páciensek és Barátok!
   paragraphs:
     - >-
-      Melegszívűsége, lelkesedése és gondoskodó természete tökéletesen illeszkedik
-      ahhoz a filozófiához, amelyet Önök már megismertek és amelyben megbíznak.
-      Biztos vagyok benne, hogy barátságosnak, együttérzőnek és elkötelezettnek
-      fogják találni őt mind fogászati egészségük, mind általános jólétük iránt.
+      Szeretettel köszöntöm Önt az Aiki Dent Fogászatban. Az integrált orvoslás
+      szemléletének és módszereinek tanulmányozásával foglalkozom, és folyamatosan
+      képzem magam — hogy Önnek a lehető legszélesebb rálátást nyújthassam az
+      egészségére.
     - >-
-      Az integrált orvoslás szemléletének és módszereinek tanulmányozásával
-      foglalkozom, és folyamatosan képzem magam — hogy Önnek a lehető legszélesebb
-      rálátást nyújthassam az egészségére.
+      Ha bármiben bizonytalan, kérdezzen nyugodtan: az első látogatáson arra is időt
+      szánunk, hogy átbeszéljük a lehetőségeket.
 
 credentials:
   - title: Fogorvosi diploma

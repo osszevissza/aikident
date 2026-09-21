@@ -12,12 +12,12 @@
     <div class="contact-grid">
       <div class="form-card reveal">
         <h3>{{ $b.formTitle | default "Küldjön üzenetet" }}</h3>
-        <p style="color:var(--ink-3);font-size:.95rem">{{ $b.formLead | default "Kérjük, adja meg adatait, és kollégánk egy munkanapon belül visszahívja." }}</p>
+        <p style="color:var(--ink-3);font-size:.95rem">{{ $b.formLead | default "Kérjük, adja meg elérhetőségét és néhány sorban a kérdését." }}</p>
         <form data-demo-form>
           <div class="field--row">
             <div class="field">
               <label for="cf-name">Név *</label>
-              <input id="cf-name" name="name" type="text" autocomplete="name" required placeholder="Kovács Anna">
+              <input id="cf-name" name="name" type="text" autocomplete="name" required placeholder="Az Ön neve">
             </div>
             <div class="field">
               <label for="cf-phone">Telefonszám *</label>
@@ -57,7 +57,7 @@
           </div>
           <div class="info">
             <span class="info__icon">{{ partial "icon" "phone" }}</span>
-            <span><b>Hívjon minket még ma!</b><a href="tel:{{ site.Params.phoneHref }}">{{ site.Params.phoneDisplay }}</a></span>
+            <span><b>Telefon</b><a href="tel:{{ site.Params.phoneHref }}">{{ site.Params.phoneDisplay }}</a></span>
           </div>
           <div class="info">
             <span class="info__icon">{{ partial "icon" "mail" }}</span>

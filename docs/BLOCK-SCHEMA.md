@@ -57,15 +57,6 @@ or twice per page. Never put two identical `bg` values back to back.
         icon: droplet
 ```
 
-## `marquee` — scrolling trust strip
-
-```yaml
-  - type: marquee
-    items:
-      - text: Fémmentes fogpótlások
-        icon: tooth
-```
-
 ## `cards` — icon card grid
 
 | key | notes |
@@ -76,8 +67,14 @@ or twice per page. Never put two identical `bg` values back to back.
 | `items` | inline list of `{title, text, icon, anchor, url, linkLabel}` |
 | `limit` | show only the first N items |
 | `numbered` | `true` to show 01/02/03 labels |
+| `linkTo` | turn every card into a link to this URL (an item `url` wins over it) |
+| `linkLabel` | the visible affordance text, default `Részletek` |
 | `cta` | `{label, url, icon, style}` button under the grid |
 | `footnote` | small grey paragraph under the grid |
+
+A card only becomes clickable when it really has a destination. If an item has no
+`url`/`anchor` and the block has no `linkTo`, the card stays a static information
+card — that is deliberate (see the README's "Kattinthatóság" section).
 
 ```yaml
   - type: cards
@@ -87,10 +84,14 @@ or twice per page. Never put two identical `bg` values back to back.
     cols: 3
     style: mini
     data: examinations
+    linkTo: /szolgaltatasok/#folyamat   # every card leads to the process section
+    linkLabel: Hogyan zajlik
     cta:
       label: Kapcsolat
       url: /kapcsolat/
       icon: arrow-right
+    footnote: >-
+      Az alábbi leírások még a rendelő szakorvosi jóváhagyására várnak: …
 ```
 
 ## `split` — image beside text (the workhorse)
@@ -148,10 +149,6 @@ Items may be plain strings, or `{label, text, icon}`.
       role: fogorvos, alapító és tulajdonos
 ```
 
-## `stats` — dark band with animated numbers
-
-Data-driven: `data: stats` (keys `value`, `suffix`, `label`).
-
 ## `steps` — numbered process
 
 ```yaml
@@ -172,6 +169,13 @@ Data-driven: `data: stats` (keys `value`, `suffix`, `label`).
 ```
 
 ## `quotes` — patient testimonials
+
+> **Used by no page right now.** The three demo quotes were lorem ipsum with
+> invented names and were removed from the content; `data/testimonials.yaml` is an
+> empty scaffold. The block, the data file and the `.quote*` CSS are kept on
+> purpose, so showing real reviews is a content-only change — **but only with the
+> patient's written consent** (`_brief/HIANYLISTA.md` §2). Add back a
+> `- type: quotes` block with `data: testimonials`.
 
 `data: testimonials` plus optional `limit`, `footnote`, `align`.
 
@@ -249,25 +253,37 @@ instagram youtube`
 
 ## Available data files (`aiki/data/…`)
 
-| file | keys |
-| --- | --- |
-| `services.yaml` | `items` (4 pillars, each with `anchor`) |
-| `examinations.yaml` | `items` (12 vizsgálat) |
-| `treatments.yaml` | `items` (15 kezelés) |
-| `values.yaml` | `items` (5 alapérték) |
-| `stats.yaml` | `items` |
-| `testimonials.yaml` | `items` |
-| `faq.yaml` | `items` |
-| `insurance.yaml` | `items`, `note`, `extra` |
-| `doctor.yaml` | `name`, `role`, `photo`, `lead`, `letter`, `credentials` |
-| `technology.yaml` | `featured`, `items` |
-| `holistic.yaml` | `differentiators`, `cbct_findings`, `cbct_benefits`, `cbct_comfort`, `cbct_when` |
-| `patients.yaml` | `intro`, `steps`, `we_do`, `bring`, `finance` |
+| file | keys | used by |
+| --- | --- | --- |
+| `services.yaml` | `items` (4 pillars, each with `anchor`) | főoldal, Szolgáltatások |
+| `examinations.yaml` | `items` (12 vizsgálat) | főoldal (`limit`), Szolgáltatások |
+| `treatments.yaml` | `items` (15 kezelés) | Szolgáltatások |
+| `values.yaml` | `items` (5 alapérték) | Rólunk |
+| `testimonials.yaml` | `items` — **szándékosan üres** | *nincs használatban* |
+| `faq.yaml` | `items` | főoldal, Szolgáltatások, Új páciensek, Kapcsolat |
+| `insurance.yaml` | `items`, `note`, `extra` | Új páciensek |
+| `holistic.yaml` | `differentiators`, `cbct_findings`, `cbct_benefits`, `cbct_comfort`, `cbct_when` | főoldal, Szolgáltatások, Technológia |
+| `patients.yaml` | `intro`, `steps`, `we_do`, `bring`, `fits`, `notfits`, `finance` | Új páciensek, főoldal |
+| `doctor.yaml` | `name`, `role`, `photo`, `lead`, `letter`, `credentials` | *nincs használatban* (a Rólunk oldal a saját front matterében írja le) |
+| `technology.yaml` | `featured`, `items` | Technológia (`items`; a `featured` nincs használatban) |
+
+`data/stats.yaml` **megszűnt**: a benne lévő számok („300+ elégedett páciens”,
+„20 év”) kitaláltak voltak, a megbízó anyagában nem szerepeltek.
 
 ## Copy rules
 
 * Everything is written in **Hungarian**, polite/formal address („Ön”), warm and friendly.
-* Use only facts that appear in `brief.txt`. Do not invent prices, dates, names or promises.
-* Where demo copy is needed (e.g. testimonials), use lorem ipsum and say so in a `footnote`.
+* **Inform, don't sell.** Use only facts that appear in `brief.txt` (the client's own
+  documents) or in the practice's own `data/`. Do not invent numbers, prices, dates,
+  names, opening hours, response times, qualifications or promises.
+* **No superlatives and no self-praise.** „legmodernebb”, „legprecízebb”,
+  „Magyarországon az első”, „egyedülálló”, „világszínvonalú” — state the capability
+  instead: what the device or the method makes possible.
+* No invented social proof: no star ratings, no „X+ elégedett páciens”, no
+  testimonials without written consent, no trust marquee.
+* Where a text is still provisional (written by us, not yet approved by the dentist),
+  say so in the block's `footnote` and list the affected items **by name** — the two
+  service grids on `/szolgaltatasok/` do exactly this.
 * YAML gotcha: a plain scalar containing `": "` must be quoted or written as a
   `>-` block scalar, otherwise the file will not parse.
+

@@ -2,17 +2,17 @@
 aliases: ["/cbct/"]
 title: Technológia
 description: >-
-  A legmodernebb fogászati technológia az Aiki Dent Fogászatban — Zeiss Extaro 300
-  mikroszkóp, 3D-s CBCT kúpos sugárnyalábos képalkotás, digitális röntgenfelvételek,
-  lézeres fogászat, ózonterápia és PRF.
+  Fogászati technológiánk az Aiki Dent Fogászatban — Zeiss Extaro 300 mikroszkóp,
+  3D-s CBCT kúpos sugárnyalábos képalkotás, digitális röntgenfelvételek, lézeres
+  fogászat, ózonterápia és PRF.
 blocks:
   # ------------------------------------------------------------ pageHero ---
   - type: pageHero
     eyebrow: Technológia
-    title: A legmodernebb fogászati technológia
+    title: Mivel dolgozunk a rendelőben
     lead: >-
-      A legmodernebb fogászati technológia — egyedülálló technikai felszereltséggel
-      támogatott diagnosztika.
+      Eszközeink nem öncélúak: mindegyik azt szolgálja, hogy pontosabban lássunk, és
+      hogy a beavatkozás a lehető legkisebb területen maradjon.
     actions:
       - label: Időpontfoglalás
         url: /kapcsolat/
@@ -34,15 +34,14 @@ blocks:
     image: /img/demo4.webp
     imageAlt: Zeiss Extaro 300 mikroszkóp az Aiki Dent Fogászat rendelőjében
     eyebrow: Kiemelt készülékünk
-    title: 'Zeiss Extaro 300 — Magyarországon az első készülék!'
+    title: Zeiss Extaro 300 mikroszkóp
     lead: >-
-      Rendelőnkben a Zeiss Extaro 300 mikroszkóppal dolgozunk — Magyarországon ez az
-      első ilyen készülék.
+      Rendelőnkben Zeiss Extaro 300 mikroszkóppal dolgozunk.
     body:
       - >-
         A nagyításnak és a kiváló mélységélességnek köszönhetően olyan részletek is
         láthatóvá válnak, amelyek szabad szemmel rejtve maradnak. Ez teszi lehetővé a
-        minimális foganyag-veszteséggel járó, rendkívül precíz kezeléseket.
+        minimális foganyag-veszteséggel járó, pontos kezeléseket.
       - >-
         Az alábbi fogászati beavatkozások során használjuk rendelőnkben:
     bullets:
@@ -61,8 +60,8 @@ blocks:
   - type: checklist
     bg: cream
     twoCol: true
-    eyebrow: Miért jobb?
-    title: Miért jobb a mikroszkópos kezelés, mint a hagyományos?
+    eyebrow: Mit tesz lehetővé?
+    title: Mit jelent a mikroszkópos kezelés a gyakorlatban?
     lead: >-
       A mikroszkóp nem csupán kényelmi kérdés — a kezelés pontosságát és
       kíméletességét is meghatározza.
@@ -70,8 +69,8 @@ blocks:
       - Megelőzésre koncentrálunk.
       - Minimális foganyag-veszteséggel dolgozunk.
       - >-
-        A mikroszkóppal végzett kezelések pontosságuk miatt a legprecízebb módon
-        elvégzett beavatkozások közé tartoznak.
+        A nagyításnak köszönhetően a beavatkozás a lehető legkisebb területen marad,
+        és nem a szabad szem felbontásán múlik.
       - >-
         A régen készült gyökértömések mikroszkóp segítségével jó eséllyel
         eltávolíthatóak.
@@ -175,8 +174,8 @@ blocks:
     flip: true
     image: /img/demo2.webp
     imageAlt: Páciens konzultáció a diagnosztikai eredményekről
-    eyebrow: Az Ön biztonsága
-    title: Az egészsége túl fontos ahhoz, hogy a véletlenre bízza
+    eyebrow: A diagnózis az első
+    title: Miért kérünk felvételt a kezelés előtt?
     lead: >-
       A teljes testre kiterjedő egészség iránti elkötelezettségünk azt jelenti, hogy a
       kezelés megkezdése előtt a lehető legteljesebb és legpontosabb információkra van

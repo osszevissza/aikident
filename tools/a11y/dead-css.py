@@ -29,11 +29,17 @@ RESERVED_PREFIXES = (
     "bg-mint-tint", "bg-wine-tint", "btn--light", "card--num", "card--tint",
     "card--wine", "card__num", "grid--2", "link-arrow", "mt-0", "pill--onwine",
     "prose", "round-img", "sec-head--row", "shadow", "split__media--plain",
-    "split__media--tall", "stack", "stats--light", "ticks", "visually-hidden",
+    "split__media--tall", "stack", "ticks", "visually-hidden",
     "iform__grid--3",
     # the call-to-action banner: removed from every page by request, kept as a
-    # block type so it can be switched back on from content alone
-    "cta-band", "eyebrow--onwine", "section--tight",
+    # block type so it can be switched back on from content alone. `section--wine`
+    # is the dark band surface that block uses (the invented-numbers stats band,
+    # which was the last user of it, is gone).
+    "cta-band", "eyebrow--onwine", "section--tight", "section--wine",
+    # the testimonial block: unused until real, consented reviews exist (the
+    # lorem-ipsum ones were removed). Kept so it is a content-only change to
+    # bring back — same deal as the cta band.
+    "quote",
 )
 
 css = (SITE / "assets" / "css" / "main.css").read_text(encoding="utf-8")

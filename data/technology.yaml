@@ -1,7 +1,10 @@
-# Technológiai eszközpark — főoldali kiemelés és a Technológia oldal.
+# Technológiai eszközpark — a Technológia oldal „Eszközparkunk” szekciója.
+#
+# A `featured` kulcs jelenleg egyetlen oldalon sincs használatban (a Zeiss
+# Extaro 300 bemutatása a technologia/_index.md-ben van). A szövegeket ezért is
+# tartjuk tényszerűen: se „Magyarországon az első”, se „legprecízebb”.
 featured:
   name: Zeiss Extaro 300
-  badge: Magyarországon az első készülék!
   icon: microscope
   text: >-
     Rendelőnkben a Zeiss Extaro 300 mikroszkóppal dolgozunk: a nagyításnak és a
@@ -18,7 +21,7 @@ featured:
   advantages:
     - Megelőzésre koncentrálunk.
     - Minimális foganyag-veszteséggel dolgozunk.
-    - A mikroszkóppal végzett kezelések pontosságuk miatt a legprecízebb módon elvégzett beavatkozások közé tartoznak.
+    - A nagyításnak köszönhetően a beavatkozás a lehető legkisebb területen marad.
     - A régen készült gyökértömések mikroszkóp segítségével jó eséllyel eltávolíthatóak.
 
 items:

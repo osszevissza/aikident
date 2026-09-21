@@ -25,22 +25,34 @@ Budapest (XIII. kerület, Hegedűs Gyula utca 29/b). The dentist and owner is
 **This is the most important section.** Every item below is demo filler that either we
 invented or that came from the client's own "about us" text. Treat none of it as fact.
 
-| on the site | reality |
-| --- | --- |
-| `data/stats.yaml`: "300+ elégedett páciens", "20 év / két évtizede" | **invented by us.** Not in the brief. |
-| `data/testimonials.yaml`: 3 quotes, names Kovács Anna / Nagy Péter / Szabó Eszter | **lorem ipsum + invented names** |
-| hero `proof: stars: 5` | **a fabricated rating** |
-| the doctor's portrait (`demo1.webp`, 4 places) | **a stock photo**, captioned as Dr. Kelemen László |
-| `demo1–4.webp`, `fekvo.webp`, `allo.webp` | Unsplash / demo photos |
-| 8 of the 27 service descriptions | **written by us** — the brief had no text for them |
-| the map embed coordinates | estimated, not verified |
+| on the site | reality | status |
+| --- | --- | --- |
+| `data/stats.yaml`: "300+ elégedett páciens", "20 év / két évtizede" | **invented by us.** Not in the brief. | **removed** — file, block, CSS and the counter animation in `main.js` are gone |
+| `data/testimonials.yaml`: 3 quotes, names Kovács Anna / Nagy Péter / Szabó Eszter | **lorem ipsum + invented names** | **removed from content** — the data file is an empty scaffold; the `quotes` block + CSS stay for real reviews (§ see `docs/BLOCK-SCHEMA.md`) |
+| hero `proof: stars: 5` | **a fabricated rating** | **removed** — the star branch is gone from `hero.html` and `main.css` |
+| hero `badge` / `float` chips ("Magyarországon az első", "20 mp") | decoration + an unverifiable boast | **removed** — markup and CSS gone |
+| `marquee` strip | a scrolling brag strip | **removed** — partial, CSS and usage gone |
+| the doctor's portrait (`demo1.webp`, 4 places → now 3) | **a stock photo**, captioned as Dr. Kelemen László | **still there** — waiting on real photos |
+| `demo1–4.webp`, `fekvo.webp`, `allo.webp` | Unsplash / demo photos | still there |
+| 8 of the 27 service descriptions | **written by us** — the brief had no text for them | still written by us; each affected grid now names them in a `footnote` |
+| the map embed coordinates | estimated, not verified | still estimated |
+| "fogszabályozó" in `hugo.toml` meta description | **invented** — the brief never calls him an orthodontist | **removed** |
+| "Hívjon minket még ma", "egy munkanapon belül visszahívja Önt", West-station transit and wheelchair-access claims on `/kapcsolat/` | **written by us**, not in the brief | **removed / reworded** |
 
 The 8 descriptions we wrote, which the client must approve or rewrite:
 `Ételintolerancia vizsgálat`, `Fogászati anyagok allergiavizsgálata`, `Hajanalízis`,
 `Sötétlátóteres mikroszkópos vérvizsgálat`, `Szájüreg mikroszkópos vizsgálata`,
 `Akupunktúra`, `Homeopátia`, `PRF membrán`.
 
+They are now listed **by name in the footnote of the two service grids** on
+`/szolgaltatasok/` (and the examinations grid on the home page), so a visitor — and
+the client — can see which texts are still provisional.
+
 The client has a fill-in sheet at `_brief/HIANYLISTA.md` covering all of the above.
+One item there is now slightly out of date: the §4 quote for
+`Szájüreg mikroszkópos vizsgálata` was a grammatically broken sentence ("a diagnózis
+pontossá válnak"), which we corrected — the quote in that document differs from the
+site by a few words.
 
 ---
 
@@ -48,28 +60,42 @@ The client has a fill-in sheet at `_brief/HIANYLISTA.md` covering all of the abo
 
 > "More clean and more informative, **without the self-promotion stuff**."
 
-Concretely:
+### Done in the last pass
 
-**Remove / replace (unbacked claims):**
-- `stats` block — invented numbers. Delete or replace with **facts** (e.g. the 20-second
-  CBCT scan *is* real; it is in the brief).
-- `quotes` block — fake testimonials. Hide until real, consented reviews exist.
-- hero `proof: stars: 5` — fabricated rating.
-- `marquee` — a scrolling brag strip.
-- hero `badge` / `float` chips — decoration, not information.
+**Removed / replaced (unbacked claims):**
+- `stats` block — invented numbers. The block, its data file, its CSS and the
+  count-up animation are **deleted** (not merely unused): a number band invites
+  invented numbers back.
+- `quotes` block — fake testimonials. Removed from every page, data file emptied;
+  the block itself is kept so real, consented reviews can be switched on from
+  content alone.
+- hero `proof: stars: 5`, hero `badge` and `float` — gone from the markup and CSS.
+- `marquee` — the scrolling brag strip is gone entirely.
 - Superlatives: "legmodernebb", "egyetlen", "legprecízebb", "Magyarországon az első"
-  repeated 4×. State the capability, not the boast.
+  — all rewritten to state the capability, not the boast. The meta description no
+  longer claims he is a "fogszabályozó".
 
-**Add / strengthen (what a patient actually needs):**
-- real **opening hours** (currently "Előzetes egyeztetés alapján", which answers nothing)
-- **what a treatment actually involves** — the 27 service cards are one line each with
-  no depth and nowhere to click on `/szolgaltatasok/`
-- **pricing approach** — currently only buried as FAQ #6 on another page
-- who the practice is **for** and who it is **not** for
-- the first-visit process, in plain steps
-- insurance / health-fund handling (this part is already good — keep it)
+**Added / strengthened (what a patient actually needs):**
+- **How to reach us** — a new "Rendelés és időpont" section on the home page: address,
+  phone, e-mail, the (unchanged) hours statement, what to bring, how payment works,
+  with buttons to the booking page and to the pricing section.
+- **What a treatment involves** — a new "Hogyan zajlik egy kezelés nálunk?" section on
+  `/szolgaltatasok/` (`#folyamat`): diagnostics first, checking the materials,
+  minimally invasive technique, reviewing the findings together, follow-up. Every one
+  of the 27 service cards now links there, so no card is a dead end any more.
+- **Pricing** — `/uj-paciens/#arak` ("Árak és fizetés"): what the cost depends on,
+  when the figure is discussed, payment in the practice, the invoice-for-the-insurer
+  route and the health-fund list. No prices are published, and the page says so
+  plainly instead of hiding the question in an FAQ.
+- **Who the practice is for — and who it is not for** — `/uj-paciens/#kinek` plus a
+  candid "Mikor érdemes máshol megoldást keresnie?" list (acute pain without an
+  appointment, expecting the insurer to pay, wanting treatment without diagnostics,
+  not wanting to take part in the decisions).
+- **Practical FAQ first** — the FAQ is reordered so the shorter pages (home, services,
+  contact) show booking, insurance, price and first-visit questions rather than theory.
 
-**Tone:** inform, don't sell. Prefer specifics over adjectives.
+**Still open (needs the client):** see §7 — opening hours above all.
+
 
 ---
 
@@ -113,13 +139,15 @@ node tools/a11y/audit.js          # axe-core + heading order, ids, link names, l
 node tools/a11y/contrast.js       # 71 WCAG contrast pairings — add new colours to PAIRS
 node tools/a11y/selectors.js      # CSS selectors matching nothing (= typo'd class names)
 python3 tools/a11y/dead-css.py    # same idea, class level
+node tools/a11y/claims.js         # removed claims must not come back; #fragments; aliases
 ```
 
 Plus, after any layout/CSS change:
 
 ```bash
 python3 -m http.server 8099 --directory public &     # or BASE_URL=... 
-node tools/a11y/overflow.js       # horizontal overflow at 320–430px, names the culprit
+PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/overflow.js
+                                  # horizontal overflow at 320–430px, names the culprit
 ```
 
 **All of these must be clean before committing.** Current state: 0 violations / 0 failures.
@@ -131,16 +159,41 @@ Two traps this tooling exists to catch, both of which have actually happened her
    gutter → 6px of horizontal pan. **Note `overflow.js` must keep `isMobile: false`** —
    Playwright's mobile emulation widens the layout viewport and hides the bug.
 
+Two notes on the tooling itself:
+
+- **`audit.js` cannot check contrast** (jsdom has no layout engine, so the axe rule is
+  disabled there) — `contrast.js` covers the token pairs instead. For a stronger check,
+  run axe in real Chromium with the rule on; the last such run was clean on all 7 pages
+  (0 violations), measuring with `.js` removed from `<html>` so the scroll-reveal
+  opacity transition does not produce blended false positives.
+- **`RESERVED` lists** in `selectors.js` / `dead-css.py` hold the class vocabulary that
+  is deliberately unused. Right now that is the `quotes` block (waiting for real,
+  consented reviews) and `cta-band` / `section--wine` (the bottom band the client asked
+  to drop). If a block is gone for good, delete its CSS and partial too instead of
+  growing that list.
+
 ---
 
 ## 7. Open items waiting on the client
 
-1. Photos — a stock photo is currently captioned as the dentist. Needs ~9 real photos.
-2. The fill-in sheet `_brief/HIANYLISTA.md`: opening hours, real testimonials (with written
-   patient consent), approval of the 8 descriptions, pricing decision, map check.
-3. `baseURL` is `https://aikident.hu/`, but that domain's HTTPS certificate does not match
+1. **Opening hours.** Still the single least informative line on the site: every
+   surface says "Előzetes egyeztetés alapján". That is *true*, but it does not answer
+   "are you open on Saturday?". The client explicitly chose to leave it as it is for
+   now; when the weekly schedule arrives (`_brief/HIANYLISTA.md` §1), the places to
+   change are `site.Params.hours` (topbar, footer, contact info list) and the
+   `/kapcsolat/` page — plus the FAQ answer "Van fix nyitvatartásuk?".
+2. Photos — a stock photo is still captioned as the dentist (3 places now).
+   Needs ~9 real photos.
+3. The fill-in sheet `_brief/HIANYLISTA.md`: real testimonials (with written patient
+   consent), approval of the 8 descriptions, pricing decision, map check. The hours
+   item and §4's corrected sentence are the two places where that document is now
+   slightly out of step with the site.
+4. `baseURL` is `https://aikident.hu/`, but that domain's HTTPS certificate does not match
    and it is not serving this build. `canonical` and `og:url` therefore point at a dead
-   domain. If the site should look correct on the statichost preview, set
+   domain — and because Hugo's alias pages use absolute URLs, the four legacy
+   redirects (`/vizsgalatok/`, `/kezelesek/`, `/elso-latogatas/`, `/cbct/`) also send
+   visitors to that dead domain rather than to the statichost preview. If the site
+   should look correct on the preview, set
    `baseURL = 'https://aiki-dent.statichost.page/'` until DNS is moved.
 
 ---

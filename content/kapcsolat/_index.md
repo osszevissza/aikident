@@ -2,15 +2,16 @@
 title: Kapcsolat
 description: >-
   Vegye fel velünk a kapcsolatot: Aiki Dent Fogászat, 1136 Budapest, Hegedűs Gyula
-  utca 29/b. Telefon: +36 30 193 2714 — hívjon még ma, és foglaljon időpontot.
+  utca 29/b. Telefon: +36 30 193 2714 — időpontot telefonon, e-mailben vagy az
+  űrlapon keresztül tud kérni.
 blocks:
   # ---------------------------------------------------------------- hero ---
   - type: pageHero
     eyebrow: Kapcsolat
-    title: Hívjon még ma, vagy vegye fel velünk a kapcsolatot
+    title: Időpontkérés és elérhetőségeink
     lead: >-
-      Hívjon még ma vagy az alábbi űrlap segítségével vegye fel a kapcsolatot
-      rendelőnkkel.
+      Rendelőnk előzetes egyeztetés alapján működik. Telefonon, e-mailben vagy az
+      űrlapon keresztül tud időpontot kérni.
     actions:
       - label: '+36 30 193 2714'
         url: /kapcsolat/#elerhetoseg
@@ -28,13 +29,13 @@ blocks:
     id: elerhetoseg
     bg: cream
     eyebrow: Kapcsolat
-    title: Írjon nekünk, és visszahívjuk
+    title: Írjon nekünk néhány sort
     lead: >-
-      Kérdése van, vagy időpontot szeretne kérni? Írjon néhány sort az űrlapon, és
-      kollégánk egy munkanapon belül visszahívja Önt.
+      Kérdése van, vagy időpontot szeretne kérni? Írjon néhány sort az űrlapon, vagy
+      hívjon minket telefonon.
     formTitle: Időpontkérés vagy kérdés
     formLead: >-
-      Kérjük, adja meg adatait — néhány sor is elegendő, és visszahívjuk.
+      Kérjük, adja meg elérhetőségét és néhány sorban a kérdését.
     showMap: true
 
   # --------------------------------------------------------- getting here ---
@@ -60,10 +61,13 @@ blocks:
         biztosítóknak, így Ön közvetlenül a saját fogászati biztosítójától kaphatja
         meg a visszatérítést — mértéke a konkrét biztosítási csomagtól függ.
     bullets:
-      - Parkolás a környéken — érkezéskor érdemes néhány perccel többet tervezni
-      - Tömegközlekedéssel a Nyugati pályaudvar felől is könnyen elérhető
-      - Kérjük, jelezze előre, ha kerekesszékkel, babakocsival vagy csoportosan érkezik, hogy felkészülhessünk a fogadására
-      - Ha elakadna az útvonalon, hívjon minket, és segítünk megtalálni a rendelőt
+      - A pontos útvonalat a fenti térkép és a Google Maps útvonalterv mutatja
+      - >-
+        Ha elakadna az útvonalon vagy a bejáratnál, hívjon minket, és segítünk
+        megtalálni a rendelőt
+      - >-
+        Ha segítségre van szüksége a megközelítéshez vagy a rendelőn belül, jelezze
+        előre telefonon — megnézzük, hogyan tudjuk megkönnyíteni
 
   # ----------------------------------------------------------------- faq ---
   - type: faq
@@ -71,8 +75,7 @@ blocks:
     eyebrow: Gyakori kérdések
     title: Kapcsolatfelvétel előtt
     lead: >-
-      Összegyűjtöttük azokat a kérdéseket, amelyeket a leggyakrabban kapunk
-      telefonon és e-mailben.
+      A leggyakoribb gyakorlati kérdések: időpont, fizetés, ár és az első vizit.
     data: faq
     limit: 4
     actions:

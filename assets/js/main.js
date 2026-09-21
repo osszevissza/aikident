@@ -79,31 +79,6 @@
     }
   }
 
-  /* --- count-up for statistics ---------------------------------------- */
-  var counters = document.querySelectorAll('[data-count]');
-  if (counters.length && !reduced && 'IntersectionObserver' in window) {
-    var run = function (el) {
-      var target = parseFloat(el.getAttribute('data-count'));
-      var suffix = el.getAttribute('data-suffix') || '';
-      var start = performance.now();
-      var dur = 1400;
-      var tick = function (now) {
-        var p = Math.min((now - start) / dur, 1);
-        var eased = 1 - Math.pow(1 - p, 3);
-        var value = target * eased;
-        el.textContent = (target % 1 ? value.toFixed(1) : Math.round(value)) + suffix;
-        if (p < 1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-    };
-    var cio = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) { run(entry.target); cio.unobserve(entry.target); }
-      });
-    }, { threshold: 0.5 });
-    counters.forEach(function (el) { cio.observe(el); });
-  }
-
   /* --- contact / intake forms (demo: no backend) ----------------------- */
   var form = document.querySelector('[data-demo-form]');
   if (form) {

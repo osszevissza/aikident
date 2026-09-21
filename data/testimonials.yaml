@@ -1,23 +1,17 @@
-# Páciensvélemények — bemutató (lorem ipsum) tartalom, éles indulás előtt cserélendő.
-items:
-  - quote: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-      nostrud exercitation ullamco.
-    name: Kovács Anna
-    meta: Biológiai fogászat · 2025
-    photo: /img/demo2.webp
-  - quote: >-
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-      fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-      culpa qui officia deserunt.
-    name: Nagy Péter
-    meta: Higanymentes tömések · 2025
-    photo: /img/demo1.webp
-  - quote: >-
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-      doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore
-      veritatis.
-    name: Szabó Eszter
-    meta: Holisztikus kezelési terv · 2024
-    photo: /img/demo4.webp
+# Páciensvélemények — SZÁNDÉKOSAN ÜRES.
+#
+# A korábbi három vélemény bemutató tartalom volt: lorem ipsum szöveg kitalált
+# nevekkel (Kovács Anna, Nagy Péter, Szabó Eszter). Ezeket eltávolítottuk, és a
+# vélemény-szekció egyetlen oldalon sem jelenik meg, amíg nincs valódi,
+# hozzájáruláson alapuló vélemény.
+#
+# Feltétel, mielőtt ide bármi bekerül:
+#   1. a páciens írásban hozzájárult a vélemény és a név közzétételéhez
+#      (a név lehet rövidített is, pl. „Anna K.”),
+#   2. a szöveg szó szerint az, amit a páciens mondott/írt.
+#
+# Ha ez megvan, vedd fel ide az items listát, és tedd vissza a `quotes` blokkot
+# arra az oldalra, ahol meg kell jelennie (lásd docs/BLOCK-SCHEMA.md).
+# A blokk és a hozzá tartozó CSS szándékosan a helyén maradt, hogy a visszakapcsolás
+# csak tartalmi módosítás legyen.
+items: []

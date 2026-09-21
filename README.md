@@ -76,7 +76,7 @@ A logó a `brief/Aiki_Dent_logo_h.pdf` fájlból generálódik, a márkaszínre
 átszínezve:
 
 ```bash
-python3 .build/make_logo.py
+python3 tools/make-logo.py
 ```
 
 Ez létrehozza a `static/img/logo.svg`, `logo-white.svg`, `logo-mark.svg`,
@@ -181,16 +181,25 @@ Ha módosítod, futtasd a `contrast.js`-t: a gomb 3 párosítása is szerepel be
 ### Az ellenőrzések futtatása
 
 ```bash
-cd aiki && hugo                          # build a public/ könyvtárba
-cd ..
+hugo --quiet                            # build a public/ könyvtárba
 node tools/a11y/audit.js                # axe-core + saját strukturális vizsgálatok
 node tools/a11y/contrast.js             # WCAG kontraszt-párosítások
 node tools/a11y/selectors.js            # melyik CSS szabály nem illeszkedik semmire
 python3 tools/a11y/dead-css.py          # melyik osztálynév nem létezik a DOM-ban
+node tools/a11y/claims.js               # a törölt állítások nem jöttek-e vissza + aliasok
+```
+
+Mobil túlcsordulás (igényel egy futó szervert, pl.
+`python3 -m http.server 8099 --directory public`):
+
+```bash
+PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/overflow.js
 ```
 
 - `audit.js` — minden generált oldalt végigfut: axe-core szabályok,
   címsor-sorrend, duplikált `id`, linknevek, űrlap-címkék, landmark-lefedettség.
+  (A jsdom nem tud színt számolni, ezért a kontrasztot ott kikapcsolja — azt a
+  `contrast.js` és a valódi böngésző fedi.)
 - `contrast.js` — a `main.css` tokenjeiből számolja a kontrasztarányokat, ezért
   **ha új színt vezetsz be, vedd fel a `PAIRS` listába**.
 - `selectors.js` / `dead-css.py` — **ezek fogták meg a lábléc hibáját**: a
@@ -198,8 +207,23 @@ python3 tools/a11y/dead-css.py          # melyik osztálynév nem létezik a DOM
   szelektorokat használt, így a lábléc összes szabálya csendben elveszett.
   Ha új blokkot vagy osztályt vezetsz be, futtasd le ezeket — a build ilyen
   hibát nem jelez.
+- `claims.js` — **a visszaesések elleni háló.** A honlapról eltávolított
+  állítások (kitalált statisztikák, lorem ipsum vélemények, csillagos értékelés,
+  marquee-sáv, szuperlatívuszok, a kitalált „fogszabályozó” végzettség) közül
+  egy sem kerülhet vissza észrevétlenül. Emellett ellenőrzi, hogy minden
+  egy oldalon belüli `#horgony` létező `id`-re mutat, és hogy a négy régi URL
+  (`/vizsgalatok/`, `/kezelesek/`, `/elso-latogatas/`, `/cbct/`) továbbra is
+  átirányít. Ha egy minta tudatosan visszakerül (mert a megbízó valós adatot
+  adott), a `PATTERNS` listából törölni kell — indoklással a commitban.
 
-(Első futtatás előtt: `cd .build/a11y && npm install axe-core jsdom`.)
+A `selectors.js` és a `dead-css.py` külön listát vezet azokról az osztályokról,
+amelyek szándékosan nincsenek használatban (`RESERVED`). Jelenleg ilyen a
+`quotes` blokk teljes szókincse (valós, hozzájáruláson alapuló véleményekre vár)
+és a `cta-band`/`section--wine` (a kérésre eltávolított záró sáv). Ha egy
+blokkot végleg kivesztek, a CSS-ét és a partialját is törölni kell — különben a
+fenntartott lista hízik a semmiért.
+
+(Első futtatás előtt: `cd tools/a11y && npm install`.)
 
 ### Lekerekítés
 
@@ -232,8 +256,23 @@ letter, accordion, form, info, notice) — összesen 44 deklaráció.
 ## Élesítés előtt cserélendő
 
 - **Demó fotók:** `static/img/demo1–4.webp`, `fekvo.webp` — valódi rendelői
-  fotókra cserélendők (és az `alt` szövegek pontosításra).
-- **Páciensvélemények:** `data/testimonials.yaml` jelenleg lorem ipsum.
+  fotókra cserélendők (és az `alt` szövegek pontosításra). Ez érinti a
+  legfontosabbat is: a `demo1.webp` jelenleg **egy stock fotó, Dr. Kelemen
+  László nevével** (a Rólunk oldal köszöntőjében, a bemutatkozásban és a
+  galériában). Amíg nincs valódi portré, érdemes kivenni vagy semleges `alt`
+  szöveggel szerepeltetni.
+- **Nyitvatartás:** minden felület ugyanazt a mondatot írja: „Előzetes
+  egyeztetés alapján" (`site.Params.hours`). Ez igaz, de nem válaszolja meg azt,
+  hogy „nyitva vannak szombaton?" — a valós heti rendet a megbízó adja meg
+  (`_brief/HIANYLISTA.md` §1). Cserélni: `hugo.toml` (`hours`), a `/kapcsolat/`
+  oldal szövegei és a GYIK „Van fix nyitvatartásuk?" kérdése.
+- **Páciensvélemények:** a `quotes` blokk egyetlen oldalon sem szerepel, a
+  `data/testimonials.yaml` szándékosan üres. Csak **írásos páciens-hozzájárulás**
+  birtokában kerüljön vissza tartalom (és akkor a `claims.js` megfelelő sora is
+  törölhető, ha a minta véletlenül a valós adatra illeszkedne).
+- **Nyolc szolgáltatásleírás:** a briefben nem volt hozzá szöveg, ezért mi
+  írtuk. A `/szolgaltatasok/` és a főoldal kártyarácsainak lábjegyzete név
+  szerint felsorolja őket, amíg a rendelő nem hagyja jóvá.
 - **Új páciens adatlap:** a `/uj-paciens/adatlap/` oldal egy nyomtatható,
   böngészőben kitölthető űrlap (nem PDF). Ha valódi PDF letöltést szeretnél,
   tedd a fájlt a `static/files/` könyvtárba, és onnan linkeld.
@@ -252,4 +291,24 @@ letter, accordion, form, info, notice) — összesen 44 deklaráció.
   Ha végleg nem kell, töröld a partialt és a `.cta-band` szabályokat.
 - **Térkép:** az OpenStreetMap beágyazás koordinátái közelítőek — cseréld a
   rendelő pontos helyére, vagy Google Maps beágyazásra.
-- **`baseURL`:** a `hugo.toml`-ban jelenleg `https://aikident.hu/`.
+- **`baseURL`:** a `hugo.toml`-ban jelenleg `https://aikident.hu/`, de az a domain
+  nem ezt a buildet szolgálja ki. Mivel a Hugo alias-oldalai abszolút URL-t
+  használnak, a négy régi átirányítás (`/vizsgalatok/`, `/kezelesek/`,
+  `/elso-latogatas/`, `/cbct/`) is oda mutat — a statichost előnézetben ezért a
+  `baseURL = 'https://aiki-dent.statichost.page/'` a helyes beállítás, amíg a
+  DNS nem áll át.
+
+## Amit szándékosan nem teszünk ki
+
+Ezek a korábbi bemutató változatból **eltávolításra kerültek**, és a `claims.js`
+ellenőrzi, hogy ne is jöjjenek vissza. Bővebben: `docs/REDESIGN-BRIEF.md` §2–3.
+
+| mi | miért nincs |
+| --- | --- |
+| „300+ elégedett páciens", „20 év" | kitalált számok; a `stats` blokk, a `data/stats.yaml`, a CSS és a számláló animáció is törölve |
+| páciensvélemények (lorem ipsum, kitalált nevekkel) | valós, hozzájáruláson alapuló vélemény hiányában nem jelenik meg |
+| csillagos értékelés a hero-ban | kitalált értékelés; a csillagok kódútja is törölve |
+| marquee-sáv, hero jelvény és „20 mp" chip | díszítés és önfényezés, nem információ |
+| „Magyarországon az első", „legmodernebb", „legprecízebb", „egyedülálló" | a képességet írjuk le, nem a dicsekvést |
+| árlista | a megbízó nem adott árat; helyette az ár kialakulásának menete olvasható (`/uj-paciens/#arak`) |
+| „egy munkanapon belül visszahívjuk", parkolási és akadálymentesítési ígéretek | nem szerepeltek a briefben; a szöveg helyett a valós elérhetőségek és a térkép van ott |

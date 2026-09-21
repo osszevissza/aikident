@@ -1,4 +1,8 @@
 # Kezelések — a Szolgáltatások oldal „Kezelések” szekciója.
+#
+# A szövegek a megbízó briefjéből származnak. Ahol a briefben nem volt leírás,
+# ott a szöveg a rendelő szakorvosi jóváhagyására vár — ezeket a kártyarács
+# lábjegyzete név szerint felsorolja.
 items:
   - title: Akupunktúra
     icon: needle

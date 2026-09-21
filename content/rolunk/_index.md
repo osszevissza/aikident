@@ -38,24 +38,24 @@ blocks:
     title: Kedves Páciensek és Barátok!
     lead: >-
       A holisztikus és biológiai fogászat képezi a rendelőnk alapját — Dr. Kelemen
-      László a fogorvos és tulajdonos.
+      László fogorvos, a rendelő alapítója és tulajdonosa.
     body:
       - >-
         Eszközparkunk az új felfogású, preventív — megelőző — szemléletű fogorvosi
         terápiás stratégiát segíti, a rendelő filozófiája pedig az egész ember
         támogatására épül.
     quote: A high-tech és a többezeréves kínai orvosi diagnosztika találkozása.
+    # A köszöntőből kivettük az önmagáról írt, harmadik személyű méltatást
+    # („Melegszívűsége, lelkesedése…”) — ez sablonszöveg volt, és öndicséret.
     paragraphs:
       - >-
-        Szeretettel köszöntöm Önt az Aiki Dent Fogászatban. Melegszívűségem,
-        lelkesedésem és gondoskodó természetem tökéletesen illeszkedik ahhoz a
-        filozófiához, amelyet Ön már megismert és amelyben megbízik. Bízom benne,
-        hogy barátságosnak, együttérzőnek és elkötelezettnek talál mind a fogászati
-        egészsége, mind az általános jóléte iránt.
+        Szeretettel köszöntöm Önt az Aiki Dent Fogászatban. Az integrált orvoslás
+        szemléletének és módszereinek tanulmányozásával foglalkozom, és folyamatosan
+        képzem magam — hogy Önnek a lehető legszélesebb rálátást nyújthassam az
+        egészségére.
       - >-
-        Az integrált orvoslás szemléletének és módszereinek tanulmányozásával
-        foglalkozom, és folyamatosan képzem magam — hogy Önnek a lehető
-        legszélesebb rálátást nyújthassam az egészségére.
+        Ha bármiben bizonytalan, kérdezzen nyugodtan: az első látogatáson arra is időt
+        szánunk, hogy átbeszéljük a lehetőségeket.
     sign:
       photo: /img/demo1.webp
       name: Dr. Kelemen László
@@ -69,8 +69,7 @@ blocks:
     eyebrow: Bemutatkozás
     title: Dr. Kelemen László
     lead: >-
-      A holisztikus és biológiai fogászat képezi a rendelőnk alapját. Dr. Kelemen
-      László a fogorvos és tulajdonos.
+      Fogorvos, a rendelő alapítója és tulajdonosa.
     body:
       - >-
         A Semmelweis Egyetem (SOTE) Fogorvostudományi Karán szerzett diplomát, majd
@@ -147,11 +146,6 @@ blocks:
       - Integrált kezelési tervek, amelyek a szájüreg és a teljes szervezet összefüggéseire épülnek
       - Biokompatibilis anyagok és minimálisan invazív technikák a természetes fogszerkezet megőrzéséért
 
-  # --------------------------------------------------------------- stats ---
-  - type: stats
-    bg: wine
-    data: stats
-
   # ---------------------------------------------------------- commitment ---
   - type: split
     bg: cream
@@ -171,17 +165,8 @@ blocks:
       - label: Szolgáltatásaink
         url: /szolgaltatasok/
         icon: arrow-right
-
-  # ------------------------------------------------------- testimonials ---
-  - type: quotes
-    bg: paper
-    eyebrow: Páciensvélemények
-    title: Amit pácienseink mondanak
-    lead: >-
-      Néhány visszajelzés azoktól, akik már megjárták velünk az utat a holisztikus
-      szemléletű fogászathoz.
-    data: testimonials
-    footnote: >-
-      A vélemények bemutató (lorem ipsum) tartalmak — éles indulás előtt
-      cserélendők valódi páciensvéleményekre.
+      - label: Kinek szól a rendelő?
+        url: /uj-paciens/#kinek
+        icon: users
+        style: btn--ghost
 ---

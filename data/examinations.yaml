@@ -1,4 +1,8 @@
 # Vizsgálatok — a Szolgáltatások oldal „Vizsgálatok” szekciója.
+#
+# A szövegek a megbízó briefjéből származnak. Ahol a briefben nem volt leírás,
+# ott a szöveg a rendelő szakorvosi jóváhagyására vár — ezeket a kártyarács
+# lábjegyzete név szerint felsorolja.
 items:
   - title: 3D-s CBCT képalkotás
     icon: scan
@@ -78,4 +82,4 @@ items:
     icon: scan
     text: >-
       A Zeiss Extaro 300 mikroszkóppal a legkisebb elváltozások is láthatóvá válnak,
-      így a diagnózis pontossá válik és a beavatkozás minimálisan invazív marad.
+      így a diagnózis pontosabbá válik, és a beavatkozás minimálisan invazív marad.

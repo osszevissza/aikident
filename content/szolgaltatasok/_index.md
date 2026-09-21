@@ -17,6 +17,10 @@ blocks:
       - label: Időpontfoglalás
         url: /kapcsolat/
         icon: calendar
+      - label: Árak és fizetés
+        url: /uj-paciens/#arak
+        icon: info
+        style: btn--ghost
     pills:
       - text: Higanymentes fogászat
         icon: shield
@@ -24,7 +28,7 @@ blocks:
         icon: droplet
       - text: Fémmentes fogpótlások
         icon: tooth
-      - text: Mikroszkópos precizitás
+      - text: Zeiss Extaro 300 mikroszkóp
         icon: microscope
 
   # ------------------------------------------------------------- pillars ---
@@ -34,8 +38,8 @@ blocks:
     eyebrow: Négy pillér
     title: A fogászati ellátás négy szintje
     lead: >-
-      Általános, biológiai, holisztikus és integrált fogászat — egyetlen, egymásra
-      épülő ellátásban, ahol a szájegészség az egész szervezet része.
+      Általános, biológiai, holisztikus és integrált fogászat — egy rendelőben,
+      egymásra épülve, ahol a szájegészség az egész szervezet része.
     cols: 4
     data: services
     cta:
@@ -53,17 +57,24 @@ blocks:
     lead: >-
       A teljes testre kiterjedő egészség iránti elkötelezettségünk azt jelenti, hogy a
       kezelés megkezdése előtt a lehető legteljesebb és legpontosabb információkra van
-      szükségünk.
+      szükségünk. Minden kártyánál megtalálja, hogyan zajlik nálunk egy kezelés.
     cols: 3
     style: mini
     data: examinations
+    linkTo: /szolgaltatasok/#folyamat
+    linkLabel: Hogyan zajlik
     cta:
       label: Eszközparkunk
       url: /technologia/
       icon: arrow-right
+    footnote: >-
+      Az alábbi leírások még a rendelő szakorvosi jóváhagyására várnak:
+      Ételintolerancia vizsgálat, Fogászati anyagok allergiavizsgálata, Hajanalízis,
+      Sötétlátóteres mikroszkópos vérvizsgálat, Szájüreg mikroszkópos vizsgálata.
 
   # --------------------------------------------------------------- cbct ---
   - type: split
+    id: cbct
     bg: paper
     image: /img/demo3.webp
     imageAlt: 3D-s CBCT képalkotás az Aiki Dent Fogászatban
@@ -173,36 +184,49 @@ blocks:
     lead: >-
       Hiszünk abban, hogy a szájápolás szorosan összefügg az általános egészségi
       állapottal — átgondolt, integrált fogászati kezelésünk segít Önnek magabiztosságot
-      és egész életen át tartó vitalitást nyerni.
+      és egész életen át tartó vitalitást nyerni. Minden kártyánál megtalálja, hogyan
+      zajlik nálunk egy kezelés.
     cols: 3
     style: mini
     data: treatments
+    linkTo: /szolgaltatasok/#folyamat
+    linkLabel: Hogyan zajlik
+    footnote: >-
+      Az alábbi leírások még a rendelő szakorvosi jóváhagyására várnak: Akupunktúra,
+      Homeopátia, PRF membrán.
 
-  # --------------------------------------------------------------- steps ---
+  # ------------------------------------------------------------- folyamat ---
   - type: steps
+    id: folyamat
     bg: paper
     align: center
-    eyebrow: Első lépések
-    title: Amit az Aiki Dent Fogászat elvégez
+    eyebrow: Így dolgozunk
+    title: Hogyan zajlik egy kezelés nálunk?
     lead: >-
-      Első látogatásakor időt szánunk arra, hogy megismerjük Önt — és Ön is minket —,
-      valamint megbeszéljük fogászati igényeit.
+      A kezelések típusa eltérő, a munkamenet ugyanaz: először megértjük, mi történik a
+      szájában, és csak utána tervezünk beavatkozást.
     items:
-      - title: Átfogó fogászati vizsgálat elvégzése
+      - title: Állapotfelmérés és diagnózis
         text: >-
-          A Zeiss Extaro 300 mikroszkóppal a legkisebb elváltozások is láthatóvá
-          válnak, így a diagnózis pontossá válik.
-      - title: Szükséges röntgenfelvételek elkészítése
+          Mikroszkópos fogorvosi állapotfelmérés (szájüreg, fogak, íny) és kamerás
+          felvétel; szükség esetén digitális röntgenfelvétel vagy 3D-s CBCT.
+      - title: Az anyagok ellenőrzése
         text: >-
-          Digitális röntgenfelvételek, és ha a teljes képhez többre van szükség,
-          3D-s CBCT képalkotás — kevesebb sugárterhelés mellett.
-      - title: Információk gyűjtése az Ön számára személyre szabott terv elkészítéséhez
+          Ha tömés vagy pótlás készül, előzetesen ellenőrizzük a tervezett anyagok
+          biokompatibilitását, és higany-, BPA- és fluoridmentes megoldásokat
+          választunk.
+      - title: Kíméletes beavatkozás
         text: >-
-          Összegyűjtjük mindazt, ami az Ön egyéni igényeihez illeszkedő kezelési
-          tervhez szükséges.
-      - title: A leletek közös áttekintése és érthető magyarázata
+          Minimálisan invazív technikával dolgozunk, a természetes fogszerkezet
+          megőrzésére törekedve — ahol lehet, mikroszkóppal és lézerrel.
+      - title: A leletek közös áttekintése
         text: >-
-          Együttműködünk Önnel, hogy jól tájékozott, közös döntéseket hozhassunk.
+          A felvételeket és a kezelési tervet együtt nézzük át, hogy Ön is megalapozott,
+          közös döntést hozhasson.
+      - title: Kontroll és utógondozás
+        text: >-
+          Megbeszéljük, mire figyeljen a kezelés után. A rendszeres kontroll az ellátás
+          része: javasoljuk, hogy félévente keressen fel minket.
     actions:
       - label: Új páciens adatlap
         url: /uj-paciens/
@@ -214,8 +238,12 @@ blocks:
     eyebrow: Gyakori kérdések
     title: Amit a legtöbben kérdeznek
     lead: >-
-      Összegyűjtöttük a leggyakoribb kérdéseket a holisztikus fogászatra és a rendelőnk
-      működésére vonatkozóan.
+      A leggyakoribb gyakorlati kérdések a kezelésekről, az anyagokról és a
+      fizetésről.
     data: faq
     limit: 5
+    actions:
+      - label: Árak és fizetés
+        url: /uj-paciens/#arak
+        icon: info
 ---

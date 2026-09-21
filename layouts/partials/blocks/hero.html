@@ -23,13 +23,11 @@
       </div>
       {{- end }}
 
+      {{- /* Only a plain, factual line survives here. The fabricated 5-star rating
+             (`proof.stars`), the „Magyarországon az első” badge and the animated
+             20-second chip were removed — see docs/REDESIGN-BRIEF.md §2. */ -}}
       {{- with $b.proof }}
       <div class="hero__proof">
-        {{- if .stars }}
-        <span class="hero__stars" role="img" aria-label="{{ .stars }} csillagos értékelés">
-          {{- range seq .stars }}{{ partial "icon" "star" }}{{ end -}}
-        </span>
-        {{- end }}
         <small>
           {{- with .bold }}<b>{{ . }}</b> {{ end -}}
           {{- .text -}}
@@ -43,21 +41,6 @@
       <figure class="hero__frame">
         <img src="{{ $b.image | default "/img/fekvo.webp" }}" alt="{{ $b.imageAlt | default "" }}" width="1313" height="878" fetchpriority="high" decoding="async">
       </figure>
-      {{- with $b.badge }}
-      <div class="hero__badge">
-        <span class="chip">{{ partial "icon" (.icon | default "sparkles") }}</span>
-        <span>
-          <b>{{ .title }}</b>
-          <span>{{ .text }}</span>
-        </span>
-      </div>
-      {{- end }}
-      {{- with $b.float }}
-      <div class="hero__float">
-        <b>{{ .value }}{{ .suffix }}</b>
-        <span>{{ .label }}</span>
-      </div>
-      {{- end }}
     </div>
   </div>
 </section>

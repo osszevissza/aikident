@@ -3,8 +3,8 @@ aliases: ["/elso-latogatas/"]
 title: Új páciensek
 description: >-
   Minden, amit az első látogatás előtt tudnia érdemes — új páciens adatlap,
-  az első vizit menete, pénzügyi információk, egészségpénztári partnereink és
-  gyakori kérdések az Aiki Dent Fogászatban.
+  az első vizit menete, kinek szól a rendelő, hogyan alakul az ár,
+  egészségpénztári partnereink és gyakori kérdések az Aiki Dent Fogászatban.
 blocks:
   # ------------------------------------------------------------ pageHero ---
   - type: pageHero
@@ -20,6 +20,10 @@ blocks:
       - label: Időpontfoglalás
         url: /kapcsolat/
         icon: calendar
+        style: btn--ghost
+      - label: Árak és fizetés
+        url: /uj-paciens/#arak
+        icon: info
         style: btn--ghost
     pills:
       - text: Nyugodt tempójú első vizit
@@ -82,9 +86,23 @@ blocks:
     data: patients
     key: we_do
 
+  # ------------------------------------------------------------- kinek ---
+  # A brief kérése: mondja meg a honlap, kinek szól a rendelő — és kinek nem.
+  - type: checklist
+    id: kinek
+    bg: cream
+    twoCol: true
+    eyebrow: Kinek szól?
+    title: Önnek szól, ha…
+    lead: >-
+      Nem mindenkinek ugyanaz a rendelő a megfelelő. Az alábbiakban összegyűjtöttük,
+      miben tudunk igazán segíteni.
+    data: patients
+    key: fits
+
   # -------------------------------------------------------- látogatás ---
   - type: split
-    bg: cream
+    bg: paper
     flip: true
     image: /img/demo3.webp
     imageAlt: Rendelői látogatás az Aiki Dent Fogászatban
@@ -100,26 +118,39 @@ blocks:
         valamint megbeszéljük fogászati igényeit. Nincs sietség: szeretnénk, ha
         magabiztosan és nyugodtan érezné magát nálunk.
 
+  # ------------------------------------------------------------ notfits ---
+  - type: checklist
+    bg: cream
+    twoCol: true
+    eyebrow: Kinek nem?
+    title: Mikor érdemes máshol megoldást keresnie?
+    lead: >-
+      Ezt is őszintén leírjuk, hogy ne vesztegesse az idejét: az alábbi esetekben nem
+      tudunk jó megoldást kínálni.
+    data: patients
+    key: notfits
+
   # ---------------------------------------------------------- pénzügy ---
   - type: split
+    id: arak
     bg: paper
     image: /img/demo4.webp
     imageAlt: Konzultáció a kezelési tervről és a költségekről
-    eyebrow: Pénzügyek
-    title: Aiki Dent Fogászat pénzügyi információk
+    eyebrow: Árak és fizetés
+    title: Hogyan alakul a kezelés ára?
     lead: >-
-      A kezelési tervet és a költségeket mindig átláthatóan, közösen beszéljük át —
-      hogy Ön a legjobb döntést hozhassa meg.
+      Nincs két egyforma kezelés, ezért nálunk az ár a kezelési tervből következik.
     body:
       - >-
         A kezelés költsége az Ön egyéni igényeitől és a kezelési tervtől függően
         változhat.
       - >-
-        A rendelőnkben tett látogatása során megbeszéljük Önnel a kezelés költségét,
-        valamint az elérhető fizetési lehetőségeket, hogy Ön a legjobb döntést
-        hozhassa meg.
+        Az első látogatáson megbeszéljük Önnel a kezelés költségét, valamint az
+        elérhető fizetési lehetőségeket, hogy Ön a legjobb döntést hozhassa meg.
       - >-
-        Fogászati biztosítást nem fogadunk el fizetési módként.
+        Árlista egyelőre nem szerepel a honlapon: a pontos összeg a kezelési tervhez
+        kötődik, ezért azt személyesen egyeztetjük. Ha egy-egy kezelésről előzetes
+        tájékoztatást szeretne, hívjon minket a +36 30 193 2714 számon.
     checks:
       - icon: hand-heart
         title: 'Közvetlen fizetés a rendelőben'
@@ -132,6 +163,15 @@ blocks:
           Számlát állítunk ki a fogászati biztosítóknak, így a visszatérítést
           közvetlenül a saját biztosítójától kaphatja. A visszatérítés mértéke a
           konkrét biztosítási csomagtól függ.
+      - icon: users
+        title: 'Egészségpénztárak'
+        text: >-
+          Számos egészségpénztárral állunk szerződésben — a szerződött partnerek
+          listája a következő szakaszban olvasható.
+    actions:
+      - label: Kapcsolat
+        url: /kapcsolat/
+        icon: calendar
 
   # --------------------------------------------------------- partnerek ---
   - type: partners
@@ -174,8 +214,8 @@ blocks:
         url: /kapcsolat/
         icon: calendar
         style: btn--mint
-      - label: Kapcsolat
-        url: /kapcsolat/
-        icon: arrow-right
+      - label: Árak és fizetés
+        url: /uj-paciens/#arak
+        icon: info
         style: btn--ghost
 ---

@@ -9,7 +9,9 @@ cleanDestinationDir = true
 disableKinds = ['taxonomy', 'term', 'rss']
 
 [params]
-  description = 'Biológiai és holisztikus fogászat Budapesten. Dr. Kelemen László fogszabályozó és biológiai fogorvos rendelője a XIII. kerületben.'
+  # „fogszabályozó" korábban itt szerepelt — a briefben nincs ilyen végzettség, ezért
+  # kivettük. A meta leírás csak azt állítja, ami a megbízó anyagában szerepel.
+  description = 'Biológiai és holisztikus fogászat Budapesten. Dr. Kelemen László fogorvos rendelője a XIII. kerületben.'
   brandName = 'Aiki Dent Fogászat'
   tagline = 'Biológiai és holisztikus fogászat'
   phoneDisplay = '+36 30 193 2714'

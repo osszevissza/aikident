@@ -1,5 +1,43 @@
-# Gyakori kérdések — az Új páciensek és a Szolgáltatások oldalon.
+# Gyakori kérdések — az Új páciensek, a Szolgáltatások és a Kapcsolat oldalon.
+#
+# Sorrend szándékos: elöl a gyakorlati kérdések (időpont, fizetés, ár, első vizit),
+# mert a rövidebb oldalak csak az első néhány tételt mutatják (limit).
 items:
+  - q: Van fix nyitvatartásuk? Mikor tudok jönni?
+    a: >-
+      Rendelésünk előzetes egyeztetés alapján működik: minden látogatást előre
+      egyeztetünk telefonon vagy e-mailben, így biztosított, hogy Önre annyi idő
+      jusson, amennyire a vizsgálathoz és a beszélgetéshez szükség van. Hívjon minket
+      a +36 30 193 2714 számon, vagy írjon az info@aikident.hu címre.
+
+  - q: Elfogadnak fogászati biztosítást?
+    a: >-
+      Fogászati biztosítást nem fogadunk el fizetési módként; a díjakat a
+      szolgáltatások igénybevételekor közvetlenül a páciens fizeti meg rendelőnkben.
+      Szolgáltatásként azonban számlát állítunk ki a fogászati biztosítóknak, így
+      pácienseink közvetlenül a saját biztosítójuktól kaphatják meg a visszatérítést.
+      Számos egészségpénztárral állunk szerződésben.
+
+  - q: Mennyibe kerül a kezelés?
+    a: >-
+      A kezelés költsége az Ön egyéni igényeitől és a kezelési tervétől függően
+      változhat. A rendelőnkben tett látogatása során megbeszéljük Önnel a kezelés
+      költségét, valamint az elérhető fizetési lehetőségeket, hogy Ön a legjobb
+      döntést hozhassa meg. Árlista egyelőre nem szerepel a honlapon — a részleteket
+      az „Árak és fizetés” szakaszban olvashatja.
+
+  - q: Mit hozzak magammal az első vizitre?
+    a: >-
+      Kérjük, töltse ki és hozza magával az Új páciens adatlapot, valamint a korábbi
+      röntgen- és leletanyagait, ha rendelkezésre állnak. Ha rendszeresen szed
+      gyógyszert vagy van ismert allergiája, azt is jelezze előre.
+
+  - q: Milyen anyagokat használnak?
+    a: >-
+      Kerüljük az olyan anyagokat, mint a higany, a BPA és a fluorid, és helyettük
+      biztonságosabb alternatívákat alkalmazunk, amelyek támogatják szervezete
+      hosszú távú egészségét. Töméseink 100%-ban BPA-mentesek, a pótlások fémmentesek.
+
   - q: Mi az a holisztikus vagy biológiai fogászat?
     a: >-
       A holisztikus fogászat — amelyet néha biológiai vagy integratív fogászatnak is
@@ -26,30 +64,3 @@ items:
       technikákkal dolgozunk, és minden ajánlásunknál figyelembe vesszük az Ön
       általános állapotát. Az oktatás, a táplálkozás és az életmód támogatása minden
       látogatás része.
-
-  - q: Milyen anyagokat használnak?
-    a: >-
-      Kerüljük az olyan anyagokat, mint a higany, a BPA és a fluorid, és helyettük
-      biztonságosabb alternatívákat alkalmazunk, amelyek támogatják szervezete
-      hosszú távú egészségét. Töméseink 100%-ban BPA-mentesek, a pótlások fémmentesek.
-
-  - q: Elfogadnak fogászati biztosítást?
-    a: >-
-      Fogászati biztosítást nem fogadunk el fizetési módként; a díjakat a
-      szolgáltatások igénybevételekor közvetlenül a páciens fizeti meg rendelőnkben.
-      Szolgáltatásként azonban számlát állítunk ki a fogászati biztosítóknak, így
-      pácienseink közvetlenül a saját biztosítójuktól kaphatják meg a visszatérítést.
-      Számos egészségpénztárral állunk szerződésben.
-
-  - q: Mennyibe kerül egy első konzultáció?
-    a: >-
-      A kezelés költsége az Ön egyéni igényeitől és a kezelési tervétől függően
-      változhat. A rendelőnkben tett látogatása során megbeszéljük Önnel a kezelés
-      költségét, valamint az elérhető fizetési lehetőségeket, hogy Ön a legjobb
-      döntést hozhassa meg.
-
-  - q: Mit hozzak magammal az első vizitre?
-    a: >-
-      Kérjük, töltse ki és hozza magával az Új páciens adatlapot, valamint a korábbi
-      röntgen- és leletanyagait, ha rendelkezésre állnak. Ha rendszeresen szed
-      gyógyszert vagy van ismert allergiája, azt is jelezze előre.

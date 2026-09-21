@@ -2,7 +2,7 @@
 title: Főoldal
 description: >-
   Biológiai és holisztikus fogászat Budapesten. Dr. Kelemen László rendelője a XIII.
-  kerületben: higany-, BPA- és fluoridmentes anyagok, mikroszkópos precizitás és az
+  kerületben: higany-, BPA- és fluoridmentes anyagok, mikroszkópos diagnosztika és az
   egész embert támogató ellátás.
 blocks:
   # ---------------------------------------------------------------- hero ---
@@ -25,38 +25,12 @@ blocks:
         url: /szolgaltatasok/
         icon: arrow-right
         style: btn--ghost
+    # Korábban itt egy kitalált 5 csillagos értékelés, egy „Magyarországon az első”
+    # jelvény és egy 20 mp-es számláló volt. Mind a három eltávolítva: a proof csak
+    # azt mondja el, milyen anyagokkal dolgozunk.
     proof:
-      stars: 5
       bold: Biológiai és holisztikus szemlélet.
       text: Higany-, BPA- és fluoridmentes anyagok, minimálisan invazív kezelések.
-    badge:
-      icon: microscope
-      title: Zeiss Extaro 300
-      text: Magyarországon az első készülék
-    float:
-      value: '20'
-      suffix: ' mp'
-      label: A 3D-s CBCT felvétel ideje
-
-  # -------------------------------------------------------------- trust ---
-  - type: marquee
-    items:
-      - text: Higanymentes fogászat
-        icon: shield
-      - text: BPA-mentes tömések
-        icon: droplet
-      - text: Fémmentes fogpótlások
-        icon: tooth
-      - text: Zeiss Extaro 300 mikroszkóp
-        icon: microscope
-      - text: 3D-s CBCT képalkotás
-        icon: scan
-      - text: PRF membrán
-        icon: dna
-      - text: Fotodinámiás lézerterápia
-        icon: zap
-      - text: Hagyományos kínai orvosi diploma
-        icon: needle
 
   # ----------------------------------------------------------- pillars ---
   - type: cards
@@ -83,8 +57,7 @@ blocks:
     eyebrow: Ismerkedjen meg fogorvosunkkal
     title: Dr. Kelemen László
     lead: >-
-      Fogorvos, a rendelő alapítója és tulajdonosa — a holisztikus és biológiai
-      fogászat képezi a rendelőnk alapját.
+      Fogorvos, a rendelő alapítója és tulajdonosa.
     body:
       - >-
         A Semmelweis Egyetem Fogorvostudományi Karán szerzett diplomát, majd a
@@ -108,42 +81,9 @@ blocks:
         title: Fülakupunktőri szakképzettség
         text: Kiegészítő módszerek a fájdalommentesebb kezelésért.
     actions:
-      - label: Rólunk bővebben
+      - label: Rólunk bövebben
         url: /rolunk/
         icon: arrow-right
-
-  # ------------------------------------------------------------- letter ---
-  - type: letter
-    bg: paper
-    eyebrow: Köszöntő
-    title: Az egész embert támogató ellátás
-    lead: >-
-      Hiszünk abban, hogy a szájápolás szorosan összefügg az általános egészségi
-      állapottal.
-    body:
-      - >-
-        Átgondolt, integrált fogászati kezelésünk révén segítünk pácienseinknek abban,
-        hogy magabiztosságot, önbizalmat és egész életen át tartó vitalitást nyerjenek.
-      - >-
-        Munkánkat alapvető értékeink vezérlik: integritás minden cselekedetben, jelenlét
-        és együttérzés, kíváncsiság és fejlődés, felelősségvállalás, valamint az
-        egyéniség helyett az együttműködés.
-    quote: A holisztikus és biológiai fogászat képezi a rendelőnk alapját.
-    paragraphs:
-      - >-
-        Melegszívűsége, lelkesedése és gondoskodó természete tökéletesen illeszkedik
-        ahhoz a filozófiához, amelyet Önök már megismertek és amelyben megbíznak.
-        Biztos vagyok benne, hogy barátságosnak, együttérzőnek és elkötelezettnek
-        fogják találni őt mind fogászati egészségük, mind általános jólétük iránt.
-    sign:
-      photo: /img/demo1.webp
-      name: Dr. Kelemen László
-      role: fogorvos, alapító és tulajdonos
-
-  # -------------------------------------------------------------- stats ---
-  - type: stats
-    bg: wine
-    data: stats
 
   # ------------------------------------------------------- examinations ---
   - type: cards
@@ -163,6 +103,10 @@ blocks:
       label: Összes vizsgálat
       url: /szolgaltatasok/
       icon: arrow-right
+    footnote: >-
+      Az Ételintolerancia vizsgálat, a Fogászati anyagok allergiavizsgálata és a
+      Hajanalízis leírása még a rendelő szakorvosi jóváhagyására vár — a teljes lista
+      a Szolgáltatások oldalon olvasható.
 
   # ---------------------------------------------------------- holistic ---
   - type: split
@@ -184,8 +128,7 @@ blocks:
         Ahelyett, hogy „egységes” megközelítést alkalmaznánk, gondosan személyre
         szabjuk a kezeléseket: nem mérgező, biokompatibilis anyagokat és minimálisan
         invazív technikákat használunk, amelyek összhangban állnak a szervezet
-        természetes gyógyulási képességeivel. Ez egy olyan fogászat, amely a
-        szájüregnél tovább tekint — mert az Ön egészsége többet érdemel.
+        természetes gyógyulási képességeivel.
     checks:
       - icon: leaf
         title: A száj a szervezet kapuja
@@ -218,15 +161,17 @@ blocks:
     image: /img/demo4.webp
     imageAlt: Zeiss Extaro 300 mikroszkóp az Aiki Dent Fogászatban
     eyebrow: Technológia
-    title: 'Zeiss Extaro 300 — Magyarországon az első készülék!'
+    title: Zeiss Extaro 300 mikroszkóp
     lead: >-
-      A legmodernebb fogászati technológia és egyedülálló technikai felszereltséggel
-      támogatott diagnosztika.
+      A mikroszkópos látás minden kezelésünk alapja: nagyobb nagyítás, kiváló
+      mélységélesség — és ennek köszönhetően kisebb beavatkozás.
     body:
       - >-
         A nagyításnak és a kiváló mélységélességnek köszönhetően olyan részletek is
         láthatóvá válnak, amelyek szabad szemmel rejtve maradnak. Ez teszi lehetővé a
-        minimális foganyag-veszteséggel járó, rendkívül precíz kezeléseket.
+        minimális foganyag-veszteséggel járó, pontos kezeléseket.
+      - >-
+        Az alábbi beavatkozások során használjuk:
     bullets:
       - Mikroszkópos fogorvosi állapotfelmérés, kamerás felvétel és elemzés
       - Fogkőeltávolítás, tömés, gyökérkezelés
@@ -237,17 +182,6 @@ blocks:
       - label: Eszközparkunk
         url: /technologia/
         icon: arrow-right
-
-  # -------------------------------------------------------- testimonials ---
-  - type: quotes
-    bg: paper
-    eyebrow: Páciensvélemények
-    title: Amit pácienseink mondanak
-    lead: >-
-      Néhány visszajelzés azoktól, akik már megjárták velünk az utat a holisztikus
-      szemléletű fogászathoz.
-    data: testimonials
-    footnote: A vélemények bemutató tartalmak — éles indulás előtt cserélendők.
 
   # ------------------------------------------------------------- steps ---
   - type: steps
@@ -264,9 +198,53 @@ blocks:
         url: /uj-paciens/
         icon: download
 
+  # ---------------------------------------------------------- rendelés ---
+  # A korábbi, kitalált számokat mutató sáv helyén. Minden adat ellenőrizhető:
+  # cím, telefon, e-mail a briefből; a nyitvatartás a rendelő saját gyakorlata.
+  - type: checklist
+    bg: paper
+    twoCol: true
+    eyebrow: Rendelés és időpont
+    title: Hogyan jut el hozzánk?
+    lead: >-
+      Rendelőnk a XIII. kerületben, előzetes egyeztetés alapján működik. Az első
+      látogatás előtt ezeket érdemes tudni.
+    items:
+      - icon: pin
+        label: Cím
+        text: 1136 Budapest, Hegedűs Gyula utca 29/b.
+      - icon: phone
+        label: Telefon
+        text: '+36 30 193 2714 — ezen a számon tud időpontot egyeztetni.'
+      - icon: mail
+        label: E-mail
+        text: info@aikident.hu
+      - icon: clock
+        label: Nyitvatartás
+        text: >-
+          Előzetes egyeztetés alapján: minden látogatást előre egyeztetünk, így Önre
+          annyi idő jut, amennyire a vizsgálathoz szükség van.
+      - icon: download
+        label: Az első vizit előtt
+        text: >-
+          Töltse ki az új páciens adatlapot, és hozza magával a korábbi leleteit.
+      - icon: hand-heart
+        label: Ár és fizetés
+        text: >-
+          A kezelés költségét a kezelési terv ismeretében beszéljük át. Fogászati
+          biztosítást fizetési módként nem fogadunk el.
+    actions:
+      - label: Időpontfoglalás
+        url: /kapcsolat/
+        icon: calendar
+      - label: Árak és fizetés
+        url: /uj-paciens/#arak
+        icon: info
+        style: btn--ghost
+
   # ----------------------------------------------------------- gallery ---
   - type: gallery
-    bg: paper
+    bg: cream
     wide: true
     eyebrow: Rendelőnk
     title: Pillantson be hozzánk
@@ -289,12 +267,11 @@ blocks:
 
   # --------------------------------------------------------------- faq ---
   - type: faq
-    bg: cream
+    bg: paper
     eyebrow: Gyakori kérdések
     title: Mielőtt eljön hozzánk
     lead: >-
-      Összegyűjtöttük a leggyakoribb kérdéseket a holisztikus fogászatról és a rendelőnk
-      működéséről.
+      A leggyakoribb gyakorlati kérdések: időpont, fizetés, ár és az első vizit.
     data: faq
     limit: 5
     actions:

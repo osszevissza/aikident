@@ -1,4 +1,4 @@
-# Új páciensek — első látogatás, adatlap, pénzügyek.
+# Új páciensek — első látogatás, adatlap, pénzügyek, kinek szól.
 intro: >-
   Gondozási filozófiánk minden tevékenységünket áthatja. Az Ön általános jóléte és
   egészsége a legfontosabb számunkra. Tudatában vagyunk annak, hogy minden páciens
@@ -35,13 +35,67 @@ bring:
   - A jelenleg szedett gyógyszerek listája
   - Ismert allergiák, érzékenységek
 
+# Kinek szól — és kinek nem. Csak olyan pontok kerüljenek ide, amelyeket a
+# megbízó briefje vagy a rendelő gyakorlata alátámaszt. Nem általános
+# marketingállítások: a „nem neki való” lista éppúgy a tájékoztatás része.
+fits:
+  - icon: shield
+    label: Szeretné elkerülni a higanyt, a BPA-t és a fluoridot
+    text: >-
+      A töméseink BPA-mentesek, a pótlások fémmentesek, a fogtisztításnál pedig —
+      ahol lehetséges — kíméletes, természetes termékeket használunk.
+  - icon: scan
+    label: Fontos, hogy a kezelés előtt teljes körű diagnózis készüljön
+    text: >-
+      Nem találgatunk: állapotfelmérés, szükség esetén digitális röntgenfelvétel
+      vagy 3D-s CBCT, és csak ezután kezelési terv.
+  - icon: leaf
+    label: Olyan tünetekre keres választ, amelyek a szájüregből indulhatnak ki
+    text: >-
+      A holisztikus szemlélet lényege, hogy a szájüregi gócokat és a szervezet
+      egészének állapotát együtt vizsgáljuk.
+  - icon: users
+    label: Szeretné érthetően megérteni, mi történik a szájában
+    text: >-
+      A leleteket és a kezelési tervet közösen, érthetően áttekintjük, hogy Ön is
+      megalapozott döntést hozhasson.
+  - icon: heart-pulse
+    label: Nyitott a megelőzésre és az életmódra is
+    text: >-
+      Az oktatás, a táplálkozás és az életmód támogatása minden látogatás részét
+      képezi.
+
+notfits:
+  - icon: clock
+    label: Akut fogfájással azonnal szeretne ellátást kapni
+    text: >-
+      Rendelésünk előzetes egyeztetés alapján működik, ezért ilyen esetben hívjon
+      minket telefonon — megnézzük, mikor tudjuk fogadni.
+  - icon: book
+    label: Azt várja, hogy a fogászati biztosítója fizeti a kezelést
+    text: >-
+      A biztosítást fizetési módként nem fogadjuk el: a díjat a rendelőben kell
+      megfizetni, a visszatérítést pedig a saját biztosítójától kaphatja meg.
+  - icon: info
+    label: Csak a gyors, diagnosztika nélküli megoldást keresi
+    text: >-
+      A kezelést nálunk mindig állapotfelmérés előzi meg: a pontos kép ismerete
+      nélkül nem tervezünk beavatkozást.
+  - icon: hand-heart
+    label: Nem szeretne részt venni a döntésekben
+    text: >-
+      A kezelési tervet közösen beszéljük át — a döntés minden esetben az Öné.
+
 finance:
-  title: Pénzügyi információk
+  title: Hogyan alakul a kezelés ára?
   paragraphs:
     - >-
       A kezelés költsége az Ön egyéni igényeitől és a kezelési tervtől függően
       változhat.
     - >-
-      A rendelőnkben tett látogatása során megbeszéljük Önnel a kezelés költségét,
-      valamint az elérhető fizetési lehetőségeket, hogy Ön a legjobb döntést
-      hozhassa meg.
+      Az első látogatáson megbeszéljük Önnel a kezelés költségét, valamint az
+      elérhető fizetési lehetőségeket, hogy Ön a legjobb döntést hozhassa meg.
+    - >-
+      Árlista egyelőre nem szerepel a honlapon: a pontos összeg a kezelési tervhez
+      kötődik, ezért azt személyesen egyeztetjük. Ha előzetes tájékoztatást szeretne,
+      hívjon minket a +36 30 193 2714 számon.
