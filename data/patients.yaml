@@ -36,8 +36,13 @@ bring:
   - Ismert allergiák, érzékenységek
 
 # Kinek szól — és kinek nem. Csak olyan pontok kerüljenek ide, amelyeket a
-# megbízó briefje vagy a rendelő gyakorlata alátámaszt. Nem általános
-# marketingállítások: a „nem neki való” lista éppúgy a tájékoztatás része.
+# megbízó briefje vagy a rendelő gyakorlata alátámaszt.
+#
+# FIGYELEM: a `notfits` listát jelenleg egyetlen oldal sem használja. A „Mikor
+# érdemes máshol megoldást keresnie?” szakasz a megbízó kérésére lekerült az Új
+# páciensek oldalról; a lista azért maradt meg, hogy visszahozása egyetlen
+# `checklist` blokk legyen. Ugyanígy használaton kívül van az `intro`, a `bring`
+# és a `finance` kulcs is — a `steps`, `we_do` és `fits` van bekötve.
 fits:
   - icon: shield
     label: Szeretné elkerülni a higanyt, a BPA-t és a fluoridot

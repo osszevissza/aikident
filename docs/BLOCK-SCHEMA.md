@@ -329,7 +329,7 @@ a `--wine` glyph; that pairing is in `tools/a11y/contrast.js`.
 | `faq.yaml` | `items` | főoldal, Szolgáltatások, Új páciensek, Kapcsolat |
 | `insurance.yaml` | `items`, `note`, `extra` | Új páciensek |
 | `holistic.yaml` | `differentiators`, `cbct_findings`, `cbct_benefits`, `cbct_comfort`, `cbct_when` | főoldal, Szolgáltatások, Technológia |
-| `patients.yaml` | `intro`, `steps`, `we_do`, `bring`, `fits`, `notfits`, `finance` | Új páciensek, főoldal |
+| `patients.yaml` | `steps`, `we_do`, `fits` (used) · `intro`, `bring`, `notfits`, `finance` (unused) | Új páciensek, főoldal |
 | `doctor.yaml` | `name`, `role`, `photo`, `lead`, `letter`, `credentials` | *nincs használatban* (a Rólunk oldal a saját front matterében írja le) |
 | `technology.yaml` | `featured`, `items` | Technológia (`items`; a `featured` nincs használatban) |
 

@@ -118,22 +118,10 @@ blocks:
         valamint megbeszéljük fogászati igényeit. Nincs sietség: szeretnénk, ha
         magabiztosan és nyugodtan érezné magát nálunk.
 
-  # ------------------------------------------------------------ notfits ---
-  - type: checklist
-    bg: cream
-    twoCol: true
-    eyebrow: Kinek nem?
-    title: Mikor érdemes máshol megoldást keresnie?
-    lead: >-
-      Ezt is őszintén leírjuk, hogy ne vesztegesse az idejét: az alábbi esetekben nem
-      tudunk jó megoldást kínálni.
-    data: patients
-    key: notfits
-
   # ---------------------------------------------------------- pénzügy ---
   - type: split
     id: arak
-    bg: paper
+    bg: cream
     image: /img/demo4.webp
     imageAlt: Konzultáció a kezelési tervről és a költségekről
     eyebrow: Árak és fizetés
@@ -175,7 +163,7 @@ blocks:
 
   # --------------------------------------------------------- partnerek ---
   - type: partners
-    bg: cream
+    bg: paper
     data: insurance
     eyebrow: Egészségpénztárak
     title: Szerződött partnereink
@@ -186,7 +174,7 @@ blocks:
   # --------------------------------------------------------------- faq ---
   - type: faq
     id: gyik
-    bg: paper
+    bg: cream
     eyebrow: Gyakori kérdések
     title: Gyakori kérdések új pácienseinktől
     lead: >-

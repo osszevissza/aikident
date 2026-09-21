@@ -100,10 +100,12 @@ site by a few words.
   when the figure is discussed, payment in the practice, the invoice-for-the-insurer
   route and the health-fund list. No prices are published, and the page says so
   plainly instead of hiding the question in an FAQ.
-- **Who the practice is for — and who it is not for** — `/uj-paciens/#kinek` plus a
-  candid "Mikor érdemes máshol megoldást keresnie?" list (acute pain without an
-  appointment, expecting the insurer to pay, wanting treatment without diagnostics,
-  not wanting to take part in the decisions).
+- **Who the practice is for** — `/uj-paciens/#kinek`. The counterpart list, "Mikor
+  érdemes máshol megoldást keresnie?" (who it is *not* for), was written here in the
+  same pass and then **removed at the client's request** — one `checklist` block,
+  `data: patients`, `key: notfits`; the list itself is still in
+  `data/patients.yaml`. Note the brief asked for both halves, so if it comes back,
+  it is a content-only change.
 - **Practical FAQ first** — the FAQ is reordered so the shorter pages (home, services,
   contact) show booking, insurance, price and first-visit questions rather than theory.
 
