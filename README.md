@@ -120,6 +120,12 @@ Fontos szabály a karbantartásnál: **csak az nézhet ki kattinthatónak, ami a
 - A `.quote`, `.info` és `.partner` elemek szándékosan hover-effekt nélküliek.
 - A galéria linkjei `cursor: zoom-in`-t és lebegő nagyító ikont kapnak, mert
   új lapon nyitják a képet.
+- **Hosszú listát ne kártyarácsban.** Kártyarács 3–6 elemig kényelmes; a 12
+  vizsgálat és a 15 kezelés ezért `faq` (lenyitható) blokkban van a
+  Szolgáltatások oldalon, alapból csukva. 390 px széles nézetben a korábbi
+  27 kártyás változat 21 185 px magas oldalt adott, a lenyitható 14 702 px-et
+  (−31%). A szövegek nincsenek megkettőzve: a `faq` blokk ugyanazokat a
+  `title`/`text` mezőket olvassa, mint a kártyarács.
 
 ### A lábléc
 

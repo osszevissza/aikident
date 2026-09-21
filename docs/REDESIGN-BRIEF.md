@@ -79,10 +79,23 @@ site by a few words.
 - **How to reach us** — a new "Rendelés és időpont" section on the home page: address,
   phone, e-mail, the (unchanged) hours statement, what to bring, how payment works,
   with buttons to the booking page and to the pricing section.
-- **What a treatment involves** — a new "Hogyan zajlik egy kezelés nálunk?" section on
-  `/szolgaltatasok/` (`#folyamat`): diagnostics first, checking the materials,
-  minimally invasive technique, reviewing the findings together, follow-up. Every one
-  of the 27 service cards now links there, so no card is a dead end any more.
+- **What a treatment involves** — earlier in this pass, `/szolgaltatasok/` gained a
+  "Hogyan zajlik egy kezelés nálunk?" section (`#folyamat`) and all 27 service cards
+  linked to it. **Both were removed on the client's instruction:** the per-treatment
+  detail is still being collected and does not yet support that structure, so cards
+  that advertise "more detail" would overpromise. What remains is the honest state:
+  each service opens to the description the brief actually contains (the two
+  accordions below), and the practical "how it works here" questions are answered by
+  the first-visit steps on `/uj-paciens/` and the pricing section.
+  The removed section's five steps are in git history (the `608e3cf` commit and its
+  parent) if the client's detail arrives — re-adding it is one `steps` block.
+- **Long lists became dropdowns.** The 12 examinations and 15 treatments are no
+  longer 27 stacked cards: they are two `faq` accordions (`#vizsgalatok`,
+  `#kezelesek`), collapsed by default, each item opening to its description. At a
+  390 px viewport `/szolgaltatasok/` went from 21 185 px to 14 702 px (25.1 → 17.4
+  screens, −31%). The home page keeps a 6-card teaser grid, which links to the full
+  examination list. The texts were not duplicated to do this: the `faq` block reads
+  the same `title`/`text` fields the grid does.
 - **Pricing** — `/uj-paciens/#arak` ("Árak és fizetés"): what the cost depends on,
   when the figure is discussed, payment in the practice, the invoice-for-the-insurer
   route and the health-fund list. No prices are published, and the page says so

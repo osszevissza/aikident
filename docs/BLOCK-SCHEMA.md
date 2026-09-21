@@ -84,8 +84,8 @@ card — that is deliberate (see the README's "Kattinthatóság" section).
     cols: 3
     style: mini
     data: examinations
-    linkTo: /szolgaltatasok/#folyamat   # every card leads to the process section
-    linkLabel: Hogyan zajlik
+    limit: 6
+    linkTo: /szolgaltatasok/#vizsgalatok   # every card leads to the full list
     cta:
       label: Kapcsolat
       url: /kapcsolat/
@@ -93,6 +93,11 @@ card — that is deliberate (see the README's "Kattinthatóság" section).
     footnote: >-
       Az alábbi leírások még a rendelő szakorvosi jóváhagyására várnak: …
 ```
+
+**Keep grids short.** A card grid is only pleasant while it stays small: 3–6 cards.
+The 12 examinations and 15 treatments are therefore *not* grids on
+`/szolgaltatasok/` — they are `faq` dropdowns (see below). At 390px a 27-card grid
+made that page 31% longer than the accordion version.
 
 ## `split` — image beside text (the workhorse)
 
@@ -179,10 +184,45 @@ Items may be plain strings, or `{label, text, icon}`.
 
 `data: testimonials` plus optional `limit`, `footnote`, `align`.
 
-## `faq` — accordion
+## `faq` — accordion (dropdown list)
 
-`data: faq` plus optional `limit`, `actions`. Give it `id: gyik` if other pages
-link to it.
+Despite the name this is a **generic disclosure list**, and it is the right block
+for any long list on a phone. Each entry is a native `<details>` row.
+
+| key | notes |
+| --- | --- |
+| `data` + `key` | a data file; `key` defaults to `items` |
+| `items` | inline list instead of a data file |
+| entry shape | `{q, a}` (FAQ) **or** `{title, text}` (services, examinations) — both work |
+| `limit` | show only the first N entries |
+| `openFirst` | default `true`; set `false` to keep every row closed |
+| `actions` | `{label, url, icon, style}` buttons under the list |
+| `footnote` | small grey paragraph under the list |
+
+Give it `id: gyik` if other pages link to it.
+
+> The two service sections on `/szolgaltatasok/` are this block with
+> `data: examinations` / `data: treatments`, `openFirst: false` and a footnote that
+> names the descriptions still waiting for the dentist's approval. There is no
+> second copy of those texts: the block reads the same `title`/`text` fields the
+> card grid would.
+
+```yaml
+  - type: faq
+    id: vizsgalatok
+    bg: cream
+    eyebrow: Vizsgálatok
+    title: Nem találgatunk — alaposan felmérjük a helyzetet
+    lead: Rövid vezető mondat.
+    data: examinations
+    openFirst: false
+    actions:
+      - label: Eszközparkunk
+        url: /technologia/
+        icon: arrow-right
+    footnote: >-
+      Az alábbi leírások még a rendelő szakorvosi jóváhagyására várnak: …
+```
 
 ## `partners` — health-fund wall
 

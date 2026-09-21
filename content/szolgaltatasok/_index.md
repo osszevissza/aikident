@@ -48,25 +48,23 @@ blocks:
       icon: arrow-right
 
   # --------------------------------------------------------- examinations ---
-  - type: cards
+  # Lenyitható lista (ugyanaz a minta, mint a GYIK-nál): mobilon 12 kártya
+  # egymás alatt túl hosszú volt. A szövegek a data/examinations.yaml-ból jönnek.
+  - type: faq
     id: vizsgalatok
     bg: cream
-    align: center
     eyebrow: Vizsgálatok
     title: Nem találgatunk — alaposan felmérjük a helyzetet
     lead: >-
       A teljes testre kiterjedő egészség iránti elkötelezettségünk azt jelenti, hogy a
       kezelés megkezdése előtt a lehető legteljesebb és legpontosabb információkra van
-      szükségünk. Minden kártyánál megtalálja, hogyan zajlik nálunk egy kezelés.
-    cols: 3
-    style: mini
+      szükségünk. A tételekre kattintva olvashatja a leírásokat.
     data: examinations
-    linkTo: /szolgaltatasok/#folyamat
-    linkLabel: Hogyan zajlik
-    cta:
-      label: Eszközparkunk
-      url: /technologia/
-      icon: arrow-right
+    openFirst: false
+    actions:
+      - label: Eszközparkunk
+        url: /technologia/
+        icon: arrow-right
     footnote: >-
       Az alábbi leírások még a rendelő szakorvosi jóváhagyására várnak:
       Ételintolerancia vizsgálat, Fogászati anyagok allergiavizsgálata, Hajanalízis,
@@ -175,66 +173,34 @@ blocks:
     key: differentiators
 
   # ---------------------------------------------------------- treatments ---
-  - type: cards
+  # Ugyanaz a lenyitható lista, mint a vizsgálatoknál: 15 kártya mobilon
+  # áttekinthetetlen volt.
+  - type: faq
     id: kezelesek
     bg: cream
-    align: center
     eyebrow: Kezelések
     title: Biológiai kezelések a gyakorlatban
     lead: >-
       Hiszünk abban, hogy a szájápolás szorosan összefügg az általános egészségi
       állapottal — átgondolt, integrált fogászati kezelésünk segít Önnek magabiztosságot
-      és egész életen át tartó vitalitást nyerni. Minden kártyánál megtalálja, hogyan
-      zajlik nálunk egy kezelés.
-    cols: 3
-    style: mini
+      és egész életen át tartó vitalitást nyerni. A tételekre kattintva olvashatja a
+      leírásokat.
     data: treatments
-    linkTo: /szolgaltatasok/#folyamat
-    linkLabel: Hogyan zajlik
+    openFirst: false
     footnote: >-
       Az alábbi leírások még a rendelő szakorvosi jóváhagyására várnak: Akupunktúra,
       Homeopátia, PRF membrán.
 
   # ------------------------------------------------------------- folyamat ---
-  - type: steps
-    id: folyamat
-    bg: paper
-    align: center
-    eyebrow: Így dolgozunk
-    title: Hogyan zajlik egy kezelés nálunk?
-    lead: >-
-      A kezelések típusa eltérő, a munkamenet ugyanaz: először megértjük, mi történik a
-      szájában, és csak utána tervezünk beavatkozást.
-    items:
-      - title: Állapotfelmérés és diagnózis
-        text: >-
-          Mikroszkópos fogorvosi állapotfelmérés (szájüreg, fogak, íny) és kamerás
-          felvétel; szükség esetén digitális röntgenfelvétel vagy 3D-s CBCT.
-      - title: Az anyagok ellenőrzése
-        text: >-
-          Ha tömés vagy pótlás készül, előzetesen ellenőrizzük a tervezett anyagok
-          biokompatibilitását, és higany-, BPA- és fluoridmentes megoldásokat
-          választunk.
-      - title: Kíméletes beavatkozás
-        text: >-
-          Minimálisan invazív technikával dolgozunk, a természetes fogszerkezet
-          megőrzésére törekedve — ahol lehet, mikroszkóppal és lézerrel.
-      - title: A leletek közös áttekintése
-        text: >-
-          A felvételeket és a kezelési tervet együtt nézzük át, hogy Ön is megalapozott,
-          közös döntést hozhasson.
-      - title: Kontroll és utógondozás
-        text: >-
-          Megbeszéljük, mire figyeljen a kezelés után. A rendszeres kontroll az ellátás
-          része: javasoljuk, hogy félévente keressen fel minket.
-    actions:
-      - label: Új páciens adatlap
-        url: /uj-paciens/
-        icon: download
+  # A „Hogyan zajlik egy kezelés nálunk?” szakasz (id: folyamat) itt volt, és a
+  # kártyák ide mutattak. A megbízó kérésére eltávolítottuk: a kezelésenkénti
+  # részletek még gyűjtés alatt vannak, és addig nem elég tartalmas ez a
+  # szerkezet. A szöveg a git történetben megvan (a 608e3cf commit előtti
+  # állapot), és a docs/REDESIGN-BRIEF.md §3 is leírja, hogyan állítható vissza.
 
   # ----------------------------------------------------------------- faq ---
   - type: faq
-    bg: cream
+    bg: paper
     eyebrow: Gyakori kérdések
     title: Amit a legtöbben kérdeznek
     lead: >-
