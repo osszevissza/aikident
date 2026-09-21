@@ -141,6 +141,30 @@ closing line (block `lead` + `insurance.yaml` `extra`), the "first visit" steps
 Each was reduced to one copy; no fact was dropped. `claims.js` now fails on any
 8-word passage repeated inside a section, so this cannot creep back.
 
+**Display font — experiment, not decided (local commit only, not pushed).**
+`--f-display` is currently **Comfortaa** instead of Playfair, on the client's
+request to see it; the previous site also used Playfair + General Sans, and the
+pairing felt overused. General Sans stays for body text either way.
+
+Measured facts that matter for choosing:
+- **Hungarian glyphs:** all four bundled families (General Sans, Playfair,
+  Comfortaa, SpartanMB) contain `ő ű Ő Ű` — checked by drawing each glyph and
+  comparing its ink against a Private-Use codepoint the font cannot have. Any new
+  font must pass the same test; a missing double acute breaks half the copy.
+- **Optical size** (per 100px): Playfair x-height 0.49 / cap 0.57 / avg advance
+  46px; Comfortaa 0.55 / **0.78** / 54px; General Sans 0.53 / 0.72 / 46px.
+  So Comfortaa's capitals are 37% taller and it sets 17% wider at the same size.
+- That is why `--display-scale: 0.88` exists (applied to h1–h4, the card/step/
+  accordion titles, `.letter__quote`, `.drawer__nav a`, `.iform__head h2`,
+  `.prose blockquote`). At 1.0 Comfortaa pushed the hero to 5 lines on desktop
+  and the services page `h2` to 2 lines; at 0.88 the pages come out slightly
+  *shorter* than with Playfair (home 11 892px vs 11 939px) and line counts match,
+  except the desktop hero (5 lines vs 4).
+
+Comfortaa's limits for this role: only two weights (400/500), no italic, and it is
+already the accent font (eyebrows, step numbers) — so using it for display too
+collapses the two-layer type system into one face plus General Sans.
+
 **Still open (needs the client):** see §7 — real photos and the rest.
 
 
