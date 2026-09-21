@@ -144,6 +144,17 @@ now stays in small doses (icon plates, the highlighted word in the title, focus
 rings) instead of one large field. The bigger remaining lever, if wanted, is the
 `frost` band on the home page (43.6% of that section is mint).
 
+**Frost band — soft edges (on request, not yet pushed).** With the hero glow
+softened, the `frost` section (its only large mint area, used once on the home
+page) read as a lone island. Cause: it started at full tint on its top edge, so
+`#ffffff` above met `#f0fdf8` below — a visible seam. It now peaks at 42% and
+fades into cream at both ends; measured, the top row went from `#f0fdf8` (green
+shift +13) to `#fffaf8` (−5), i.e. no step, and the tint sits in the middle.
+Honest side effect: the tinted area grew slightly, 34.3% → 39.9% of the section,
+because the peak moved inward. If the band should be weaker or gone, the levers
+are (a) the gradient's peak colour, (b) `bg: frost` → `paper` in
+`content/_index.md`, (c) raising `--hero-glow` again so the two rhyme.
+
 **Deduplication.** A budget of the same "cleaner, without self-promotion" pass:
 three places stated one thing twice inside a single section — the partner list's
 closing line (block `lead` + `insurance.yaml` `extra`), the "first visit" steps
