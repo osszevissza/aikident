@@ -1,4 +1,12 @@
-baseURL = 'https://aikident.hu/'
+# ⚠️ IDEIGLENES. Az éles cím az https://aikident.hu/ lesz, de az a domain
+# jelenleg nem ezt a buildet szolgálja ki (a tanúsítványa sem erre a hosztra szól),
+# ezért a canonical, az og:url és a négy régi URL átirányítása
+# (/vizsgalatok/, /kezelesek/, /elso-latogatas/, /cbct/) is egy halott domainre
+# mutatna. Amíg a DNS nem áll át, ez a preview a helyes érték.
+# **A go-live lépés: állítsd vissza `https://aikident.hu/`-ra.**
+# Figyelem: a Hugo alias-oldalai abszolút URL-t használnak (a relativeURLs nem
+# segít rajtuk), tehát az átirányításokat kizárólag ez a beállítás vezérli.
+baseURL = 'https://aiki-dent.statichost.page/'
 languageCode = 'hu-HU'
 defaultContentLanguage = 'hu'
 title = 'Aiki Dent Fogászat'

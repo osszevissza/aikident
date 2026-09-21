@@ -209,13 +209,15 @@ Two notes on the tooling itself:
    items are now moot or out of step: **§1 (opening hours) is dropped** — see above —
    and §4's quoted sentence for `Szájüreg mikroszkópos vizsgálata` was a grammatical
    error that the site has since corrected.
-4. `baseURL` is `https://aikident.hu/`, but that domain's HTTPS certificate does not match
-   and it is not serving this build. `canonical` and `og:url` therefore point at a dead
-   domain — and because Hugo's alias pages use absolute URLs, the four legacy
-   redirects (`/vizsgalatok/`, `/kezelesek/`, `/elso-latogatas/`, `/cbct/`) also send
-   visitors to that dead domain rather than to the statichost preview. If the site
-   should look correct on the preview, set
-   `baseURL = 'https://aiki-dent.statichost.page/'` until DNS is moved.
+4. **`baseURL` — currently the preview, on purpose.** It is set to
+   `https://aiki-dent.statichost.page/` so that the live preview is self-consistent:
+   `canonical` and `og:url` resolve, and the four legacy redirects
+   (`/vizsgalatok/`, `/kezelesek/`, `/elso-latogatas/`, `/cbct/`) actually land
+   somewhere. Hugo's alias pages use **absolute** URLs — `relativeURLs = true` does
+   not touch them (verified) — so this one setting is what controls the redirects.
+   **Go-live step: set it back to `https://aikident.hu/` once DNS is moved**, or the
+   published site will point every canonical and every legacy redirect at the
+   statichost preview. `hugo.toml` carries the same warning next to the value.
 
 ---
 

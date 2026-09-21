@@ -327,12 +327,16 @@ letter, accordion, form, info, notice) — összesen 44 deklaráció.
   Ha végleg nem kell, töröld a partialt és a `.cta-band` szabályokat.
 - **Térkép:** az OpenStreetMap beágyazás koordinátái közelítőek — cseréld a
   rendelő pontos helyére, vagy Google Maps beágyazásra.
-- **`baseURL`:** a `hugo.toml`-ban jelenleg `https://aikident.hu/`, de az a domain
-  nem ezt a buildet szolgálja ki. Mivel a Hugo alias-oldalai abszolút URL-t
-  használnak, a négy régi átirányítás (`/vizsgalatok/`, `/kezelesek/`,
-  `/elso-latogatas/`, `/cbct/`) is oda mutat — a statichost előnézetben ezért a
-  `baseURL = 'https://aiki-dent.statichost.page/'` a helyes beállítás, amíg a
-  DNS nem áll át.
+- **`baseURL` — a go-live előtt vissza kell állítani.** Jelenleg
+  `https://aiki-dent.statichost.page/`, hogy az előnézet önmagában konzisztens
+  legyen: a `canonical` és az `og:url` így feloldható, a négy régi átirányítás
+  (`/vizsgalatok/`, `/kezelesek/`, `/elso-latogatas/`, `/cbct/`) pedig tényleg
+  oda érkezik, ahová kell. **Amikor a DNS átáll, ezt vissza kell írni
+  `https://aikident.hu/`-ra**, különben az éles oldal minden canonical URL-je és
+  minden régi linkje a statichost előnézetre mutat. Figyelem: a Hugo
+  alias-oldalai **abszolút** URL-t használnak (a `relativeURLs = true` nem hat
+  rájuk — kipróbálva), tehát kizárólag ez a beállítás vezérli az átirányításokat.
+  A `hugo.toml`-ban ugyanez a figyelmeztetés szerepel az érték mellett.
 
 ## Amit szándékosan nem teszünk ki
 
