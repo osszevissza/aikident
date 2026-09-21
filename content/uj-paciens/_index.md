@@ -193,29 +193,4 @@ blocks:
       Összegyűjtöttük azokat a kérdéseket, amelyeket leggyakrabban kapunk az első
       látogatás előtt.
     data: faq
-
-  # ------------------------------------------------------------ kérdés ---
-  - type: split
-    bg: cream
-    flip: true
-    image: /img/demo2.webp
-    imageAlt: Beszélgetés a fogorvossal a kezelési lehetőségekről
-    eyebrow: Kérdése van?
-    title: Beszéljük meg együtt
-    lead: >-
-      Ha bármi bizonytalan, ne tartsa magában — örömmel válaszolunk.
-    body:
-      - >-
-        Hívjon minket, írjon e-mailt, vagy foglaljon időpontot egy kötelezettség
-        nélküli beszélgetésre. Megmutatjuk, hol tart most a szájegészsége, és milyen
-        lehetőségei vannak.
-    actions:
-      - label: Időpontfoglalás
-        url: /kapcsolat/
-        icon: calendar
-        style: btn--mint
-      - label: Árak és fizetés
-        url: /uj-paciens/#arak
-        icon: info
-        style: btn--ghost
 ---
