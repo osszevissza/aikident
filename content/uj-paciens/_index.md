@@ -100,28 +100,10 @@ blocks:
     data: patients
     key: fits
 
-  # -------------------------------------------------------- látogatás ---
-  - type: split
-    bg: paper
-    flip: true
-    image: /img/demo3.webp
-    imageAlt: Rendelői látogatás az Aiki Dent Fogászatban
-    eyebrow: Rendelői látogatások
-    title: Az Ön általános jóléte a legfontosabb
-    lead: >-
-      Tudatában vagyunk annak, hogy minden páciens egyedi, és célunk az, hogy segítsünk
-      Önnek megőrizni fogait funkcionálisan, kényelmesen és esztétikailag egy életen
-      át.
-    body:
-      - >-
-        Első látogatásakor időt szánunk arra, hogy megismerjük Önt — és Ön is minket —,
-        valamint megbeszéljük fogászati igényeit. Nincs sietség: szeretnénk, ha
-        magabiztosan és nyugodtan érezné magát nálunk.
-
   # ---------------------------------------------------------- pénzügy ---
   - type: split
     id: arak
-    bg: cream
+    bg: paper
     image: /img/demo4.webp
     imageAlt: Konzultáció a kezelési tervről és a költségekről
     eyebrow: Árak és fizetés
@@ -163,7 +145,7 @@ blocks:
 
   # --------------------------------------------------------- partnerek ---
   - type: partners
-    bg: paper
+    bg: cream
     data: insurance
     eyebrow: Egészségpénztárak
     title: Szerződött partnereink
@@ -174,7 +156,7 @@ blocks:
   # --------------------------------------------------------------- faq ---
   - type: faq
     id: gyik
-    bg: cream
+    bg: paper
     eyebrow: Gyakori kérdések
     title: Gyakori kérdések új pácienseinktől
     lead: >-
