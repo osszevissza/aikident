@@ -27,7 +27,8 @@ RUNTIME = {"js", "is-stuck", "is-open", "is-locked", "is-in", "is-visible"}
 # from genuinely dead selectors so a real typo still stands out.
 RESERVED_PREFIXES = (
     "bg-mint-tint", "bg-wine-tint", "btn--light", "card--num", "card--tint",
-    "card--wine", "card__num", "grid--2", "link-arrow", "mt-0", "pill--onwine",
+    "card--wine", "card__num", "grid--2", "grid--4", "link-arrow", "mt-0",
+    "pill--onwine",
     "prose", "round-img", "sec-head--row", "shadow", "split__media--plain",
     "split__media--tall", "stack", "ticks", "visually-hidden",
     "iform__grid--3",
@@ -40,6 +41,9 @@ RESERVED_PREFIXES = (
     # lorem-ipsum ones were removed). Kept so it is a content-only change to
     # bring back — same deal as the cta band.
     "quote",
+    # `grid--4`: the `cards` block still accepts cols: 4, but no page uses it —
+    # four columns squeezed a 20-word paragraph into ~27 characters per line, so
+    # the pillar grids moved to cols: 2. Kept for short-label grids.
     # the clickable-card mechanism. No page uses it at the moment: every grid
     # whose cards shared one destination now has a single `cta` button instead
     # (see the README's "Egy cél = egy hivatkozás" rule). It stays for grids

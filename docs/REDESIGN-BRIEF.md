@@ -107,7 +107,18 @@ site by a few words.
 - **Practical FAQ first** — the FAQ is reordered so the shorter pages (home, services,
   contact) show booking, insurance, price and first-visit questions rather than theory.
 
-**Still open (needs the client):** see §7 — opening hours above all.
+**Readability pass (after design-forum feedback: "too small and narrow"):**
+- body text 16→17px (top of the clamp 17.2→18.4px), and everything meant to be
+  *read* now sits at body size instead of 15.2–15.8px; labels lifted to 14.4px,
+  inputs to ≥16px (which also stops iOS Safari zooming on focus).
+- the four pillars moved from `cols: 4` to `cols: 2`: a 20-word paragraph in a
+  217px column was ~27 characters per line — the "narrow" half of the complaint.
+  Now ~54. `grid--4` stays available for short-label grids.
+- measure cap on long paragraphs 82ch → 72ch.
+- cost, measured: pages ~4–6% taller on mobile, ~6–9% on desktop.
+- `tools/a11y/type.js` keeps the floor from slipping back.
+
+**Still open (needs the client):** see §7 — real photos and the rest.
 
 
 ---
@@ -165,6 +176,9 @@ PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/overflow.js
 PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/interaction.js
                                   # keyboard, focus, skip link, 200% zoom, reduced motion,
                                   # axe with contrast + target-size in a real browser
+PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/type.js
+                                  # readability floor: reading text ≥16px, line length
+                                  # 40–90 chars, inputs ≥16px (iOS zoom)
 ```
 
 **All of these must be clean before committing.** Current state: 0 violations / 0 failures.

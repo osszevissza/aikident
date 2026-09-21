@@ -87,7 +87,7 @@ for (const sel of selectors.keys()) {
 // uses it right now — every grid with a shared destination got a single `cta`
 // button instead (see the README's "Egy cél = egy hivatkozás" rule) — but it is
 // the right tool as soon as cards have individual destinations again.
-const RESERVED = /^(\.(cta-band|quote|prose|link-arrow|ticks|stack|shadow|round-img|visually-hidden|mt-0|bg-|grid--2|card--link|card__link|card__more|card--wine|card--tint|card--num|card__num|btn--light|pill--onwine|split__media--(plain|tall)|sec-head--row|iform__grid--3|eyebrow--onwine|section--tight|section--wine)|from$|to$)/;
+const RESERVED = /^(\.(cta-band|quote|prose|link-arrow|ticks|stack|shadow|round-img|visually-hidden|mt-0|bg-|grid--2|grid--4|card--link|card__link|card__more|card--wine|card--tint|card--num|card__num|btn--light|pill--onwine|split__media--(plain|tall)|sec-head--row|iform__grid--3|eyebrow--onwine|section--tight|section--wine)|from$|to$)/;
 // bare element selectors (h4, hr, strong, video) are base/reset styles: they
 // are allowed to be broader than today's content
 const isBareElement = (s) => !/[.#]/.test(s);

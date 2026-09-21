@@ -41,7 +41,9 @@ blocks:
     lead: >-
       Minden tevékenységünk a küldetésünkön alapul: olyan empatikus, biológiai alapú
       fogászati ellátást nyújtani, amely az embert egészében támogatja.
-    cols: 4
+    # Négy oszlop ~217 px-es kártyákat adott (≈27 karakter soronként) — olvashatatlanul
+    # keskeny. Két oszlopban ~65 karakter fér el egy sorban.
+    cols: 2
     data: services
     # Nincs `linkTo`: minden kártya ugyanoda vinne, ezért egyetlen hivatkozás van
     # alattuk (`cta`). A négy pillér saját horgonya (`/szolgaltatasok/#…`) ettől

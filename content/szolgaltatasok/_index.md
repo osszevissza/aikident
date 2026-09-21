@@ -40,7 +40,9 @@ blocks:
     lead: >-
       Általános, biológiai, holisztikus és integrált fogászat — egy rendelőben,
       egymásra épülve, ahol a szájegészség az egész szervezet része.
-    cols: 4
+    # Négy oszlop ~217 px-es kártyákat adott (≈27 karakter soronként) — olvashatatlanul
+    # keskeny. Két oszlopban ~65 karakter fér el egy sorban.
+    cols: 2
     data: services
     cta:
       label: Kapcsolat

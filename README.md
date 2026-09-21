@@ -207,6 +207,7 @@ Böngészős ellenőrzések (igényelnek egy futó szervert, pl.
 ```bash
 PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/overflow.js
 PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/interaction.js
+PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/type.js
 ```
 
 - `audit.js` — minden generált oldalt végigfut: axe-core szabályok,
@@ -239,6 +240,19 @@ PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/interaction.js
   kontraszt- **és** target-size szabállyal; linkek és sorok akadálymentes neve,
   valamint hogy a díszítő ikonlemezek semmit ne adjanak az akadálymentesítési
   fához. Új interaktív komponensnél futtasd.
+- `type.js` — **az olvashatóság alsó korlátja.** Egy dizájn-fórum visszajelzése
+  szerint a szöveg „túl kicsi és keskeny" volt, ezért ez mérhető: a script
+  valódi böngészőben megköveteli, hogy a *olvasásra szánt* szöveg (kártyaszöveg,
+  felsorolás, folyamatlépés, harmonika-törzs, kapcsolatadatok, lábléc) legalább
+  16 px legyen, a hosszú bekezdések sora 40–90 karakter között maradjon (390 px
+  alatt 25 a minimum), az űrlapmezők pedig érjék el a 16 px-et — ez utóbbi azért,
+  mert az iOS Safari 16 px alatt ránagyít a mezőre fókuszáláskor. A meta- és
+  címkeszöveg padlója 13,5 px.
+
+  A méretskála három tokennel állítható (`assets/css/main.css`, `:root`):
+  `--t-body` (alapszöveg, 17 → 18,4 px), `--t-meta` (15 px), `--t-label`
+  (14,4 px). Ha nagyobbra vagy kisebbre akarod venni az egész oldalt, ezeket
+  írd — ne az egyes szabályokat.
 - `claims.js` — **a visszaesések elleni háló.** A honlapról eltávolított
   állítások (kitalált statisztikák, lorem ipsum vélemények, csillagos értékelés,
   marquee-sáv, szuperlatívuszok, a kitalált „fogszabályozó” végzettség) közül
