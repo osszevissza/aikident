@@ -79,17 +79,12 @@
     }
   }
 
-  /* --- intake form (print-only demo: no backend) ----------------------- */
+  /* --- intake sheet: print only ---------------------------------------- */
+  /* The form is never submitted — there is no backend and the practice does not
+     collect personal data through the site. The only action is printing (which
+     the browser can also save as PDF). */
   var intake = document.querySelector('[data-intake-form]');
   if (intake) {
-    var intakeStatus = intake.querySelector('[data-form-status]');
-    intake.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (intakeStatus) {
-        intakeStatus.hidden = false;
-        intakeStatus.textContent = 'Köszönjük! Ez egy bemutató adatlap — éles környezetben itt küldenénk el az adatokat a rendelőnek.';
-      }
-    });
     var printBtn = intake.querySelector('[data-print]');
     if (printBtn) {
       printBtn.addEventListener('click', function () { window.print(); });

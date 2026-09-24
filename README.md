@@ -340,9 +340,6 @@ letter, accordion, form, info, notice) — összesen 44 deklaráció.
 - **Nyolc szolgáltatásleírás:** a briefben nem volt hozzá szöveg, ezért mi
   írtuk. A `/szolgaltatasok/` és a főoldal kártyarácsainak lábjegyzete név
   szerint felsorolja őket, amíg a rendelő nem hagyja jóvá.
-- **Új páciens adatlap:** a `/uj-paciens/adatlap/` oldal egy nyomtatható,
-  böngészőben kitölthető űrlap (nem PDF). Ha valódi PDF letöltést szeretnél,
-  tedd a fájlt a `static/files/` könyvtárba, és onnan linkeld.
 - **Kapcsolat űrlap: nincs, és nem is lesz (kérésre törölve).** A `contact` blokk
   már nem rajzol űrlapot: a rendelő nem akar személyes adatot gyűjteni a honlapon
   keresztül, mert az adatkezelési tájékoztatót, megőrzési szabályt és egy élő
@@ -350,11 +347,12 @@ letter, accordion, form, info, notice) — összesen 44 deklaráció.
   térképet kínálja. Az űrlap a git történetben megvan (a `.form-card` / `.field*`
   CSS-sel és a `[data-demo-form]` JS-kezelővel együtt), ha valaha mégis kellene —
   akkor viszont előbb az adatkezelési szövegeket is meg kell írni.
-- **Új páciens adatlap (`/uj-paciens/adatlap/`):** ez **nem** beküldhető űrlap,
-  hanem böngészőben kitölthető, kinyomtatható adatlap — az adat nem hagyja el az
-  oldalt, a páciens papíron viszi be. A `[data-intake-form]` kezelő csak a
-  nyomtatás előtti visszajelzést adja; ha ezt is beküldhetővé akarod tenni, az
-  már adatkezelési döntés.
+- **Új páciens adatlap (`/uj-paciens/adatlap/`):** böngészőben kitölthető,
+  **kinyomtatható** adatlap — a lapnak egyetlen művelete van: a nyomtatás, amiből
+  a böngésző PDF-et is tud menteni. Nincs „mentés” vagy „küldés” gomb, mert az
+  adat nem hagyja el az oldalt (`<form>` `action` nélkül, nincs `fetch`), a
+  páciens papíron viszi be. Ha ezt beküldhetővé akarod tenni, az már adatkezelési
+  döntés — és akkor a beviteli mezők `name` attribútumait is át kell nézni.
 - **Közösségi linkek:** a láblécben **nincsenek** közösségi ikonok (kérésre
   törölve). Ha később kellenek, a `layouts/partials/footer.html`
   `site-footer__brand` blokkjába vedd fel őket, és az ikonokat is írd vissza a
