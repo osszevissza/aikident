@@ -1,7 +1,7 @@
 /* ==========================================================================
    Aiki Dent Fogászat — design system
    Brand: #811331 (wine)  ·  #7eecc3 (mint)
-   Type:  Playfair Display (display) · General Sans (body/UI) · Comfortaa (accent)
+   Type:  Fraunces (display — under evaluation) · General Sans (body/UI) · Comfortaa (accent)
    ========================================================================== */
 
 /* --------------------------------------------------------------- 1. Fonts */
@@ -60,17 +60,24 @@
   --t-body: clamp(1.0625rem, 1rem + 0.25vw, 1.15rem); /* 17px → 18.4px */
   --t-meta: 0.9375rem;                                /* 15px — captions, meta */
   --t-label: 0.9rem;                                  /* 14.4px — small print */
-  --f-display: 'Comfortaa', 'Trebuchet MS', sans-serif;   /* EXPERIMENT: was Playfair */
+  --f-display: 'Fraunces', Georgia, 'Times New Roman', serif;   /* evaluation — was Playfair */
+  /* Variable-axis knobs for the display face. Fraunces ships SOFT 0-100 and
+     WONK 0-1, and its own defaults are wght 900 / WONK 1 — heavy and
+     deliberately quirky. Both are pinned here; `font-weight` still drives wght.
+     They are declared on `body` (see below) so they inherit everywhere the
+     display face is used, not only on h1-h4. */
+  --display-soft: 0;
+  --display-wonk: 0;
   /* Display type scale — compensates for a candidate font's optical size, so
      typefaces can be compared at the same apparent size. Measured per 100px
      (`node tools/a11y/fonts.js --reference=Playfair`): Playfair x-height 0.540 /
-     cap 0.710 / advance 44px; Comfortaa 0.550 / 0.780 / 54px; General Sans 0.530 /
-     0.720 / 46px; SpartanMB 0.470 / 0.750 / 47px.
-     Comfortaa therefore needs no size compensation (x-height +2%): at 1 it simply
-     sets ~23% wider, so headings wrap one line earlier — a property of the face,
-     to be judged by looking, not hidden by shrinking. A face with a much smaller
-     x-height (SpartanMB) would need ~1.15. */
-  --display-scale: 1;
+     cap 0.710 / advance 44px; General Sans 0.530 / 0.720 / 46px; Comfortaa
+     0.550 / 0.780 / 54px; SpartanMB 0.470 / 0.750 / 47px; Fraunces 0.440 /
+     0.710 / 38px.
+     Fraunces' lowercase is 19% shorter than Playfair's, so it needs 1.23 to look
+     the same size — a property of the face, judged by looking at it. The cost
+     lands on the biggest sizes, which is why the h1/h2 clamps below are trimmed. */
+  --display-scale: 1.23;
   --f-sans: 'GeneralSans', 'General Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --f-accent: 'Comfortaa', 'Trebuchet MS', sans-serif;
 
@@ -131,6 +138,12 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  /* Display-face axes live here, not on h1-h4, because this property inherits:
+     the display face is also used on elements that are not headings (accordion
+     labels, the drawer nav, pull quotes, .prose blockquote), and those would
+     otherwise render with the font's own defaults. Non-variable faces ignore
+     axes they do not have. */
+  font-variation-settings: 'SOFT' var(--display-soft), 'WONK' var(--display-wonk);
   /* `clip` keeps the sticky header working (unlike `hidden`) */
   overflow-x: hidden;
   overflow-x: clip;
@@ -140,6 +153,7 @@ body.is-locked { overflow: hidden; }
 
 h1, h2, h3, h4 {
   font-family: var(--f-display);
+  /* axes inherit from body; wght still follows font-weight */
   font-weight: 400;
   color: var(--wine-deep);
   line-height: 1.14;
@@ -148,8 +162,16 @@ h1, h2, h3, h4 {
   text-wrap: balance;
 }
 
-h1 { font-size: calc((clamp(2.5rem, 1.5rem + 4.2vw, 4.35rem)) * var(--display-scale)); line-height: 1.05; }
-h2 { font-size: calc((clamp(1.95rem, 1.3rem + 2.4vw, 3.05rem)) * var(--display-scale)); line-height: 1.1; }
+/* The clamps are the design decision — how big a title is. They are kept
+   separate from --display-scale, which compensates a *font's* optical size and
+   must stay the same at every size. Both were trimmed when Fraunces replaced
+   Playfair: the h1 by 17% (4.35rem -> 3.6rem; 85.6px -> 70.8px, which drops the
+   66-character hero title from 5 lines to 4), and the h2 by 18% (3.05rem ->
+   2.5rem; 60px -> 49.2px) because at 60px it sat only 1.18x under the smaller
+   h1 and read as a second h1. The h1:h2 step is back to 1.43x — the ratio the
+   site had before the h1 was trimmed. */
+h1 { font-size: calc((clamp(2.08rem, 1.25rem + 3.49vw, 3.6rem)) * var(--display-scale)); line-height: 1.05; }
+h2 { font-size: calc((clamp(1.6rem, 1.07rem + 1.97vw, 2.5rem)) * var(--display-scale)); line-height: 1.1; }
 h3 { font-size: calc((clamp(1.22rem, 1.08rem + 0.6vw, 1.55rem)) * var(--display-scale)); }
 h4 { font-size: calc((1.075rem) * var(--display-scale)); }
 

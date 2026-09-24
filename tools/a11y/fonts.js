@@ -94,9 +94,27 @@ const families = [...new Set(faces.map((f) => f.family))];
     const canvas = document.createElement('canvas');
     canvas.width = 400; canvas.height = 200;
     const g = canvas.getContext('2d');
+    /* The `font` shorthand only: a canvas 2D context has no font longhands, and a
+       variable face is declared `font-weight: 100 900`, so `'100 900 100px "X"'`
+       is invalid CSS — the assignment is silently ignored and whatever font was
+       set before gets measured. Use one numeric weight (400 for a range) and keep
+       the string valid; `assertMeasured()` below catches it if that ever fails. */
+    const setFont = (family, weight, size) => {
+      const parts = String(weight).trim().split(/\s+/);
+      const w = parts.length === 1 && /^\d+$/.test(parts[0]) ? parts[0] : '400';
+      g.font = w + ' ' + size + 'px "' + family + '", sans-serif';
+    };
+    /* a real text face at 100px lands inside these bounds; the 10px canvas default
+       (what you get when the assignment failed) does not */
+    const assertMeasured = (m, family) => {
+      if (m.xh < 0.30 || m.xh > 0.80 || m.advance < 25 || m.advance > 90) {
+        throw new Error(`measurement looks wrong for ${family} (x-height ${m.xh}, advance ${m.advance}) — is the face loading?`);
+      }
+      return m;
+    };
     const metrics = (ch, family, weight, size) => {
       g.clearRect(0, 0, 400, 200);
-      g.font = `${weight} ${size}px "${family}"`;
+      setFont(family, weight, size);
       g.fillStyle = '#000';
       g.fillText(ch, 10, 150);
       const d = g.getImageData(0, 0, 400, 200).data;
@@ -132,8 +150,14 @@ const families = [...new Set(faces.map((f) => f.family))];
       const S = 100;
       const xh = metrics('x', family, ref.weight, S).h / S;
       const cap = metrics('H', family, ref.weight, S).h / S;
-      g.font = `${ref.weight} ${S}px "${family}"`;
+      setFont(family, ref.weight, S);
       const advance = Math.round(g.measureText('fogaszati').width / 9);
+      try {
+        assertMeasured({ xh, cap, advance }, family);
+      } catch (e) {
+        out.push({ family, error: e.message });
+        continue;
+      }
       out.push({ family, weights, xh, cap, advance, missing, files: facesOk.map((f) => f.file) });
     }
     return out;

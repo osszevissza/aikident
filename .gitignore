@@ -15,3 +15,13 @@ tools/a11y/node_modules/
 /.logo-build/
 /.pw-browsers/
 .npmcache/
+
+# Local font candidates — measured but not part of the build (see docs/REDESIGN-BRIEF.md §3)
+/new_fonts/
+/static/fonts/ArchivoNarrow/
+/static/fonts/CabinetGrotesk/
+/static/fonts/FunnelDisplay/
+/static/fonts/Gambetta/
+/static/fonts/ProzaLibre/
+# Fraunces source TTF (the shipped .woff2 is derived from it; see §3 for the commands)
+/static/fonts/Fraunces/*.ttf

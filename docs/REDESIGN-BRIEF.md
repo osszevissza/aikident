@@ -142,33 +142,67 @@ Each was reduced to one copy; no fact was dropped. `claims.js` now fails on any
 8-word passage repeated inside a section, so this cannot creep back.
 
 **Display font — experiment, not decided (local commit only, not pushed).**
-`--f-display` is currently **Comfortaa** instead of Playfair, on the client's
-request to see it; the previous site also used Playfair + General Sans, and the
-pairing felt overused. General Sans stays for body text either way.
+**The display face is Fraunces** — the client's choice, after seeing it beside
+Playfair, Gambetta, Cabinet Grotesk and the others. The Playfair + General Sans
+pairing felt overused; Comfortaa (tried in between) is the accent face and stays
+in that role: eyebrows, step numbers, labels.
 
 Measured facts that matter for choosing:
-- **Hungarian glyphs:** all four bundled families (General Sans, Playfair,
-  Comfortaa, SpartanMB) contain `ő ű Ő Ű` — checked by drawing each glyph and
-  comparing its ink against a Private-Use codepoint the font cannot have. Any new
-  font must pass the same test; a missing double acute breaks half the copy.
-- **Optical size** (per 100px, measured with `node tools/a11y/fonts.js`):
-  Playfair x-height 0.540 / cap 0.710 / advance 44px; **Comfortaa 0.550 / 0.780 /
-  54px**; General Sans 0.530 / 0.720 / 46px; SpartanMB 0.470 / 0.750 / 47px.
-  So Comfortaa is the same *size* as Playfair (x-height +2%) but sets **23%
-  wider** — headings wrap one line earlier (desktop hero 5 lines vs 4, services
-  `h2` 2 vs 1). That wrapping is a property of the face, not a size problem.
-  *(An earlier note here claimed "capitals 37% taller, 17% wider". The cap figure
-  was a measurement error: the probe swallowed a font-load failure and measured
-  the Georgia fallback. `fonts.js` now loads every face explicitly and reports a
-  failure loudly.)*
-- `--display-scale` (applied to h1–h4, the card/step/accordion titles,
-  `.letter__quote`, `.drawer__nav a`, `.iform__head h2`, `.prose blockquote`)
-  exists so candidates can be compared at the same apparent size; `fonts.js
-  --reference=Playfair` prints the value per family (Comfortaa 0.98 → left at 1).
+- **Hungarian glyphs:** every bundled family — General Sans, Playfair, Comfortaa,
+  SpartanMB, Fraunces and the unused candidates — contains `ő ű Ő Ű`. Checked by
+  drawing each glyph and comparing its ink against a Private-Use codepoint the font
+  cannot have. Any new font must pass the same test; a missing double acute breaks
+  half the copy.
+- **Optical size** (per 100px, `node tools/a11y/fonts.js --reference=Playfair`):
+  Playfair x-height 0.540 / cap 0.710 / advance 44px; General Sans 0.530 / 0.720 /
+  46px; Comfortaa 0.550 / 0.780 / 54px; SpartanMB 0.470 / 0.750 / 47px;
+  **Fraunces 0.440 / 0.710 / 38px**.
+  Fraunces' lowercase is 19% shorter than Playfair's at the same size, so it is set
+  23% larger (`--display-scale: 1.23`) to *look* the same size — measured, not
+  guessed. Its cap-height equals Playfair's, so at that setting the capitals set
+  21% taller, which is what makes it read as more present at the same nominal size.
+  *(An earlier note here claimed Comfortaa's "capitals 37% taller, 17% wider". The
+  cap figure was a measurement error: the probe swallowed a font-load failure and
+  measured the Georgia fallback. `fonts.js` now loads every face explicitly and
+  reports a failure loudly instead of measuring a fallback.)*
+- `--display-scale` multiplies h1–h4, the card/step/accordion titles,
+  `.letter__quote`, `.drawer__nav a`, `.iform__head h2` and `.prose blockquote`. It
+  compensates a *font's* optical size, so it is the same at every size.
+- **The h1/h2 clamps absorb the compensation at the top end**, because only the
+  largest sizes were pushed too far by it: h1 4.35rem → 3.6rem (85.6px → 70.8px,
+  which drops the 66-character hero title from 5 lines to 4 — a 298px block), and
+  h2 3.05rem → 2.5rem (60px → 49.2px). At 60px the h2 sat only 1.18× under the
+  trimmed h1 and read as a second h1; at 49.2px the step is 1.43× — the ratio the
+  site had before the trim. Side effect: section headings now fit on one or two
+  lines (20×1ln + 15×2ln + 4×3ln instead of 12/21/6).
+- **Variable axes.** Fraunces ships `SOFT` 0–100, `WONK` 0–1 (plus `opsz`, `wght`)
+  and its own defaults are wght 900 / WONK 1 — heavy and deliberately quirky. Both
+  are pinned to 0 in `main.css`, declared on `body` so they inherit everywhere the
+  display face is used (not only on h1–h4: accordion labels, the drawer nav, pull
+  quotes and `.prose blockquote` all use it). `opsz` is applied automatically at the
+  used size.
+  **`WONK` is free if the client ever wants more character:** `WONK 0` and `WONK 1`
+  measure identical line widths (1695px on the hero string) — it only redraws a few
+  letterforms. `SOFT` does change widths (1737px at `SOFT 100`).
+- **The shipped file is 85 KB**, not the 190 KB the font ships as: a Latin +
+  Latin-Ext subset with `SOFT`/`WONK` instanced out. It renders identically — same
+  h1/h2 line counts, line widths and page heights, verified before/after. To
+  regenerate (after downloading the Fraunces variable TTF from `google/fonts`,
+  `ofl/fraunces`):
 
-Comfortaa's limits for this role: only two weights (400/500), no italic, and it is
-already the accent font (eyebrows, step numbers) — so using it for display too
-collapses the two-layer type system into one face plus General Sans.
+  ```bash
+  fonttools varLib.instancer -o /tmp/pin.ttf Fraunces-Variable.ttf SOFT=0 WONK=0
+  pyftsubset /tmp/pin.ttf --flavor=woff2 --no-hinting \
+    --unicodes='U+0000-00FF,U+0100-024F,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+FEFF,U+FFFD' \
+    --layout-features='kern,liga,clig,calt,ccmp,locl,mark,mkmk,rvrn' \
+    --output-file=static/fonts/Fraunces/Fraunces-Variable.woff2
+  ```
+
+Fraunces' limits for this role: it is a fashionable 2020s face (a trend risk over
+the life of the site), its stroke contrast is high and its x-height small, so at the
+20–24px card/accordion sizes it is less sturdy than Playfair was. The h3 sizes in
+use (24.4px cards, 23.2px steps, 21.2px mini cards) are deliberately close: that
+level is distinguished by context and colour, not by size.
 
 **Still open (needs the client):** see §7 — real photos and the rest.
 
@@ -212,11 +246,13 @@ hugo --quiet                      # any error fails the build
 cd tools/a11y && npm install      # first time only
 
 node tools/a11y/audit.js          # axe-core + heading order, ids, link names, labels
-node tools/a11y/contrast.js       # 71 WCAG contrast pairings — add new colours to PAIRS
+node tools/a11y/contrast.js       # 72 WCAG contrast pairings — add new colours to PAIRS
 node tools/a11y/selectors.js      # CSS selectors matching nothing (= typo'd class names)
 python3 tools/a11y/dead-css.py    # same idea, class level
 node tools/a11y/claims.js         # removed claims must not come back; #fragments; aliases
 node tools/a11y/icons.js          # unknown/empty icon glyphs; every icon still paints
+node tools/a11y/fontwiring.js     # every family named by --f-display/--f-sans/--f-accent
+                                  # has an @font-face the built page can actually reach
 ```
 
 Plus, after any layout/CSS change:
@@ -235,12 +271,19 @@ PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/type.js
 
 **All of these must be clean before committing.** Current state: 0 violations / 0 failures.
 
-Two traps this tooling exists to catch, both of which have actually happened here:
+Three traps this tooling exists to catch, all of which have actually happened here:
 1. A CSS rule whose class name does not match the markup — styles silently do nothing.
    (`.footer …` vs `class="site-footer"` broke the whole footer.)
 2. Horizontal overflow on phones. `.split__media::before` hung 24px out against an 18.4px
    gutter → 6px of horizontal pan. **Note `overflow.js` must keep `isMobile: false`** —
    Playwright's mobile emulation widens the layout viewport and hides the bug.
+3. A font named by a token but never reachable from the page. `--f-display` was set to
+   Fraunces and a whole round of measurements was taken while the page quietly rendered
+   **Georgia** (the face was declared in `static/fonts/Fraunces/Fraunces.css`, but
+   `baseof.html` never linked that sheet). Nothing in the old suite could see it, so
+   `fontwiring.js` now checks token → `@font-face` → linked sheet, and also that every
+   `preload` hint points at a file some face really uses. When judging a typeface,
+   confirm the browser agrees: `document.fonts` should list the family as `loaded`.
 
 Two notes on the tooling itself:
 
