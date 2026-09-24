@@ -348,11 +348,16 @@ letter, accordion, form, info, notice) — összesen 44 deklaráció.
   CSS-sel és a `[data-demo-form]` JS-kezelővel együtt), ha valaha mégis kellene —
   akkor viszont előbb az adatkezelési szövegeket is meg kell írni.
 - **Új páciens adatlap (`/uj-paciens/adatlap/`):** böngészőben kitölthető,
-  **kinyomtatható** adatlap — a lapnak egyetlen művelete van: a nyomtatás, amiből
-  a böngésző PDF-et is tud menteni. Nincs „mentés” vagy „küldés” gomb, mert az
-  adat nem hagyja el az oldalt (`<form>` `action` nélkül, nincs `fetch`), a
-  páciens papíron viszi be. Ha ezt beküldhetővé akarod tenni, az már adatkezelési
-  döntés — és akkor a beviteli mezők `name` attribútumait is át kell nézni.
+  **kinyomtatható** és **fájlba menthető** adatlap. Két művelete van:
+  `Adatlap nyomtatása` (a nyomtatási stílus elrejti a gombokat, a böngésző PDF-et
+  is tud belőle menteni) és `Adatlap mentése fájlba`, amely a kitöltött lapból egy
+  önálló HTML-fájlt készít a böngészőben (`Blob` + `<a download>`, például
+  `aiki-dent-adatlap-2026-09-24.html`). **Nincs beküldés:** a `<form>`-nak nincs
+  `action`-je, nincs `fetch`, és a lap egyetlen külső kérést sem indít — az adat
+  végig az Ön gépén marad, papíron vagy PDF-ben viszi be a páciens.
+  A mentett fájl a lap saját jelöléséből készül (`cloneNode`), ezért új mező
+  hozzáadásakor a JS-hez nem kell nyúlni. Ha ezt beküldhetővé akarod tenni, az már
+  adatkezelési döntés — és akkor a mezők `name` attribútumait is át kell nézni.
 - **Közösségi linkek:** a láblécben **nincsenek** közösségi ikonok (kérésre
   törölve). Ha később kellenek, a `layouts/partials/footer.html`
   `site-footer__brand` blokkjába vedd fel őket, és az ikonokat is írd vissza a

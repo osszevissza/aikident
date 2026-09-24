@@ -118,10 +118,15 @@
           <button class="btn" type="button" data-print>
             {{ partial "icon" "download" }}<span>Adatlap nyomtatása</span>
           </button>
-          <p class="note" style="font-size:var(--t-meta);color:var(--ink-3);max-width:48ch;margin:0">
-            A kitöltött adatlap nem kerül fel a honlapra: nyomtassa ki — vagy mentsen
-            belőle PDF-et —, és hozza magával az első vizitre.
+          <button class="btn btn--ghost" type="button" data-save>
+            {{ partial "icon" "save" }}<span>Adatlap mentése fájlba</span>
+          </button>
+          <p class="note" style="font-size:var(--t-meta);color:var(--ink-3);max-width:52ch;margin:0">
+            A kitöltött adatlap nem kerül fel a honlapra. Nyomtassa ki, vagy mentse
+            fájlba a gépére — onnan később is kinyomtathatja —, és hozza magával az
+            első vizitre.
           </p>
+          <span class="note" data-intake-status role="status" aria-live="polite" hidden style="font-size:var(--t-meta);color:var(--ink-3)"></span>
         </div>
       </form>
     </div>

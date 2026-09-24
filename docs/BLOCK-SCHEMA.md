@@ -291,6 +291,29 @@ history — see the commit that removed them — if it is ever wanted back.)
         large: true
 ```
 
+## `intakeForm` — the printable new-patient sheet
+
+Used by `/uj-paciens/adatlap/`. Renders the practice header, the field groups and
+a data-protection paragraph, then the fields. **It is never submitted** — there is
+no `action`, no `fetch`, and the page makes no external request at all — and it
+offers two actions:
+
+| button | what happens |
+| --- | --- |
+| `Adatlap nyomtatása` | `window.print()`; the print stylesheet hides the buttons, so a clean sheet comes out (the browser can save it as PDF) |
+| `Adatlap mentése fájlba` | builds a self-contained HTML copy of the filled sheet in the browser (`Blob` + `<a download>`) and downloads it, e.g. `aiki-dent-adatlap-2026-09-24.html`. No server is involved |
+
+The saved file reuses the sheet's own markup (`cloneNode`), so a field added to the
+partial appears in the saved copy without touching the JS; the action row is
+stripped and a small stylesheet is inlined so it prints anywhere. Keys: `title`,
+`subtitle`, `id`.
+
+```yaml
+  - type: intakeForm
+    title: Új páciens adatlap
+    subtitle: Biológiai és holisztikus fogászat
+```
+
 ## `prose` — the Markdown body of the page
 
 Optional `title` / `eyebrow` / `lead`. Use this only when a page really needs free
@@ -300,7 +323,7 @@ prose; prefer structured blocks.
 
 ## Available icons
 
-The set lives in `layouts/partials/icon.html` (46 glyphs, 24×24, `currentColor`).
+The set lives in `layouts/partials/icon.html` (47 glyphs, 24×24, `currentColor`).
 The list below is generated from that file — if you add a glyph, add its name here
 and run `node tools/a11y/icons.js`.
 
@@ -308,7 +331,7 @@ and run `node tools/a11y/icons.js`.
 tooth leaf microscope scan shield heart heart-pulse sparkles balance users
 user calendar phone mail pin clock check check-circle arrow-right arrow-up
 arrow-up-right chevron-down menu close plus minus star quote needle zap
-droplet dna eye flask grid film camera award book download info hand-heart
+droplet dna eye flask grid film camera award book download save info hand-heart
 activity sun smile globe
 ```
 
