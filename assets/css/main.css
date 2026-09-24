@@ -61,12 +61,16 @@
   --t-meta: 0.9375rem;                                /* 15px — captions, meta */
   --t-label: 0.9rem;                                  /* 14.4px — small print */
   --f-display: 'Comfortaa', 'Trebuchet MS', sans-serif;   /* EXPERIMENT: was Playfair */
-  /* Display type scale. Comfortaa's capitals are 37% taller and it sets 17% wider
-     than Playfair at the same font-size (measured from drawn pixels), so the same
-     size gives bulkier, longer headings. 0.88 matches its x-height to Playfair's
-     and brings line breaks back to where they were; set 1 to switch the
-     compensation off, or re-tune it for whatever display font comes next. */
-  --display-scale: 0.88;
+  /* Display type scale — compensates for a candidate font's optical size, so
+     typefaces can be compared at the same apparent size. Measured per 100px
+     (`node tools/a11y/fonts.js --reference=Playfair`): Playfair x-height 0.540 /
+     cap 0.710 / advance 44px; Comfortaa 0.550 / 0.780 / 54px; General Sans 0.530 /
+     0.720 / 46px; SpartanMB 0.470 / 0.750 / 47px.
+     Comfortaa therefore needs no size compensation (x-height +2%): at 1 it simply
+     sets ~23% wider, so headings wrap one line earlier — a property of the face,
+     to be judged by looking, not hidden by shrinking. A face with a much smaller
+     x-height (SpartanMB) would need ~1.15. */
+  --display-scale: 1;
   --f-sans: 'GeneralSans', 'General Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --f-accent: 'Comfortaa', 'Trebuchet MS', sans-serif;
 

@@ -217,6 +217,7 @@ Böngészős ellenőrzések (igényelnek egy futó szervert, pl.
 PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/overflow.js
 PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/interaction.js
 PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/type.js
+PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/fonts.js [--reference=Playfair]
 ```
 
 - `audit.js` — minden generált oldalt végigfut: axe-core szabályok,
@@ -257,6 +258,13 @@ PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/type.js
   kulcsában is kiírta). A vizsgálat szavanként csúszó ablakkal dolgozik, mert a
   mondatra bontás pont az ilyen eseteket véti el (a lista végéhez ragad a
   mondat).
+- `fonts.js` — **betűcsere előtt.** Végigméri a `static/fonts/` alatt talált
+  családokat: mely súlyok vannak meg, tartalmazza-e a magyar kettős ékezeteket
+  (ő ű Ő Ű — enélkül a szöveg fele használhatatlan), mekkora az optikai mérete
+  (x-magasság, nagybetű-magasság, átlagos előtolás 100 px-en), és megadja a
+  `--display-scale` ajánlott értékét, amellyel egy másik családhoz optikailag
+  hasonló méretben szed. `--reference=<Család>` választja a viszonyítási betűt
+  (alapból a jelenleg beállított `--f-display`).
 - `type.js` — **az olvashatóság alsó korlátja.** Egy dizájn-fórum visszajelzése
   szerint a szöveg „túl kicsi és keskeny" volt, ezért ez mérhető: a script
   valódi böngészőben megköveteli, hogy a *olvasásra szánt* szöveg (kártyaszöveg,
@@ -315,6 +323,31 @@ letter, accordion, form, info, notice) — összesen 44 deklaráció.
 - `.hero__blob` — puha gradiens folt a hero fotó mögött, `50%`
 - `.field input`, `.iform__f input` — `0`, mert csak aláhúzásuk van
 - `.card__link::after` — `inherit`, hogy pontosan a kártyát fedje
+
+## Betűcsere
+
+Új betű a `static/fonts/<Család>/` könyvtárba kerül (`.woff2`, a súlyokkal
+együtt), mellé a **licencfájl** (Fontshare és Google Fonts esetén is ingyenes a
+kereskedelmi használat, de a licencet őrizni kell), és egy `.css`, amely
+`@font-face`-szel deklarálja a családot — a `fonts.js` ezt olvassa.
+
+Ellenőrzés csere előtt:
+
+```bash
+python3 -m http.server 8099 --directory public &     # vagy hugo server
+PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/fonts.js --reference=Playfair
+```
+
+Ez megmondja, hogy megvan-e a magyar ő/ű/Ő/Ű, mekkora a betű optikai mérete, és
+milyen `--display-scale` értékkel lesz összemérhető a mostani címsorbetűvel. A
+csere ezután egy token: `--f-display` (a `main.css` `:root` blokkjában), illetve
+`--f-accent` a kiemelésekhez (eyebrow, lépésszámok). Ha a régi betűtípusra már
+nincs szükség, a `static/fonts/<Család>/` könyvtár és a hozzá tartozó
+`<link rel="stylesheet">` a `layouts/baseof.html`-ben is törölhető.
+
+**Figyelem:** ha a `public/` könyvtárat `hugo server` írta utoljára, a HTML-ek
+tartalmaznak egy `livereload.js` hivatkozást — ilyen könyvtárat ne deployolj.
+Éles build mindig `hugo --quiet` (a statichost is forrásból épít).
 
 ## Élesítés előtt cserélendő
 

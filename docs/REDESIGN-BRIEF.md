@@ -151,15 +151,20 @@ Measured facts that matter for choosing:
   Comfortaa, SpartanMB) contain `ő ű Ő Ű` — checked by drawing each glyph and
   comparing its ink against a Private-Use codepoint the font cannot have. Any new
   font must pass the same test; a missing double acute breaks half the copy.
-- **Optical size** (per 100px): Playfair x-height 0.49 / cap 0.57 / avg advance
-  46px; Comfortaa 0.55 / **0.78** / 54px; General Sans 0.53 / 0.72 / 46px.
-  So Comfortaa's capitals are 37% taller and it sets 17% wider at the same size.
-- That is why `--display-scale: 0.88` exists (applied to h1–h4, the card/step/
-  accordion titles, `.letter__quote`, `.drawer__nav a`, `.iform__head h2`,
-  `.prose blockquote`). At 1.0 Comfortaa pushed the hero to 5 lines on desktop
-  and the services page `h2` to 2 lines; at 0.88 the pages come out slightly
-  *shorter* than with Playfair (home 11 892px vs 11 939px) and line counts match,
-  except the desktop hero (5 lines vs 4).
+- **Optical size** (per 100px, measured with `node tools/a11y/fonts.js`):
+  Playfair x-height 0.540 / cap 0.710 / advance 44px; **Comfortaa 0.550 / 0.780 /
+  54px**; General Sans 0.530 / 0.720 / 46px; SpartanMB 0.470 / 0.750 / 47px.
+  So Comfortaa is the same *size* as Playfair (x-height +2%) but sets **23%
+  wider** — headings wrap one line earlier (desktop hero 5 lines vs 4, services
+  `h2` 2 vs 1). That wrapping is a property of the face, not a size problem.
+  *(An earlier note here claimed "capitals 37% taller, 17% wider". The cap figure
+  was a measurement error: the probe swallowed a font-load failure and measured
+  the Georgia fallback. `fonts.js` now loads every face explicitly and reports a
+  failure loudly.)*
+- `--display-scale` (applied to h1–h4, the card/step/accordion titles,
+  `.letter__quote`, `.drawer__nav a`, `.iform__head h2`, `.prose blockquote`)
+  exists so candidates can be compared at the same apparent size; `fonts.js
+  --reference=Playfair` prints the value per family (Comfortaa 0.98 → left at 1).
 
 Comfortaa's limits for this role: only two weights (400/500), no italic, and it is
 already the accent font (eyebrows, step numbers) — so using it for display too
