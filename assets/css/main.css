@@ -95,6 +95,11 @@
   --shell: 1220px;
   --gutter: clamp(1.15rem, 4vw, 2.75rem);
   --section-y: clamp(4.25rem, 8.5vw, 8rem);
+  /* Space between a section h2 and the text it introduces. In `em`, so it scales
+     with the heading's own size (the display face changes that size by 23%).
+     Was 8px under .sec-head and 12px under .split__body — the h2 sat almost
+     touching its lead paragraph. */
+  --gap-h2: 0.4em;
 
   /* motion */
   --ease: cubic-bezier(0.22, 0.68, 0.31, 1);
@@ -289,7 +294,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
 .sec-head { max-width: 68ch; margin-bottom: clamp(2.25rem, 4vw, 3.5rem); }
 .sec-head--center { margin-inline: auto; text-align: center; }
 .sec-head--center .eyebrow { justify-content: center; }
-.sec-head h2 { margin-bottom: 0.5rem; }
+.sec-head h2 { margin-bottom: var(--gap-h2); }
 .sec-head p {
   font-size: 1.075em;
   color: var(--ink-3);
@@ -804,7 +809,10 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
 .card--wine .link-arrow { color: var(--mint); }
 
 .card--mini { padding: 1.35rem 1.5rem; }
-.card--mini h3 { font-size: calc((1.075rem) * var(--display-scale)); }
+/* Mini cards differ from full cards in padding and icon size only. Their titles
+   used to be smaller too (1.075rem), which read as a mistake next to the same
+   card elsewhere — the client spotted it on /rolunk/ "Alapértékeink". Title size
+   is now the same everywhere; the override is gone, not just raised. */
 .card--mini .card__icon { width: 44px; height: 44px; border-radius: var(--radius); margin-bottom: 0.35rem; }
 .card--mini .card__icon svg { width: 21px; height: 21px; }
 
@@ -854,7 +862,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
 }
 .split__media--plain::before { display: none; }
 
-.split__body > h2 { margin-bottom: 0.75rem; }
+.split__body > h2 { margin-bottom: var(--gap-h2); }
 .split__body > .lead { margin-bottom: 1.5rem; }
 
 /* a split with only one child should not sit in half the grid */
@@ -1181,7 +1189,7 @@ blockquote { margin: 0; }
   gap: clamp(1.5rem, 4vw, 3.5rem);
   flex-wrap: wrap;
 }
-.cta-band h2 { color: #fff; margin-bottom: 0.6rem; max-width: 22ch; }
+.cta-band h2 { color: #fff; margin-bottom: var(--gap-h2); max-width: 22ch; }
 .cta-band p { color: rgba(255, 255, 255, 0.8); max-width: 52ch; margin: 0; }
 .cta-band__actions { display: flex; gap: 0.85rem; flex-wrap: wrap; }
 .cta-band__phone {

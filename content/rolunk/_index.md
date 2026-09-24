@@ -110,9 +110,11 @@ blocks:
     align: center
     eyebrow: Alapértékeink
     title: Munkánkat alapvető értékeink vezérlik
+    # A lead nem sorolja fel az értékeket — a kártyák pontosan azt teszik,
+    # névvel és magyarázattal. Inkább azt mondja meg, mire jó ez az öt szabály.
     lead: >-
-      Integritás minden cselekedetben, jelenlét és együttérzés, kíváncsiság és
-      fejlődés, felelősségvállalás, valamint az egyéniség helyett az együttműködés.
+      Nem jelmondatok, hanem munkaszabályok: eldöntik, mit ajánlunk, mit inkább
+      elhalasztunk, és mit mondunk el akkor is, ha nem kellemes.
     cols: 3
     style: mini
     data: values
