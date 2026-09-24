@@ -252,17 +252,21 @@ that is exactly how the partner section once printed its closing line twice.
         alt: Leírás
 ```
 
-## `contact` — form + practice details + map
+## `contact` — practice details + map
+
+**No form, deliberately.** The block used to render a contact form; it was removed
+at the client's request, because collecting personal data through the site means a
+privacy notice, a retention rule and a backend to maintain. Phone, e-mail and the
+map are the way in. (The form and its `.form-card` / `.field*` CSS are in git
+history — see the commit that removed them — if it is ever wanted back.)
 
 ```yaml
   - type: contact
     bg: cream
     eyebrow: Kapcsolat
-    title: Hívjon még ma, vagy írjon nekünk
+    title: Így érhet el minket
     lead: Rövid vezető mondat.
-    formTitle: Küldjön üzenetet
-    formLead: Kérjük, adja meg adatait.
-    showMap: true
+    showMap: true      # set false to drop the map and the route button as well
 ```
 
 ## `cta` — closing call-to-action band

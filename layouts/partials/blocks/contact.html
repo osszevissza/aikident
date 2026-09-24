@@ -1,4 +1,10 @@
-{{- /* Contact section: appointment form + practice details. */ -}}
+{{- /* Contact section: practice details + map.
+
+     There is deliberately NO contact form: the practice does not want to collect
+     personal data through the site, which would mean a privacy notice, a
+     retention rule and a backend to keep clean. Phone, e-mail and the map are the
+     way in. (The previous form was a demo with no backend anyway; it is in git
+     history together with its `.form-card` / `.field*` CSS if it is ever wanted.) */ -}}
 {{- $b := .b -}}
 {{- $bg := $b.bg | default "cream" -}}
 <section class="section section--{{ $bg }}{{ if $b.tight }} section--tight{{ end }}"{{ with $b.id }} id="{{ . }}"{{ end }}>
@@ -10,46 +16,7 @@
     </div>
 
     <div class="contact-grid">
-      <div class="form-card reveal">
-        <h3>{{ $b.formTitle | default "Küldjön üzenetet" }}</h3>
-        <p style="color:var(--ink-3);font-size:.95rem">{{ $b.formLead | default "Kérjük, adja meg elérhetőségét és néhány sorban a kérdését." }}</p>
-        <form data-demo-form>
-          <div class="field--row">
-            <div class="field">
-              <label for="cf-name">Név *</label>
-              <input id="cf-name" name="name" type="text" autocomplete="name" required placeholder="Az Ön neve">
-            </div>
-            <div class="field">
-              <label for="cf-phone">Telefonszám *</label>
-              <input id="cf-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+36 30 123 4567">
-            </div>
-          </div>
-          <div class="field">
-            <label for="cf-email">E-mail cím</label>
-            <input id="cf-email" name="email" type="email" autocomplete="email" placeholder="anna@example.com">
-          </div>
-          <div class="field">
-            <label for="cf-topic">Miben segíthetünk?</label>
-            <select id="cf-topic" name="topic">
-              <option>Általános fogászati vizsgálat</option>
-              <option>Biológiai / holisztikus konzultáció</option>
-              <option>Amalgámtömés biztonságos eltávolítása</option>
-              <option>3D-s CBCT vizsgálat</option>
-              <option>Fémmentes fogpótlás</option>
-              <option>Egyéb kérdés</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="cf-message">Üzenet</label>
-            <textarea id="cf-message" name="message" placeholder="Röviden írja le, miben segíthetünk…"></textarea>
-          </div>
-          <button class="btn btn--block" type="submit">{{ partial "icon" "calendar" }}<span>Időpontkérés elküldése</span></button>
-          <p class="form-note">A csillaggal jelölt mezők kitöltése kötelező. Adatait kizárólag a kapcsolatfelvételre használjuk.</p>
-          <p class="notice mt-2" data-form-status role="status" aria-live="polite" hidden></p>
-        </form>
-      </div>
-
-      <div class="reveal" data-delay="2">
+      <div class="reveal">
         <div class="info-list">
           <div class="info">
             <span class="info__icon" aria-hidden="true">{{ partial "icon" "pin" }}</span>
@@ -68,9 +35,11 @@
             <span><b>Nyitvatartási idő</b><span>{{ site.Params.hours }}</span></span>
           </div>
         </div>
+      </div>
 
+      <div class="reveal" data-delay="2">
         {{- if $b.showMap | default true }}
-        <div class="map-embed mt-3">
+        <div class="map-embed">
           <iframe
             title="{{ site.Params.brandName }} térkép"
             src="https://www.openstreetmap.org/export/embed.html?bbox=19.0465%2C47.5155%2C19.0625%2C47.5235&amp;layer=mapnik&amp;marker=47.51945%2C19.05455"

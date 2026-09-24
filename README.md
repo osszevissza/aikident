@@ -343,10 +343,18 @@ letter, accordion, form, info, notice) — összesen 44 deklaráció.
 - **Új páciens adatlap:** a `/uj-paciens/adatlap/` oldal egy nyomtatható,
   böngészőben kitölthető űrlap (nem PDF). Ha valódi PDF letöltést szeretnél,
   tedd a fájlt a `static/files/` könyvtárba, és onnan linkeld.
-- **Kapcsolat űrlap:** a `layouts/partials/blocks/contact.html` és az
-  `intakeForm.html` űrlapjai bemutatók (nincs backend). Éles üzemhez kösd be a
-  választott szolgáltatást (Formspree, Netlify Forms, saját endpoint), és a
-  `data-demo-form` / `data-intake-form` attribútumokat cseréld le.
+- **Kapcsolat űrlap: nincs, és nem is lesz (kérésre törölve).** A `contact` blokk
+  már nem rajzol űrlapot: a rendelő nem akar személyes adatot gyűjteni a honlapon
+  keresztül, mert az adatkezelési tájékoztatót, megőrzési szabályt és egy élő
+  backendet vonna maga után. A `/kapcsolat/` oldal a telefont, az e-mailt és a
+  térképet kínálja. Az űrlap a git történetben megvan (a `.form-card` / `.field*`
+  CSS-sel és a `[data-demo-form]` JS-kezelővel együtt), ha valaha mégis kellene —
+  akkor viszont előbb az adatkezelési szövegeket is meg kell írni.
+- **Új páciens adatlap (`/uj-paciens/adatlap/`):** ez **nem** beküldhető űrlap,
+  hanem böngészőben kitölthető, kinyomtatható adatlap — az adat nem hagyja el az
+  oldalt, a páciens papíron viszi be. A `[data-intake-form]` kezelő csak a
+  nyomtatás előtti visszajelzést adja; ha ezt is beküldhetővé akarod tenni, az
+  már adatkezelési döntés.
 - **Közösségi linkek:** a láblécben **nincsenek** közösségi ikonok (kérésre
   törölve). Ha később kellenek, a `layouts/partials/footer.html`
   `site-footer__brand` blokkjába vedd fel őket, és az ikonokat is írd vissza a

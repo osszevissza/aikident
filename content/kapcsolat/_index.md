@@ -3,15 +3,15 @@ title: Kapcsolat
 description: >-
   Vegye fel velünk a kapcsolatot: Aiki Dent Fogászat, 1136 Budapest, Hegedűs Gyula
   utca 29/b. Telefon: +36 30 193 2714 — időpontot telefonon, e-mailben vagy az
-  űrlapon keresztül tud kérni.
+  e-mailben tud kérni.
 blocks:
   # ---------------------------------------------------------------- hero ---
   - type: pageHero
     eyebrow: Kapcsolat
     title: Időpontkérés és elérhetőségeink
     lead: >-
-      Rendelőnk előzetes egyeztetés alapján működik. Telefonon, e-mailben vagy az
-      űrlapon keresztül tud időpontot kérni.
+      Rendelőnk előzetes egyeztetés alapján működik. Időpontot telefonon vagy
+      e-mailben tud kérni.
     actions:
       - label: '+36 30 193 2714'
         url: /kapcsolat/#elerhetoseg
@@ -29,13 +29,13 @@ blocks:
     id: elerhetoseg
     bg: cream
     eyebrow: Kapcsolat
-    title: Írjon nekünk néhány sort
+    title: Így érhet el minket
     lead: >-
-      Kérdése van, vagy időpontot szeretne kérni? Írjon néhány sort az űrlapon, vagy
-      hívjon minket telefonon.
-    formTitle: Időpontkérés vagy kérdés
-    formLead: >-
-      Kérjük, adja meg elérhetőségét és néhány sorban a kérdését.
+      Kérdése van, vagy időpontot szeretne kérni? Hívjon minket telefonon, vagy írjon
+      e-mailt.
+    # Nincs űrlap: a rendelő nem gyűjt személyes adatot a honlapon keresztül
+    # (ez adatkezelési tájékoztatót, megőrzési szabályt és karbantartást vonna maga
+    # után). A telefon, az e-mail és a térkép a kapcsolatfelvétel útja.
     showMap: true
 
   # --------------------------------------------------------- getting here ---

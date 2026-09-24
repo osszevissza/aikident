@@ -79,19 +79,7 @@
     }
   }
 
-  /* --- contact / intake forms (demo: no backend) ----------------------- */
-  var form = document.querySelector('[data-demo-form]');
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var status = form.querySelector('[data-form-status]');
-      if (status) {
-        status.hidden = false;
-        status.textContent = 'Köszönjük! Ez egy bemutató űrlap — éles környezetben itt küldenénk el az adatokat. Kérjük, addig hívjon minket a +36 30 193 2714 számon.';
-      }
-    });
-  }
-
+  /* --- intake form (print-only demo: no backend) ----------------------- */
   var intake = document.querySelector('[data-intake-form]');
   if (intake) {
     var intakeStatus = intake.querySelector('[data-form-status]');

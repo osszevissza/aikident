@@ -1077,45 +1077,9 @@ blockquote { margin: 0; }
 }
 @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
 
-.form-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: clamp(1.5rem, 3vw, 2.6rem);
-  box-shadow: var(--shadow-sm);
-}
-.field { display: grid; gap: 0.42rem; margin-bottom: 1.05rem; }
-.field label { font-size: var(--t-meta); color: var(--wine-deep); letter-spacing: 0.01em; }
-.field input,
-.field select,
-.field textarea {
-  font: inherit;
-  font-size: 1em;
-  color: var(--ink);
-  background: var(--cream);
-  border: 1px solid var(--line-ui);
-  border-radius: var(--radius);
-  padding: 0.82rem 1rem;
-  width: 100%;
-  transition: border-color 0.24s var(--ease), background 0.24s var(--ease), box-shadow 0.24s var(--ease);
-}
-.field textarea { min-height: 132px; resize: vertical; }
-.field input::placeholder,
-.field textarea::placeholder,
+
 .iform__f input::placeholder,
 .iform__f textarea::placeholder { color: var(--ink-3); opacity: 1; }
-.field input:focus,
-.field select:focus,
-.field textarea:focus {
-  outline: none;
-  background: #fff;
-  border-color: var(--wine);
-  box-shadow: 0 0 0 4px rgba(126, 236, 195, 0.55);
-}
-.field--row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.05rem; margin-bottom: 1.05rem; }
-.field--row .field { margin-bottom: 0; }
-@media (max-width: 560px) { .field--row { grid-template-columns: 1fr; gap: 1.05rem; } }
-.form-note { font-size: var(--t-label); color: var(--ink-3); margin-top: 0.9rem; }
 
 .info-list { display: grid; gap: 0.95rem; }
 .info {
@@ -1123,8 +1087,9 @@ blockquote { margin: 0; }
   gap: 1rem;
   align-items: flex-start;
   background: var(--paper);
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-card);
   border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
   padding: 1.15rem 1.25rem;
 }
 .info__icon {
