@@ -165,6 +165,9 @@ Measured facts that matter for choosing:
   cap figure was a measurement error: the probe swallowed a font-load failure and
   measured the Georgia fallback. `fonts.js` now loads every face explicitly and
   reports a failure loudly instead of measuring a fallback.)*
+- **`--gap-h2: 0.4em`** is the space between a section h2 and the text under it
+  (19.7px on desktop, 12.6px at 375px). It is in `em`, so it scales with the
+  heading's own size — the point, since the font compensation changes that size.
 - `--display-scale` multiplies h1–h4, the card/step/accordion titles,
   `.letter__quote`, `.drawer__nav a`, `.iform__head h2` and `.prose blockquote`. It
   compensates a *font's* optical size, so it is the same at every size.
@@ -200,9 +203,10 @@ Measured facts that matter for choosing:
 
 Fraunces' limits for this role: it is a fashionable 2020s face (a trend risk over
 the life of the site), its stroke contrast is high and its x-height small, so at the
-20–24px card/accordion sizes it is less sturdy than Playfair was. The h3 sizes in
-use (24.4px cards, 23.2px steps, 21.2px mini cards) are deliberately close: that
-level is distinguished by context and colour, not by size.
+20–24px card/accordion sizes it is less sturdy than Playfair was. Card titles are
+24.4px everywhere (mini cards were 21.2px until the client spotted it on
+/rolunk/), step cards 23.2px — those two are deliberately close, and that level is
+distinguished by context and colour rather than size.
 
 **Still open (needs the client):** see §7 — real photos and the rest.
 
@@ -253,6 +257,8 @@ node tools/a11y/claims.js         # removed claims must not come back; #fragment
 node tools/a11y/icons.js          # unknown/empty icon glyphs; every icon still paints
 node tools/a11y/fontwiring.js     # every family named by --f-display/--f-sans/--f-accent
                                   # has an @font-face the built page can actually reach
+node tools/a11y/families.js       # no role changes typeface between desktop and phone
+                                  # (sizes may differ, families may not)
 ```
 
 Plus, after any layout/CSS change:
@@ -271,7 +277,7 @@ PLAYWRIGHT_BROWSERS_PATH="$PWD/.pw-browsers" node tools/a11y/type.js
 
 **All of these must be clean before committing.** Current state: 0 violations / 0 failures.
 
-Three traps this tooling exists to catch, all of which have actually happened here:
+Four traps this tooling exists to catch, all of which have actually happened here:
 1. A CSS rule whose class name does not match the markup — styles silently do nothing.
    (`.footer …` vs `class="site-footer"` broke the whole footer.)
 2. Horizontal overflow on phones. `.split__media::before` hung 24px out against an 18.4px
@@ -284,6 +290,13 @@ Three traps this tooling exists to catch, all of which have actually happened he
    `fontwiring.js` now checks token → `@font-face` → linked sheet, and also that every
    `preload` hint points at a file some face really uses. When judging a typeface,
    confirm the browser agrees: `document.fonts` should list the family as `loaded`.
+4. **One navigation, two typefaces.** The desktop menu (`.nav__link`) is body sans; the
+   mobile menu is a different component (`.drawer__nav`) and had been set in the display
+   serif at 1.28rem — so the site served one menu in sans and the other in serif. A
+   design-forum reviewer saw it before any gate did: `type.js` checks readability,
+   `fonts.js` measures files, `contrast.js` measures colours, all happy. `families.js`
+   now reads every role at 1280px and at 390px (drawer open) and fails on a family
+   mismatch; sizes are allowed to change between breakpoints, families are not.
 
 Two notes on the tooling itself:
 

@@ -603,8 +603,15 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
   padding: 0.92rem 0.25rem;
   border-bottom: 1px solid var(--line);
   color: var(--wine-deep);
-  font-family: var(--f-display);
-  font-size: calc((1.28rem) * var(--display-scale));
+  /* The mobile menu is the *same* navigation as the desktop one, so it keeps the
+     body sans and the body size. It used to be set in the display face at
+     1.28rem, which made one navigation serif on phones and sans on desktop — a
+     design-forum reviewer spotted it, and no gate could: type.js checks
+     readability, families.js now checks exactly this. Families must not change
+     between breakpoints; sizes may. Note `--display-scale` compensates the
+     display face and therefore must not be applied to the sans. */
+  font-family: var(--f-sans);
+  font-size: var(--t-body);
 }
 .drawer__nav a:hover { color: var(--wine); padding-left: 0.6rem; }
 .drawer__nav svg { width: 18px; height: 18px; color: var(--mint-deep); flex: none; }
