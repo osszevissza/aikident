@@ -2,8 +2,9 @@
   <div class="shell topbar__inner">
     <ul class="topbar__list">
       <li><a href="tel:{{ site.Params.phoneHref }}">{{ partial "icon" "phone" }}<span>{{ site.Params.phoneDisplay }}</span></a></li>
-      <li><a href="mailto:{{ site.Params.email }}">{{ partial "icon" "mail" }}<span>{{ site.Params.email }}</span></a></li>
-      <li><a href="{{ site.Params.mapsUrl }}" target="_blank" rel="noopener">{{ partial "icon" "pin" }}<span>{{ site.Params.city }}, {{ site.Params.street }}</span></a></li>
+      <li class="topbar__item--email"><a href="mailto:{{ site.Params.email }}">{{ partial "icon" "mail" }}<span>{{ site.Params.email }}</span></a></li>
+      {{- $cityShort := replaceRE `^\d{4}\s+` "" site.Params.city -}}
+      <li class="topbar__item--address"><a href="{{ site.Params.mapsUrl }}" target="_blank" rel="noopener">{{ partial "icon" "pin" }}<span><span class="topbar__addr-full">{{ site.Params.city }}, {{ site.Params.street }}</span><span class="topbar__addr-short">{{ $cityShort }}, {{ site.Params.street }}</span></span></a></li>
     </ul>
     <span class="topbar__note">{{ partial "icon" "clock" }}<span>Nyitvatartás: {{ site.Params.hours }}</span></span>
   </div>

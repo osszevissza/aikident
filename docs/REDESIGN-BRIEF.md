@@ -240,6 +240,16 @@ These were explicitly requested. Re-adding them will be seen as a regression:
 - a floating **"Vissza a tetejére"** button exists and is expected
 - the **URL aliases** `/vizsgalatok/`, `/kezelesek/`, `/elso-latogatas/`, `/cbct/` must keep
   redirecting to the new pages (they are live and may be linked)
+- the **booking action stays in the mobile header**. Below 1080px the menu becomes a
+  drawer, but `Időpontfoglalás` stays as a button next to the burger — labelled
+  `Időpont` on phones (≤640px) and without its calendar glyph at ≤400px, where the brand
+  also shrinks to 122px. It used to disappear with the nav, so booking on a phone took
+  two taps. The accessible name stays `Időpontfoglalás` at every width (WCAG 2.5.3: the
+  visible `Időpont` is contained in it).
+- the **mobile topbar keeps the phone number *and* the address**, not just the phone: the
+  address gets its own row at ≤640px (sharing a row wrapped it into three or four lines)
+  and drops the postcode at ≤400px. The e-mail and the "Előzetes egyeztetés alapján" note
+  stay in the drawer. The strip is not sticky, so a second row costs nothing.
 
 ---
 
